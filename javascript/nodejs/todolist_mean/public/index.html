@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Todos NodeSample App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h2>Create a TOdo!</h2>
+        <form @submit.prevent>
+          <label >
+            Todo: <input v-model="form.todo" type="text" />
+          </label>
+          <br>
+          <label >
+            <input v-model="form.hasAttachments" type="checkbox" />hasAttachments
+          </label>
+          <br>
+          <label >
+            <input v-model="form.isDone" type="checkbox" />is done
+          </label>
+          <br>
+          <button @click="postTodo">Post Todo!</button>
+        </form>
+        <hr>
+        <h2>Todos List:</h2>
+        <ul>
+        <li style="cursor: pointer" v-for="todo in todos">
+          <input type="checkbox" :checked="todo.isDone" @change="toggleDone(todo)">
+          <span @click="selectTodo(todo)">{{ todo.todo }} - {{ todo.username }} - {{ todo.hasAttachments ? 'Has Files' : '' }} </span>
+          <button type="button" name="button" @click="removeTodo(todo)">X</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      new Vue({
+        el: '#root',
+        data: {
+          form: {
+            id: '',
+            todo: '',
+            hasAttachments: false,
+            isDone: false
+          },
+          clenedForm: {},
+          todos: [
+            {
+              _id: '98908as908d90a8s',
+              todo: 'buy some chocolate',
+              username: 'marcusbalbi',
+              isDone: true,
+              hasAttachments: false
+            }
+          ]
+        },
+        methods: {
+          postTodo () {
+            fetch('/api/todo', { headers: { 'Content-Type': 'application/json' }, method: 'POST', body: JSON.stringify(this.form) })
+              .then((data) => {
+                this.reloadTodosList()
+                this.cleanForm()
+              })
+          },
+          cleanForm () {
+            this.form = {...this.cleanedForm}
+          },
+          reloadTodosList () {
+            fetch('/api/todos/marcusbalbi')
+              .then(res => res.json())
+              .then((data) => {
+                this.todos = {...data}
+              })
+          },
+          selectTodo (todo) {
+            this.form = {...todo}
+            this.form.id = todo._id
+          },
+          toggleDone (todo) {
+            todo.isDone = !todo.isDone
+            todo.id = todo._id
+            fetch('/api/todo', { headers: { 'Content-Type': 'application/json' },
+            method: 'POST', body: JSON.stringify(todo) })
+              .then((data) => {
+                this.reloadTodosList()
+              })
+          },
+          removeTodo (todo) {
+            fetch('/api/todo', { headers: { 'Content-Type': 'application/json' },
+            method: 'DELETE', body: JSON.stringify({id: todo._id}) })
+              .then((data) => {
+                this.reloadTodosList()
+              })
+          }
+        },
+        mounted: function () {
+          this.clenedForm = {...this.form}
+          this.reloadTodosList()
+        }
+      })
+    </script>
+  </body>
+</html>

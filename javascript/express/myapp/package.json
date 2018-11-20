@@ -1,0 +1,62 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "mocha test/**",
+    "coverage": "nyc mocha test/**"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1",
+    "mysql": "^2.13.0",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "codecov": "^2.2.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.0.2",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.8.0",
+    "sinon-stub-promise": "^4.0.0"
+  },
+  "nyc": {
+    "check-coverage": false,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 80,
+    "include": [
+      "models/**/*.js",
+      "database/**/*.js",
+      "controllers/**/*.js",
+      "routes/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "require": [],
+    "cache": true,
+    "all": true,
+    "report-dir": "./test/coverage"
+  }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>"Utilizando Jade"</title>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/public/chat.js"></script>
+    </head>
+    <body>
+        <div id="chat">
+            
+        </div>
+        <form onsubmit="return submitChat(this);">
+                <input type="text" id="texto" name="chat"/>
+                <button type="submit">Enviar texto</button>
+            </form>
+    </body>
+</html>
+        

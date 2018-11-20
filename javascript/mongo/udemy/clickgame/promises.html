@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Click Game</title>
+  </head>
+  <body>
+    <button class="main-btn" type="button" name="button">Click me</button>
+    <script type="text/javascript">
+      function startGame () {
+        var btn = document.querySelector('.main-btn')
+        var counter = 0;
+        btn.addEventListener('click', () => {
+          ++counter
+        })
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if(counter > 5) {
+              resolve('you won the game', counter)
+            } else {
+              reject('you lose the game', counter)
+            }
+          }, 2000)
+        })
+      }
+      startGame()
+      .then((msg) => alert(msg))
+      .catch((msg) => alert(msg))
+    </script>
+  </body>
+</html>

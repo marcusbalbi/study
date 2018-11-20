@@ -1,0 +1,13 @@
+{
+  "name": "@marcusbalbi/howtonpm",
+  "version": "1.0.2",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": "http://github.com/marcusbalbi",
+  "author": "Marcus",
+  "license": "ISC",
+  "description": "This is my Amazing project",
+  "dependencies": {}
+}

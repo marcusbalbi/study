@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="intro">
+    <head>
+        <title>Hello World</title>
+        <meta charset="UTF-8">
+    </head>
+    <body ng-controller="HelloController" >
+        <button ng-click="incrementar()" >Clicar</button>
+        <label>Você clicou: {{total}} veze(s)</label>
+        
+        
+        <footer ng-controller="FooterController" >
+            {{ footer }}
+        </footer>
+        
+        
+         <script src="js/angular.js"></script>
+         <script src="js/main.js"></script>
+        <script src="js/HelloController.js"></script>
+        <script src="js/FooterController.js"></script>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+extends layout
+
+block scripts
+    script(type='text/javascript',src='/socket.io/socket.io.js')
+    script(type='text/javascript',src='chat.js')
+block content
+    div#chat
+
+    form(onsubmit='return submitChat(this);')
+        input#chat(name='chat',type='text')
+        input(type='submit', value='Send Chat')

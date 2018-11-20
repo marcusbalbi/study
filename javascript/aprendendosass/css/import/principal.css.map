@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IACA;EACI,KAAK,EAAE,GAAG;;ACFd,IACA;EACI,WAAW,EAAE,IAAI",
+"sources": ["../../scss/import/menu.scss","../../scss/import/cabecalho.scss"],
+"names": [],
+"file": "principal.css"
+}

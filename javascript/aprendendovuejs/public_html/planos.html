@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="app">
+<pre>
+	</pre>
+	<div v-for="plano in planos">
+		
+		<plano v-bind:objeto="plano" v-bind:ativo.sync="ativo" ></plano>
+
+	</div >
+
+	<template id="plano-template">
+		
+		<span>{{ objeto.nome }}<span>
+		<span>{{ objeto.preco }}<span>
+		<button v-on:click="definirPlanoAtivo"
+		 v-show="this.objeto.nome !== this.ativo.nome"
+		 >
+			{{ ehUpgrade ? "Upgrade" : "Dowgrade" }}
+		</button>
+
+		<span style="color:#FFFF00" v-else >
+			Atual
+		</span>	
+
+	</template>
+
+</div>
+</body>
+ <script src="bower_components/vue/dist/vue.js"></script>
+ <script type="text/javascript">
+ 	new Vue({
+ 		el : '#app',
+
+ 		data : {
+
+ 			planos : [
+				{ nome : "Mestre", preco : 40 },
+ 				{ nome : "Profissional", preco : 30 },
+ 				{ nome : "Intermediario", preco : 20 },
+ 				{ nome : "Iniciante", preco : 10 },
+ 				{ nome : "Basico", preco : 0 },
+ 			],
+
+ 			ativo : false
+
+ 		},
+
+ 		components : {
+
+ 			 plano : {
+
+ 			 	template : '#plano-template',
+
+ 			 	props : ['objeto','ativo'],
+
+ 			 	computed : {
+
+ 			 		ehUpgrade : function(){
+
+ 			 			return this.ativo.preco < this.objeto.preco;
+
+ 			 		}
+
+ 			 	},
+
+ 			 	methods : {
+
+					definirPlanoAtivo : function(e) {
+							this.ativo = this.objeto
+					}
+
+ 			 	}
+
+ 			 }
+
+ 		}
+
+ 	});
+ </script>
+</html>

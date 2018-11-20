@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarefas</title>
+
+	<style type="text/css">
+		.completa  {
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+
+<ul id="app" >
+	<li v-for="tarefa in tarefas"
+		:class="tarefa.completa ? 'completa' : 'nao-completa'" 
+		@click="aoClicarTarefa(tarefa)">{{ tarefa.nome }}</li>
+</ul>
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	
+	new Vue({
+
+		el : '#app',
+
+		data :{
+
+			tarefas : [
+				{ nome : "Ir ao Shopping", completa : false },
+				{ nome : "Ir ao Supermercado", completa : false },
+				{ nome : "Ir ao Banco", completa : true },
+
+			]
+
+		},
+
+		methods : {
+
+			aoClicarTarefa : function(tarefa) {
+
+					tarefa.completa = !tarefa.completa;
+
+			}
+
+		}
+
+	});
+
+</script>
+</body>
+</html>

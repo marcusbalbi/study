@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+
+<div id="form2" >
+    <form @submit.prevent="aoFormSubmetido">
+        <button @click="aoClicarEnviar">Enviar</button>
+    </form>
+    <span>Contador: {{ contador }}</span>
+</div>
+
+        <div id="form">
+            
+          
+                <h3 v-show='!texto'>{{ mensagem_erro }}</h3>
+                <textarea v-model="texto"></textarea>
+                <button v-model="teste_btn" v-show="texto" v-on:click="aoEnviar" >{{ textoBotao }}</button>
+
+        </div>
+
+        <div id="teste" >
+            
+            
+            <ul>
+                <li v-for="item in lista" >{{ item }}</li>
+            </ul>
+            
+            <input type="text" v-model="nome" v-on:blur="teste"/>
+            <button v-on:click="teste" >CLIEUQ ME</button>
+            
+            <label for="keyup" >KEY UP:</label>
+            <input type="text" 
+                   v-on:keyup="onKeyUp"
+                   v-on:click="teste"
+                   
+                   >
+            
+        </div>
+        
+        <script src="bower_components/vue/dist/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

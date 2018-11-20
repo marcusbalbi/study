@@ -1,0 +1,13 @@
+body {
+  font: arial;
+  color: blue;
+  margin-left: 10px; }
+
+p {
+  font-size: 18px; }
+  p a {
+    color: black; }
+    p a:hover {
+      text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

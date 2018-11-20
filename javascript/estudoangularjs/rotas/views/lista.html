@@ -1,0 +1,5 @@
+Pesquisar :<input type="text" id="pesquisa" ng-model="pesquisa">
+<a href="#/novo">Novo</a>
+<ul>
+    <li ng-repeat="fruta in frutas | filter: pesquisa" ><a href="#/editar/{{fruta}}">{{ fruta }}</a></li>
+</ul>

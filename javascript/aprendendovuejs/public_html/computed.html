@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>{{ skill }}</h1>
+
+<input type="text" v-model="pontos">
+
+
+<h3>{{ nomeCompleto }}</h3>
+<input type="text" v-model="nome">
+
+<input type="text" v-model="sobrenome">
+
+</body>
+ <script src="bower_components/vue/dist/vue.js"></script>
+ <script type="text/javascript">
+ 	
+ 	new Vue({
+
+ 		el: 'body',
+
+ 		data: {
+ 			pontos: 30,
+
+ 			nome : "Joao",
+
+ 			sobrenome : 'Doe',
+
+ 			nomeCompleto : "Joao Doe"
+ 		},
+
+ 		computed : {
+
+ 			skill : function(){
+
+ 				if(this.pontos < 100)
+ 					return "iniciante"
+
+ 				return "Avancado";
+
+ 			}
+
+ 		},
+
+ 		watch : {
+				// com o computed seria bem mais facil
+ 			nome : function(nome) {
+ 				this.nomeCompleto = nome +" "+ this.sobrenome;
+ 			},
+ 			sobrenome : function(sobrenome) {
+ 				this.nomeCompleto = this.nome +" "+ sobrenome;
+ 			}
+
+ 		}
+
+ 	});
+
+ </script>
+</html>

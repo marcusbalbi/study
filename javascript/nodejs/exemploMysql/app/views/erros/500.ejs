@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oops, um erro aconteceu!</title>
+  </head>
+  <body>
+    <h1>Oops, um erro aconteceu!</h1>
+    <div class="content" >
+      <% if(process.env.NODE_ENV === 'production') {  %>
+        <span>Estamos trabalhando para corrigi-lo!</span>
+      <% } else { %>
+        <pre>
+          <%= error %>
+        </pre>
+      <% } %>
+    </div>
+  </body>
+</html>

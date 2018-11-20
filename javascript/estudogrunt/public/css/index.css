@@ -1,0 +1,15 @@
+p:first-letter {
+	font-size: 2em;
+}
+
+p:nth-of-type(even) {
+	color: red;
+}
+
+p:nth-of-type(odd) {
+	color: blue;
+}
+
+.invisivel {
+	display: none;
+}

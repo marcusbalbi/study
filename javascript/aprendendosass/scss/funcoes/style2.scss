@@ -1,0 +1,48 @@
+@import "base_colors.scss";
+
+@function fixBorder($cor) {
+    @return desaturate(darken($cor,5%),100%);
+}
+body
+{
+    font-size: 14px;
+}
+
+h1
+{
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.box
+{
+    border: 5px solid;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center; 
+    em {
+        font-weight: bold;
+    }
+}
+
+.azul
+{   @extend .box;
+    background-color: $azul;
+    border-color: fixBorder($azul);
+}
+
+.vermelho
+{
+    @extend .box;
+    background-color: $vermelho;
+    border-color: fixBorder($vermelho);
+
+}
+
+.laranja
+{
+    @extend .box;
+    background-color: $laranja;
+    border-color: fixBorder($laranja);
+}

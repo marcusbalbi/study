@@ -1,0 +1,25 @@
+body {
+  font-size: 14px; }
+
+h1 {
+  font-size: 22px;
+  font-weight: bold; }
+
+.box, .azul, .vermelho, .laranja {
+  border: 2px solid;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center; }
+  .box em, .azul em, .vermelho em, .laranja em {
+    font-weight: bold; }
+
+.azul {
+  color: #000080; }
+
+.vermelho {
+  color: #FF0000; }
+
+.laranja {
+  color: #E29000; }
+
+/*# sourceMappingURL=style2.css.map */

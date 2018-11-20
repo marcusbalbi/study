@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+  <body>
+    <div class="erros">
+        <% if (erros !== undefined) { %>
+          <ul>
+            <% for (var i = 0; i < erros.length; i++) { %>
+              <li> <%=erros[i].msg %></li>
+            <% } %>
+
+          </ul>
+        <% } %>
+    </div>
+    <form method="POST">
+      <div>
+        <label for="tipo">Tipo:</label>
+        <input type="text" name="name" value="<%=tipo.name%>" id="tipo"/>
+      </div>
+      <div>
+        <label for="permanente">Permanente:</label>
+        <select id="permanente" name="permanent" >
+          <option value="1" selected="<%=tipo.permanent === 1 ? 'selected' : ''%>">SIM</option>
+          <option value="0" selected="<%=tipo.permanent === 0 ? 'selected' : ''%>">NÃO</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit">Gravar</button>
+        <a href="/tipos">Voltar</a>
+      </div>
+    </form>
+  </body>
+</html>

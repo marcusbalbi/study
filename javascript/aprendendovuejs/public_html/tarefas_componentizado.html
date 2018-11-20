@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tarefas</title>
+
+	<style type="text/css">
+		.completa  {
+			text-decoration: underline;
+		}
+
+				.balbi-tarefa {
+			padding: 30px;
+		}
+		
+	</style>
+</head>
+<body id="app" >
+
+
+<balbi-tarefas  titulo="OK" ></balbi-tarefas>
+
+<balbi-tarefas  titulo="Tarefas do Marcus" ></balbi-tarefas>
+
+<balbi-tarefas  titulo="Tarefas do Gustavo" ></balbi-tarefas>
+
+
+<template id="tarefas" >
+	<h3>{{ titulo }} <span v-show="total">({{ completas }} de {{lista.length}})</span></h3>
+	<alerta></alerta>
+	<div v-show="lista.length">
+	<ol>
+		<li v-for="tarefa in lista">
+				<span :class="tarefa.completa ? 'completa' : 'nao-completa'" 
+				@click="aoClicarTarefa(tarefa)">{{ tarefa.nome }}</span>
+				 - <button @click="excluirTarefa(tarefa)" >excluir</button></li>
+	</ol>
+	<button @click="removerCompletas">Remover Completas</button><br><br><hr>
+	</div>
+	<span v-else="">NENHUMA TAREFA </span>
+
+	<form >
+	<label for="nova_tarefa">Nova Tarefa</label>
+		<input name="nova_tarefa" v-model="nome_nova_tarefa" type="text"/>
+		<button @click.prevent="adicionarTarefa" >Adicionar!</button>	
+	</form>
+
+</template>
+
+<template id="alerta" >
+	<div v-show="exibir">
+		{{mensagem}}
+	</div>
+</template>
+
+
+
+<script src="bower_components/vue/dist/vue.js"></script>
+<script src="scripts/main_tarefas_componentizadas.js"></script>
+<script type="text/javascript">
+	
+	Vue.component('alerta',{
+		'template' : '#alerta',
+
+		methods: {
+
+			exibir: function(mensagem) {
+				console.log(mensagem);
+			}
+
+		}
+	})
+
+new Vue({
+
+		el : '#app',
+
+		data : {
+
+			
+
+		}
+
+	});
+
+	
+
+</script>
+</body>
+</html>

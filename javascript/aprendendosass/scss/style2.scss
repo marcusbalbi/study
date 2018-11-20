@@ -1,0 +1,41 @@
+body
+{
+    font-size: 14px;
+}
+
+h1
+{
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.box
+{
+    border: 2px solid;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center; 
+    
+    em {
+        font-weight: bold;
+    }
+}
+
+.azul
+{   @extend .box;
+    color: #000080;
+}
+
+.vermelho
+{
+    @extend .box;
+    color: #FF0000;
+
+}
+
+.laranja
+{
+    @extend .box;
+    color: #E29000;
+}

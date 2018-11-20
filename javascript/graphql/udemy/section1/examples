@@ -1,0 +1,56 @@
+# {
+#   company(id: "1") {
+#     name,
+#     users {
+#       firstName,
+#       company {
+#         description,
+#         users {
+#           age
+#         }
+#       }
+#     }
+#   }
+# }
+
+# {
+#   rg: company(id: "1") {
+#    ...companyDetails
+#   }
+#   google: company(id: "2") {
+#     ...companyDetails
+#   }
+# }
+
+# fragment companyDetails on Company {
+#   id,
+#   name
+# }
+
+# mutation {
+#   addUser (firstName: "Jhon", age: 12) {
+#     id,
+#     firstName,
+#     age
+#   }
+# }
+
+# {
+#   user (id: "rkTw4ffRW") {
+#     firstName
+#   }
+# }
+
+# mutation {
+#   removeUser(id: "HkccBzf0-") {
+#     id
+#   }
+# }
+
+mutation {
+  editUser(id: "23", firstName: "Marcus Vinicius", age: 2) {
+    id,
+    firstName,
+    age
+  }
+}

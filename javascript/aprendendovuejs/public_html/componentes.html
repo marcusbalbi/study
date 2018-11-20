@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Componentes com VUe.js</title>
+</head>
+<body>
+
+<template  id="template-contador">
+ 	<button @click="incrementar" >Incrementar</button>
+    <span>Contagem para {{ assunto }} : {{ contagem }}</span>
+    <br>
+</template>
+
+
+	
+<div id="componentes">
+<contador assunto="amei" ></contador>
+<contador assunto="Gostei" ></contador>
+<contador assunto="No gostei" ></contador>
+</div>
+</body>
+<script src="bower_components/vue/dist/vue.js"></script>
+<script src="componentes.js"></script>
+
+<script type="text/javascript">
+	
+</script>
+</html>

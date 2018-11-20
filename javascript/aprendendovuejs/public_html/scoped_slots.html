@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="app">
+          <pai>
+            <template scope="props">
+                {{ mensagem }} - {{ props.data.titulo3 }}
+            </template>
+          </pai>
+          <input type="text" v-model="mensagem">
+        </div>
+
+        <template id="componente_pai">
+            <div style="color:pink; background-color:black;font-size:35px;text-align:center;height:150px;padding-top:75px">
+                <slot :data="titulos"></slot>
+            </div>
+        </template>
+
+        <script src="bower_components/vue/dist/vue.js"></script>
+        <script type="text/javascript">
+            Vue.component('pai', {
+              template: '#componente_pai',
+              props: {
+              },
+              data: function () {
+                return {
+                    titulos: {
+                      titulo1: 'Titulo 1',
+                      titulo2: 'Titulo 2',
+                      titulo3: 'Titulo 3sssssssssssssssssss'
+                    }
+                }
+              }
+            });
+            new Vue({
+              el: '#app',
+              data: {
+                mensagem: 'aaa'
+              }
+            })
+        </script>
+    </body>
+</html>

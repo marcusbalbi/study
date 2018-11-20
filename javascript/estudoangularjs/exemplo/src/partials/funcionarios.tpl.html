@@ -1,0 +1,9 @@
+<!-- partials/funcionarios.tpl.html -->
+<input type="checkbox" ng-model="mostra">
+<input type="text" ng-model="textoFiltro">
+<h4>{{ mensagem }}</h4>
+<ul ng-show="mostra">
+    <li ng-repeat="funcionario in funcionarios | filter: textoFiltro">
+        {{funcionario.nome}} <button ng-click="remover(funcionario)" >Remover</button>
+    </li>
+</ul>

@@ -1,0 +1,7 @@
+env:
+  mocha: true
+globals:
+  expect: false
+  assert: false
+  chai: false
+  server: false

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IACA;EACI,WAAW,EAAE,IAAI",
+"sources": ["../../scss/import/cabecalho.scss"],
+"names": [],
+"file": "cabecalho.css"
+}

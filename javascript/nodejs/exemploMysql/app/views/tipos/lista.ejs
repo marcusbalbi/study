@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tipos de Card</title>
+</head>
+<body>
+<a href="/tipos/form">Cadastrar</a>
+<table width="100%" border="1px">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Permanente</th>
+      <th>Criado em </th>
+      <th>Atualizado em </th>
+    </tr>
+    <tbody id="dados">
+      <% tipos.forEach(function(tipo){ %>
+      <tr>
+        <td><%=tipo.id%></td>
+        <td><%=tipo.name%></td>
+        <td><%= tipo.permanent ? 'SIM' : 'NÃO'%></td>
+        <td><%=tipo.created_at.toLocaleString()%></td>
+        <td><%= tipo.updated_at ? tipo.updated_at.toLocaleString() : ''%></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </thead>
+</table>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  socket.on('atualizaLista', function (tipos) {
+    var tabela = document.querySelector('#dados');
+    tabela.innerHTML = "";
+    var linhas = '';
+    tipos.forEach(function (tipo) {
+      linhas+= `
+        <tr>
+          <td>${tipo.id}</td>
+          <td>${tipo.name}</td>
+          <td>${tipo.permanent ? 'SIM' : 'NÃO'}</td>
+          <td>${tipo.created_at.toLocaleString()}</td>
+          <td>${tipo.updated_at ? tipo.updated_at.toLocaleString() : ''}</td>
+        </tr>
+        `
+    });
+    tabela.innerHTML = linhas;
+
+  });
+</script>
+</body>
+</html>

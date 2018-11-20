@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="Funcionarios">
+<head>
+	<meta charset="UTF-8">
+	<title>Bem-vindo</title>
+</head>
+<body>
+	<header>
+		<img src="img/logo.png">
+		<hr>
+	</header>
+	<div>
+            <ng-view></ng-view>
+	</div>
+	<footer>
+		<hr>
+		<p>Copyright 2014</p>	
+	</footer>
+	<script src="vendor/angular.min.js"></script>
+        <script src="vendor/angular-route.min.js"></script>
+        <script src="vendor/angular-resource.js"></script>
+        <script src="main.js"></script>
+         <script src="controllers/FuncionariosController.js"></script>
+         <script src="controllers/WelcomeController.js"></script>
+         <script src="Services/FuncionariosService.js"></script>
+	
+       
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "contatooh",
+  "version": "0.0.0",
+  "homepage": "https://github.com/marcusbalbi/contatooh",
+  "authors": [
+    "Marcus Balbi <balbimarcus@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.1",
+    "angular-route": "~1.4.1",
+    "bootstrap": "~3.3.5"
+  }
+}

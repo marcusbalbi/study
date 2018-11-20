@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="meuapp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-controller="ControllerTeste">
+            
+            <p>{{ titulo }}</p>
+            
+        </div>
+        
+        <div ng-controller="ControllerCliente">
+            
+            <ul>
+                <li ng-repeat="cliente in clientes" ng-click="dizerOla(this)">{{ cliente.nome }}</li>
+            </ul>
+            
+        </div>
+        
+         <script src="vendor/angular.js"></script>
+         <script src="ControllerTeste.js"></script>
+         <script src="ControllerCliente.js"></script>
+    </body>
+</html>

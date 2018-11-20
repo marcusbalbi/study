@@ -1,0 +1,1 @@
+!function(){var a=document.querySelectorAll.bind(document),b=a(".painel")[0];b.classList.add("invisivel");var c=a("button")[0];c.classList.remove("invisivel"),c.onclick=function(){b.classList.remove("invisivel"),this.classList.add("invisivel")}}();

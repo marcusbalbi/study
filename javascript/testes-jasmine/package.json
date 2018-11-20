@@ -1,0 +1,11 @@
+{
+  "name": "testes-jasmine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/jasmine"
+  },
+  "author": "Marcus Balbi",
+  "license": "ISC"
+}

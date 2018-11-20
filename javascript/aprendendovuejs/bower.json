@@ -1,0 +1,13 @@
+{
+  "name": "aprendendovuejs",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "vue": "~2.1.0"
+  },
+  "devDependencies": {}
+}

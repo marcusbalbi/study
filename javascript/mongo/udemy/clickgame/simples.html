@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Click Game</title>
+  </head>
+  <body>
+    <button class="main-btn" type="button" name="button">Click me</button>
+    <script type="text/javascript">
+      var btn = document.querySelector('.main-btn')
+      var counter = 0;
+      btn.addEventListener('click', () => {
+        ++counter
+      })
+      setTimeout(() => {
+        if (counter > 5) {
+          alert('you won the game: ' + counter)
+        } else {
+          alert('you lose the game: ' + counter)
+        }
+      }, 2000)
+      console.log(btn);
+    </script>
+  </body>
+</html>

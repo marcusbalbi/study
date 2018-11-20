@@ -1,0 +1,19 @@
+{
+    "name": "Marcus/composerautoload",
+    "description": "Teste de Autoload com arquivos com nomes diferentes da classe",
+    "authors": [
+        {
+            "name": "Marcus Balbi",
+            "email": "Marcus@rgsistemas.com.br"
+        }
+        
+        
+    ],
+    "require": {},
+    "autoload" : {
+        "classmap" : [
+            "consultas/",
+            "framework/"
+        ]
+    }
+}

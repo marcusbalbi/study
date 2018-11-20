@@ -1,0 +1,13 @@
+{
+    "name": "vendor/redis",
+    "description": "Descrição do projeto redis.",
+    "authors": [
+        {
+            "name": "marcus",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "predis/predis" : "v1.1.0"
+    }
+}

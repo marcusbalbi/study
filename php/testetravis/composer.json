@@ -1,0 +1,24 @@
+{
+    "name": "Marcus/testeerros",
+    "authors": [
+        {
+            "name": "Marcus Balbi",
+            "email": "balbimarcus@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    
+    "autoload" :
+            {
+                "psr-4" :
+                {
+                    "Balbi\\":"Balbi"
+                }
+            },
+    
+    "require": {
+        
+        "scrutinizer/php-analyzer": "dev-legacy",
+        "phpmd/phpmd": "dev-master"
+    }
+}

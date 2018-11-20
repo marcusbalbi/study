@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:shrinkColumns="2">
+
+    <TableRow>
+        <TextView
+            android:text="Coluna 1"/>
+        <TextView
+            android:text="Coluna 2"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Coluna 1"/>
+        <TextView
+            android:text="Coluna 2"/>
+        <TextView
+            android:text="COLUNA COM O TEXTO MUITO GRANDE QUE NAO CABE NA TELA ENTAO O ANDROID VAI COLOCALO NA LINHA ABAIXO"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="Coluna 1"/>
+        <TextView
+            android:text="Coluna 2"/>
+        <TextView
+            android:text="Coluna 3"/>
+    </TableRow>
+
+
+
+</TableLayout>

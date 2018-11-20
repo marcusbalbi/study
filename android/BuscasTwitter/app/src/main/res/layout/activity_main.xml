@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.balbi.marcus.buscastwitter.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:stretchColumns="1,2,3">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow0">
+                <EditText
+                    android:id="@+id/queryEditText"
+                    android:hint="@string/dicaBusca"
+                    android:layout_span="2"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableRow1">
+            <EditText
+                android:id="@+id/tagEditText"
+                android:hint="@string/digaTag"
+                android:inputType="text"
+                android:imeOptions="actionDone"/>
+            <Button
+                android:text="@string/btnSalvar"
+                android:id="@+id/saveButton"
+                android:onClick="aoBotaoSalvarBuscaClicado"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/corFundoBuscas"
+            android:id="@+id/tableRow2">
+
+            <TextView
+                android:text="@string/tituloBuscasSalvas"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:layout_span="2"
+
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow3"
+            android:layout_weight="1"
+            android:background="@color/corFundoBuscas"
+            >
+
+
+            <ScrollView android:id="@+id/queryScrollView"
+                android:layout_span="2">
+
+                <TableLayout
+                    android:background="@color/corFundoBuscas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/queryTableLayout"
+                    android:stretchColumns="*">
+                </TableLayout>
+
+            </ScrollView>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow4">
+
+            <Button android:id="@+id/limparTags"
+                    android:text="@string/btnLimparTags"
+                    android:layout_span="2"
+                    android:onClick="aoBotaoLimparBuscasClicado"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>

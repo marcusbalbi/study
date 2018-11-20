@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="total_conta">Total da Conta:</string>
+    <string name="gorgeta">Gorgeta:</string>
+    <string name="total_gorgeta">Total Gorgeta:</string>
+    <string name="gorgeta_personalizada">Personalizada:</string>
+    <string name="total">Total:</string>
+    <string name="zero_decimal">0.00</string>
+
+</resources>

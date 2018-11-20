@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/principal"
+    android:background="@color/colorAccent"
+    tools:context="com.example.marcus.views.MainActivity">
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/brancoGesso"
+        android:textColor="@color/azulProfundo"
+        android:text="@string/minha_string" />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/azulProfundo"
+        android:textColor="@color/brancoGesso"
+        android:text="@string/minha_string" />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/azulProfundo"
+        android:textColor="@color/brancoGesso"
+        android:text="http://www.google.com.br"
+        android:autoLink="web"
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:password="true"
+        android:background="@color/brancoGesso"
+        android:textColor="@color/azulProfundo"
+        android:text="SENHA ESCONDIDA" />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/brancoGesso"
+        android:textColor="@color/azulProfundo"
+        android:hint="APARECE ESTE TEXTO CASO NENHUM TENHA SIDO  DEFINIDO"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALO USA"
+        style="@style/meuEstilo"/>>
+</LinearLayout>

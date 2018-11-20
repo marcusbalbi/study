@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecionar"
+        style="?android:attr/starStyle"
+        android:onClick="checkboxSelecionado"/>
+
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="Selecionado"
+        android:onClick="toggleSelecionado"
+        android:textOff="Selecionar"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/grupo_radio"
+        android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim"
+                android:tag="@string/positivo"
+                android:layout_weight="1"
+                android:id="@+id/sim"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não"
+            android:tag="@string/negativo"
+            android:layout_weight="1"
+            android:id="@+id/nao"/>
+    </RadioGroup>
+</LinearLayout>

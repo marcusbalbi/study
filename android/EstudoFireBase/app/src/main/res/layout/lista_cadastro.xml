@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal">
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/texto1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="texto 1"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:layout_weight="2"/>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/texto2"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:textAppearance="?android:attr/textAppearanceListItemSmall"
+android:gravity="center_vertical"
+    android:text="texto 2"
+    android:layout_weight="2"
+android:minHeight="?android:attr/listPreferredItemHeightSmall" />
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"/>
+
+    <Button
+        android:id="@+id/excluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"/>
+
+</LinearLayout>

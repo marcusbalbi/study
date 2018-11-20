@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="meuEstilo">
+
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:background">@color/brancoGesso</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:padding">30dp</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+</resources>

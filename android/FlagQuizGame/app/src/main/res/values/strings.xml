@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FlagQuizGame</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="choices">Selecione o numero de alternativas</string>
+    <string name="correct">Correto!</string>
+    <string name="guess_country">Acerte o País</string>
+    <string name="guesses">acertos</string>
+    <string name="incorrect_answer">Incorreto!</string>
+    <string name="more_regions_title">Requer mais regiões</string>
+    <string name="more_regions_message">Não existe paises suficientes nas regiões selecionadas
+    . Por favor selecione mais regiões</string>
+    <string name="of">de</string>
+    <string name="ok">OK</string>
+    <string name="question">Questão</string>
+    <string name="quiz_title">Jogo das Dez Bandeiras</string>
+    <string name="regions">Selecione as Regiões</string>
+    <string name="reset_quiz">Reiniciar o Quiz</string>
+
+    <string-array name="regionsList">
+        <item>Africa</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>North_America</item>
+        <item>Oceania</item>
+        <item>South_America</item>
+    </string-array>
+
+    <string-array name="guessesList">
+        <item>3</item>
+        <item>6</item>
+        <item>9</item>
+    </string-array>
+
+</resources>

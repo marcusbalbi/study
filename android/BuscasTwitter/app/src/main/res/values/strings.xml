@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BuscasTwitter</string>
+    <string name="dicaBusca">Digite a busca para Twitter</string>
+    <string name="digaTag">Adicione uma Tag</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="btnLimparTags">Limpar Tags Salvas</string>
+    <string name="tituloBuscasSalvas">Buscas Salvas</string>
+
+    <string name="urlBusca">https://twitter.com/search?q=</string>
+    <string name="btnEditar">Editar</string>
+    <string name="btnApagar">Apagar</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnOk">OK</string>
+
+    <string name="tituloFaltando">Faltando Texto</string>
+    <string name="mensagemFaltando">Por favor digite uma busca e uma tag para salvar</string>
+
+    <string name="tituloConfirmacaoExclusao">Tem Certeza?</string>
+    <string name="mensagemConfirmacaoExclusao">Isto vai Deletar todas as suas Buscas salvas</string>
+
+</resources>

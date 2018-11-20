@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8B8B83"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_usuario"
+        android:text="Usuário:"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_usuario"
+        android:layout_toRightOf="@id/tv_usuario"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_senha"
+        android:layout_below="@id/edt_usuario"
+        android:text="Senha:"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_senha"
+        android:layout_alignTop="@id/tv_senha"
+        android:id="@+id/edt_senha"
+        android:password="true"
+        android:background="@android:drawable/editbox_background"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/edt_senha"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@id/edt_senha"/>
+
+
+
+</RelativeLayout>

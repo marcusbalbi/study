@@ -1,0 +1,21 @@
+{
+  "name": "github-balbi",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "web": "node ./src/web/bin/www",
+    "cli": "node ./src/cli/index.js",
+    "start": "node ./src/web/bin/www"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "request": "^2.88.0",
+    "yargs": "^12.0.2"
+  }
+}

@@ -1,0 +1,34 @@
+<h1>Balbi GitHub!</h1>
+<form action="/" method="POST">
+  Buscar Usuário:
+  <input type="text" name="query" value="{{params.query}}">
+</form>
+<ul class="user-list" >
+  {{#each result.items }}
+      <li class="user-item">
+          <a href="{{this.html_url}}"  target="_blank">
+            <span><img width="150" height="150" src="{{ this.avatar_url }}"></span>
+          </a>
+        <span>{{ this.login }}</span>
+        <span>Admin: {{yesNoFormat this.site_admin}}</span>
+      </li>
+  {{/each}}
+</ul>
+<style>
+  .user-list {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .user-item {
+    margin-top: 25px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  .user-item:hover {
+    box-shadow: 5px 5px black;
+  }
+</style>
+<script>
+  console.log('vai!')
+</script>

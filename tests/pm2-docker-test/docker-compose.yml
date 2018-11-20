@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pm2-services:
+    build: ./services
+    command: pm2-runtime start index.js
+    container_name: 'pm2-services'
+    depends_on:
+      - redis
+    links:
+      - redis
+  redis:
+    image: redis
+    container_name: redis-teste

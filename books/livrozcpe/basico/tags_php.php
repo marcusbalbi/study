@@ -1,0 +1,24 @@
+<?
+//ESTA TAG DE FECHAMANETO ESTA DISPONIVEL SOMENTE POR HABILIDAÇÃO NO PHP.INI
+//POR ISSO SEU USO É DESENCORAJADO
+echo "\nola mundo\n";
+
+//ESTA TAG SIGNIFICA UM ECHO MUITO UTIL QUANDO FOR ECOAR COM HTML
+?>
+<?="\nALO BRASIL\n"?> 
+
+<?php
+
+//QUANDO O ARQUIVO FOR PURAMENTE CODIGO PHP É FUNDAMENTAL REMOVER A TAG DE FECHA
+//MENTO POIS A MESMA PODE ACABAR POR ATRAPALHAR O PROCESSAMENTO DE OUTROS ARQUIVOS
+//PHPpor que o PHP iniciará o buffer de saída quando não existir intenção
+// do programador de enviar alguma saída neste ponto do script.
+echo "\nESTILO DE TAG MAIS UTILIZADO\n";
+
+?>
+
+<?php
+//GERA UM WARNING
+//session_start();
+//$_SESSION['TESTE'] = "AHA";
+?>

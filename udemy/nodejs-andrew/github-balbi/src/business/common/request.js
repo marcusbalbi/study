@@ -5,7 +5,7 @@ let baseParams = {
   json: true,
   headers: {
     'user-agent': 'BalbiAPI',
-    Authorization: '67d31544fb0878c4c0fb8b9bbaf1e2133ad82b44'
+    Authorization: ''
   }
 }
 

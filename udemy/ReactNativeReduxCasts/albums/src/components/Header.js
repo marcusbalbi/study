@@ -28,7 +28,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <View style={styles.container} >
-        <Text style={styles.titleStyle} >Albums</Text>
+        <Text style={styles.titleStyle} >{this.props.title || 'Albums'}</Text>
       </View>
     );
   }

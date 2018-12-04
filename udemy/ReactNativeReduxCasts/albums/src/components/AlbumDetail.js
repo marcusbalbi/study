@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking, Alert } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
 
 export default ({ album }) => {
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image, url } = album;
 
   return (
     <Card>
@@ -22,7 +22,14 @@ export default ({ album }) => {
         <Image style={styles.coverImage} source={{ uri: image }} />
       </CardSection>
       <CardSection>
-        <Button />
+        <Button onPress={() => { Linking.openURL(url); }}>
+          CLICA AQIUO!
+        </Button>
+      </CardSection>
+      <CardSection>
+        <Button onPress={() => { debugger; console.log('teste do clique'); }}>
+          Buy me!
+        </Button>
       </CardSection>
     </Card>
   );
@@ -48,7 +55,7 @@ const styles = {
     flex: 1
   },
   coverImage: {
-    height: 300,
+    height: 400,
     flex: 1,
     width: null
   }

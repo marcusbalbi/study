@@ -5,6 +5,8 @@ import SearchBar from './components/SearchBar'
 import VideoList from './components/VideoList'
 import VideoDetail from './components/VideoDetail'
 import search from 'youtube-search'
+import _ from 'lodash'
+
 class Root extends React.Component {
   constructor (props) {
     super(props)
@@ -12,26 +14,33 @@ class Root extends React.Component {
       videos: [],
       selected: null
     }
-    this.SearchVideos()
+  }
+  componentDidMount () {
+    this.SearchVideos('MBL')
   }
   render () {
     if (this.state.videos.length <= 0) {
-      return <h3>Loading...</h3>
+      return ( 
+        <div>
+          <h3>Loading...</h3>
+        </div>
+      )
     }
+    const search = _.debounce((term) => { this.SearchVideos(term) }, 800)
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearch={search} />
         <VideoDetail selected={this.state.selected} />
         <VideoList onVideoSelected={(video) => { this.changeVideo(video) }} list={this.state.videos} />
       </div>
     )
   }
-  SearchVideos () {
-    search('MBL', { key: window.YOUTUBE_KEY, maxResults: 5 }, (err, res) => {
+  SearchVideos (term) {
+    search(term, { key: window.YOUTUBE_KEY, maxResults: 5 }, (err, res) => {
       const videos = res.filter((item) => {
         item.link = item.link.replace('watch?v=', 'embed/')
         return item.kind.includes('video')
-      }) || []
+      })
       this.setState({ videos })
       if (videos[0]) {
         this.setState({ selected: videos[0] })

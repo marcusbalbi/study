@@ -1,0 +1,50 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2em;
+}
+
+.content {
+  display: flex;
+  max-height: 530px;
+  /* border: 1px solid black; */
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 1.5;
+  font-size: 2em;
+}
+
+.video-list {
+  overflow-y: scroll;
+  flex: 1 0 auto;
+  margin: 0;
+}
+
+.video-list li {
+  list-style: none;
+  display: flex;
+  padding: 0.3em;
+  margin: 0.5em;
+  cursor: pointer;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+}
+
+.video-list li:hover {
+  background-color: #C3C3C3;
+}
+
+.video-list li span {
+  /* font-size: 35px; */
+  margin-left: 0.5rem;
+}
+
+
+.video-detail {
+}

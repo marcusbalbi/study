@@ -28,15 +28,17 @@ class Root extends React.Component {
     }
     const search = _.debounce((term) => { this.SearchVideos(term) }, 800)
     return (
-      <div>
+      <div className="app">
         <SearchBar onSearch={search} />
-        <VideoDetail selected={this.state.selected} />
-        <VideoList onVideoSelected={(video) => { this.changeVideo(video) }} list={this.state.videos} />
+        <div className="content" >
+          <VideoDetail selected={this.state.selected} />
+          <VideoList onVideoSelected={(video) => { this.changeVideo(video) }} list={this.state.videos} />
+        </div>
       </div>
     )
   }
   SearchVideos (term) {
-    search(term, { key: window.YOUTUBE_KEY, maxResults: 5 }, (err, res) => {
+    search(term, { key: window.YOUTUBE_KEY, maxResults: 10 }, (err, res) => {
       const videos = res.filter((item) => {
         item.link = item.link.replace('watch?v=', 'embed/')
         return item.kind.includes('video')

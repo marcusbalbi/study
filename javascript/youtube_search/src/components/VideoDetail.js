@@ -7,7 +7,7 @@ const VideoDetail = (props) => {
     </div>
   }
   return (
-    <div>
+    <div className="video-detail">
       <h3>{props.selected.title}</h3>
       <iframe title="aaa" width="853" height="480" src={props.selected.link} 
         frameBorder="0"

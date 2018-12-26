@@ -3,7 +3,7 @@ import React from 'react'
 class VideoList extends React.Component {
   render () {
     return (
-      <ul>
+      <ul className="video-list">
         {this.renderVideos()}   
       </ul>
     )

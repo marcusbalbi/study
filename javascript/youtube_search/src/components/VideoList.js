@@ -11,11 +11,14 @@ class VideoList extends React.Component {
   renderVideos () {
     return this.props.list.map((item) => {
       return (
-        <li key={item.id} >
+        <li onClick={() => { this.selectVideo(item) }} key={item.id} >
           <img src={item.thumbnails.default.url} alt="IMAGEM AQUI"  />
           <span>{item.title}</span>
         </li>)
     })
+  }
+  selectVideo (item) {
+    this.props.onVideoSelected(item)
   }
 }
 

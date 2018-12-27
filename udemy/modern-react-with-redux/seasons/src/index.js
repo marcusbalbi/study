@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import SeasonDisplay from './SeasonDisplay'
+import Loading from './Loading'
 
 class Root extends Component {
   constructor (props) {
@@ -17,7 +18,7 @@ class Root extends Component {
       }
     )
   }
-  render () {
+  renderContent () {
     if (this.state.lat) {
       return (
         <div>
@@ -30,7 +31,12 @@ class Root extends Component {
       return <div>error: {this.state.errorMessage}</div>
     }
 
-    return <div>Loading...</div>
+    return <Loading>Loading...</Loading>
+  }
+  render () {
+   return (
+     <div>{this.renderContent()}</div>
+   )
   }
 }
 

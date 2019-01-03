@@ -6,6 +6,9 @@ router.post('', function (req, res, next) {
   const { email, password } = req.body
   LoginUser({ email, password })
     .then((pRes) => {
+      if (!pRes) {
+        throw new Error('Email or Password Incorrect!')
+      }
       res.json({ data: pRes });
     })
     .catch((pErr) => {

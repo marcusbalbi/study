@@ -5,7 +5,8 @@ module.exports = mongoose.model('users', {
   email: {
     type: String,
     unique: true,
-    required: true
+    required: true,
+    dropDups: true
   },
   password: {
     type: String,

@@ -1,10 +1,11 @@
 const User = require('../models/User')
-const crypto = require('crypto')
+const EncryptPassword = require('./EncryptPassword')
+
 module.exports = ({ email, password }) => {
   try {
     return User.create({
       email,
-      password: crypto.createHash('SHA1').update(password).digest('hex')
+      password: EncryptPassword(password)
     })
   } catch(pErr) {
     return Promise.reject(pErr)

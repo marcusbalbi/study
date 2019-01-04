@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Card, CardSection, Button, Input, Spinner } from './common'
-import { Text, View, Alert } from 'react-native'
+import { Text } from 'react-native'
 import Login from '../models/Login'
 import User from '../models/User'
 
@@ -12,13 +12,11 @@ class LoginForm extends Component {
     this.setState({error: '', loading: true})
     Login.login( { email, password })
       .then((pRes) => {
-        console.log(pRes)
-        Alert.alert('User Logged Success!'); 
         this.setState({ loading: false, error: '' }) 
       })
       .catch(async (perr) => {
         User.CreateUser({ email, password })
-          .then((pRes) => { Alert.alert('User Created Success'); this.setState({ loading: false, error: '' }) })
+          .then((pRes) => { this.setState({ loading: false, error: '' }) })
           .catch((pErr) => { this.setState({ error: 'Falha ao Registrar usuário! tente outro email e senha', loading: false }) })
        })
   }

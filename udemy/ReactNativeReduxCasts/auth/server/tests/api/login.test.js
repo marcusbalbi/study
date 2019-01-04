@@ -4,12 +4,12 @@ const app = require('../../app')
 const CreateUser = require('../../actions/CreateUser')
 
 describe('Login Api', () => {
-  const user = {
+  let user = {
     email: faker.internet.email(),
     password: faker.internet.password(8)
   }
   beforeAll((done) => {
-    CreateUser(user).then(() => done()).catch(() => done())
+    CreateUser(user).then((pRes) => { user._id = pRes._id; done()}).catch(() => done())
   })
   it('should login', (done) => {
     request(app).post('/login')
@@ -22,10 +22,18 @@ describe('Login Api', () => {
   })
   it('should not login', (done) => {
     request(app).post('/login')
-      .send({ email: 'wrongemail@gmail.com', password: 'abc123s' })
+    .send({ email: 'wrongemail@gmail.com', password: 'abc123s' })
+    .then((pRes) => {
+        jest.sna
+        expect(pRes.body.error).toBeDefined()
+        done()
+      })
+  })
+  it('should logout', (done) => {
+    request(app).delete('/login')
+      .send({ userID: user._id })
       .then((pRes) => {
-        expect(pRes.body.data).toBeDefined()
-        expect(pRes.body.data).toBeNull()
+        expect(pRes.body.data).toBeTruthy()
         done()
       })
   })

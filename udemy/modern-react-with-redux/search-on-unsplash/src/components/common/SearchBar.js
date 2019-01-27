@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-
+import './SearchBar.scss'
 class SearchBar extends Component {
   state = { query: '' }
 
   render () {
     return (
-      <form onSubmit={this.submit.bind(this)}>
+      <form className="search-bar-component" onSubmit={this.submit.bind(this)}>
         <label>
-          Buscar Imagem:
+          <span>Buscar Imagem:</span>
         <input onChange={(ev) => { this.setState({ query: ev.target.value }) }}  />
         </label>
       </form>

@@ -1,0 +1,23 @@
+.search-bar-component {
+  display: flex;
+  height: 100%;
+  label {
+    align-self: center;
+    margin-left: 2rem;
+    display: flex;
+    font-size: 4rem;
+    flex: 1;
+    margin: 10px;
+    span {
+      margin-right: 2rem;
+    }
+    input {
+      flex: 2;
+      font-size: 4rem;
+      outline: none;
+      height: 5rem;
+      border-radius: 15px;
+      padding: 0.3rem;
+    }
+  }
+}

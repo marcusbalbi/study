@@ -6,21 +6,27 @@ import config from './config'
 
 import './App.scss'
 class App extends Component {
+  state = { result: {} }
   render() {
     return (
       <div className="App">
         <div className="search-bar">
-        <SearchBar onSubmit={this.searchPictures} />
+        <SearchBar onSubmit={this.searchPictures.bind(this)} />
         </div>
         <div className="content">
-          <Content />
+          <Content result={this.state.result} />
         </div>
       </div>
     );
   }
-  searchPictures (query) {
-    axios.get(`https://api.unsplash.com/search/photos/?client_id=${config.unsplashKey}&query=${query}`)
-      .then(console.log)
+  async searchPictures (query) {
+    let result = await axios.get(`https://api.unsplash.com/search/photos/`, {
+      params: {
+        query,
+        client_id: config.unsplashKey
+      }
+    })
+    this.setState({ result: result.data })
   }
 }
 

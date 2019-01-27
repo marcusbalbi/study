@@ -4,7 +4,7 @@ class Content extends Component {
   render () {
     return (
       <div>
-        CONTENT FOUND
+        total found: {this.props.result.total || 0}
       </div>
     )
   }

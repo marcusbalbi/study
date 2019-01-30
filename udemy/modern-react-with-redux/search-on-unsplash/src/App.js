@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/common/SearchBar'
-import Content from './components/common/Content'
+import Content from './components/Content'
 import axios from 'axios'
 import config from './config'
 

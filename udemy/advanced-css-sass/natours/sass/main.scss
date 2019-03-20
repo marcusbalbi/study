@@ -22,49 +22,50 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80vh,0 100%);
+  
+  &__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__logo {
+    height: 70px;
+  }
+  
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.header__logo {
-  height: 70px;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 .header-title {
   color: $white;
   text-transform: uppercase;
-}
 
-.header-title--main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-}
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+  }
 
-.header-title--secondary {
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 31px;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  margin-bottom: 60px;
+  &--secondary {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 31px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    margin-bottom: 60px;
+  }
 }
 
 @keyframes moveInLeft {
@@ -103,33 +104,36 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 10px;
-  transition: all .2s;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+  }
 
-.btn--animated {
-  animation: moveInBottom .75s ease-out;
-  animation-delay: .40s;
-  animation-fill-mode: backwards;
-}
+  &--animated {
+    animation: moveInBottom .75s ease-out;
+    animation-delay: .40s;
+    animation-fill-mode: backwards;
+  }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($black, .2)
+  }
 
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
-}
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($black, .2)
+  }
 
-.btn--white {
-  background-color: $white;
-  color: $forecolor;
+  &--white {
+    background-color: $white;
+    color: $forecolor;
+  }
+
 }

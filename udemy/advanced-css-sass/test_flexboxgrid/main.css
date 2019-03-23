@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.test-flex {
+  display: flex;
+  background-color: red;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.item {
+  margin-right: 2rem;
+}
+
+.item:last-child {
+  margin: 0;
+}
+
+.a {
+  flex: 1;
+  background-color: chocolate;
+}
+
+.b {
+  flex: 1;
+  background-color: darkcyan;
+}
+
+.c {
+  flex: 1;
+  background-color: darkmagenta;
+}

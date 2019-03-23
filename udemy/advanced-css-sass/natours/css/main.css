@@ -3,51 +3,8 @@
   padding: 0; }
 
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
   background-color: #FFF;
   padding: 30px; }
-
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("img/nature1.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 30px;
-    left: 30px; }
-  .header__logo {
-    height: 70px; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.header-title {
-  color: #FFF;
-  text-transform: uppercase; }
-  .header-title--main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation-name: moveInLeft;
-    animation-duration: 1s; }
-  .header-title--secondary {
-    display: block;
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 31px;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    margin-bottom: 60px; }
 
 @keyframes moveInLeft {
   0% {
@@ -75,6 +32,31 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7; }
+
+.header-title {
+  color: #FFF;
+  text-transform: uppercase; }
+  .header-title--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+  .header-title--secondary {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 31px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    margin-bottom: 60px; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -99,3 +81,23 @@ body {
 .btn--white {
   background-color: #FFF;
   color: #777; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("img/nature1.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .header__logo {
+    height: 70px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

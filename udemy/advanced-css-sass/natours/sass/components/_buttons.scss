@@ -1,0 +1,34 @@
+
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+  }
+
+  &--animated {
+    animation: moveInBottom .75s ease-out;
+    animation-delay: .40s;
+    animation-fill-mode: backwards;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($black, .2)
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($black, .2)
+  }
+
+  &--white {
+    background-color: $white;
+    color: $forecolor;
+  }
+
+}

@@ -1,0 +1,31 @@
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.header-title {
+  color: $white;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+  }
+
+  &--secondary {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 31px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,47 @@
+.text {
+  position: absolute;
+  background: url('cloud.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20vh;
+  width: 20vw;
+  animation: teste 15s infinite;
+  transform: translateX(-20vw)
+}
+
+.text:active {
+  fill: tomato;
+}
+
+@keyframes teste {
+  0% {
+    margin-left: -10%;
+  }
+  50% {
+    margin-left: 70%;
+    opacity: 1;
+    animation-delay: .2s;
+  }
+  90% {
+    margin-left: 99%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  margin-top: 20vh;
+  background-image: url('arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 64px;
+  transition: .7s;
+}
+
+.arrow-clicked {
+  transform: rotate(90deg);
+  background-color: transparent;
+}

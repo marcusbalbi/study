@@ -12,14 +12,20 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "css-loader": "^2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "svg-inline-loader": "^0.8.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   }

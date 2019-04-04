@@ -1,0 +1,3 @@
+rootProject.name = 'native_redux_storage_example'
+
+include ':app'

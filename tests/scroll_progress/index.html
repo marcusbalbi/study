@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scroll Progress</title>
+</head>
+<body>
+  <div class="scroll"></div>
+  <script>
+    let bar = document.querySelector('.scroll')
+    window.onscroll = (e) => {
+    let offsetHeight = document.documentElement.offsetHeight - document.documentElement.clientHeight
+    let scrollPos = document.documentElement.scrollTop
+    let width = parseInt((document.documentElement.clientWidth *  scrollPos) / offsetHeight)
+      bar.style.width = width + 'px'
+    }
+  </script>
+</body>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    height: 200vh;
+    width: 100%;
+  }
+  .scroll {
+    position: fixed;
+    top: 0;
+    background-image: linear-gradient(to right, #B79891, #94716B);
+    height: 1.5rem;
+    width: 0;
+    transition: 0ms all ease-in;
+  }
+</style>
+</html>

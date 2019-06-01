@@ -7,14 +7,23 @@
   <title>Scroll Progress</title>
 </head>
 <body>
-  <div class="scroll"></div>
+  <div class="scroll">
+  </div>
   <script>
     let bar = document.querySelector('.scroll')
     window.onscroll = (e) => {
     let offsetHeight = document.documentElement.offsetHeight - document.documentElement.clientHeight
     let scrollPos = document.documentElement.scrollTop
     let width = parseInt((document.documentElement.clientWidth *  scrollPos) / offsetHeight)
-      bar.style.width = width + 'px'
+    bar.style.width = width + 'px'
+    let generateColor = function () {
+      let r = parseInt(Math.random() * 255)
+      let g = parseInt(Math.random() * 255)
+      let b = parseInt(Math.random() * 255)
+      return `rgba(${r},${g},${b})`
+    }
+    bar.style.backgroundColor =  generateColor()
+    document.body.style.backgroundColor = generateColor()
     }
   </script>
 </body>
@@ -26,14 +35,15 @@
   body {
     height: 200vh;
     width: 100%;
+    transition: 2s all ease-out;
   }
   .scroll {
     position: fixed;
     top: 0;
-    background-image: linear-gradient(to right, #B79891, #94716B);
+    /* background-image: linear-gradient(to right, #B79891, #94716B); */
     height: 1.5rem;
     width: 0;
-    transition: 0ms all ease-in;
+    transition: 1s all ease-out;
   }
 </style>
 </html>

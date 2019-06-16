@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
 import firebase from 'firebase'
 import { Provider } from 'react-redux'
@@ -7,8 +7,8 @@ import reducers from './reducers/index'
 import LoginForm from './components/LoginForm'
 import config from 'react-native-config'
 
+const store = createStore(reducers)
 export default () => {
-  
   var firebaseConfig = {
     apiKey: config.FIREBASE_API_KEY,
     authDomain: config.FIREBASE_AUTH_DOMAIN,
@@ -23,11 +23,16 @@ export default () => {
 
   firebase.database().ref('/test3').set('ok com config')
   return (
-    <Provider store={createStore(reducers)} >
-      <View>
-        <Text>TESTING REACT NATIVE!!</Text>
-        <LoginForm></LoginForm>
+    <Provider store={store} >
+      <View style={Styles.App} >
+        <LoginForm />
       </View>
     </Provider>
   )
+}
+
+const Styles = {
+  App: {
+    padding: 10
+  }
 }

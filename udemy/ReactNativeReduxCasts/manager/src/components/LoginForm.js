@@ -1,13 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
-import { emailChange, passwordChange } from '../actions'
+import { emailChange, passwordChange, login } from '../actions'
+
 const LoginForm = (props) => {
   const onEmailChange = (value) => {
     props.emailChange(value)
   }
   const onPasswordChange = (value) => {
     props.passwordChange(value)
+  }
+  const login = () => {
+    props.login(props.auth)
   }
   return (
     <View>
@@ -16,7 +20,7 @@ const LoginForm = (props) => {
         <Text style={Styles.formInput.text} >Email</Text>
         <TextInput 
           style={Styles.formInput.input} 
-          onChangeText={onEmailChange.bind(this)}
+          onChangeText={onEmailChange}
           value={props.auth.email} />
       </View>
       <View style={Styles.formInput.container} >
@@ -24,11 +28,11 @@ const LoginForm = (props) => {
         <TextInput
           secureTextEntry={true}
           style={Styles.formInput.input}
-          onChangeText={onPasswordChange.bind(this)}
+          onChangeText={onPasswordChange}
           value={props.auth.password} />
       </View>
       <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={login}>
           <Text style={[Styles.formInput.text, Styles.formInput.button]}>Logon</Text>
         </TouchableOpacity>
       </View>
@@ -81,6 +85,7 @@ const MapActionToProps = (dispatch) => {
   return {
     emailChange: (email) => dispatch(emailChange(email)),
     passwordChange: (password) => dispatch(passwordChange(password)),
+    login: (info) => dispatch(login(info))
   }
 }
 

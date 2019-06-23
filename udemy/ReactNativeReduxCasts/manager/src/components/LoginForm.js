@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native'
 import { emailChange, passwordChange, login } from '../actions'
 
 const LoginForm = (props) => {
@@ -11,7 +11,32 @@ const LoginForm = (props) => {
     props.passwordChange(value)
   }
   const login = () => {
-    props.login(props.auth)
+    const { email, password } = props.auth
+    props.login({ email, password })
+  }
+  const renderError = () => {
+    if (props.auth.error) {
+      return (
+        <View style={Styles.formInput.container} >
+          <Text style={Styles.formInput.errorText} >{props.auth.error}</Text>
+        </View>
+      )
+    }
+  }
+  const renderAction = () => {
+    if (props.auth.loading) {
+      return (
+        <ActivityIndicator size="large" color="#0000ff" />
+      )
+    } else {
+      return (
+        <View>
+          <TouchableOpacity onPress={login}>
+            <Text style={[Styles.formInput.text, Styles.formInput.button]}>Logon</Text>
+          </TouchableOpacity>
+        </View>
+      )
+    }
   }
   return (
     <View>
@@ -31,11 +56,8 @@ const LoginForm = (props) => {
           onChangeText={onPasswordChange}
           value={props.auth.password} />
       </View>
-      <View>
-        <TouchableOpacity onPress={login}>
-          <Text style={[Styles.formInput.text, Styles.formInput.button]}>Logon</Text>
-        </TouchableOpacity>
-      </View>
+      {renderError()}
+      {renderAction()}
     </View>
   )
 }
@@ -68,6 +90,11 @@ const Styles = {
       borderColor: '#CCC',
       fontSize: 22,
       paddingLeft: 10
+    },
+    errorText: {
+      fontSize: 22,
+      textAlign: 'center',
+      color: '#FF0000'
     },
     container: {
       marginBottom: 10

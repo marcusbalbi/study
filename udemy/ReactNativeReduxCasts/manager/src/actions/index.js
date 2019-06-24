@@ -1,6 +1,6 @@
 import { EMAIL_CHANGED, PASSWORD_CHANGED, LOGIN_USER_SUCCESS, LOGIN_USER, LOGIN_USER_FAILED } from './types'
+import { Actions } from 'react-native-router-flux'
 import firebase from 'firebase'
-
 export const emailChange = (payload) => {
   return {
     type: EMAIL_CHANGED,
@@ -23,6 +23,7 @@ export const login = (payload) => {
       .signInWithEmailAndPassword(payload.email, payload.password)
       .then(result => {
         if (result.user) {
+          Actions.main()
           dispatch({
             type: LOGIN_USER_SUCCESS,
             payload: result.user
@@ -34,6 +35,7 @@ export const login = (payload) => {
         return firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password)
           .then(result => {
             if (result.user) {
+              Actions.main()
               dispatch({
                 type: LOGIN_USER_SUCCESS,
                 payload: result.user

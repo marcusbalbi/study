@@ -39,8 +39,7 @@ const LoginForm = (props) => {
     }
   }
   return (
-    <View>
-      <Text style={Styles.title} >Login Page</Text>
+    <View style={Styles.container}>
       <View style={Styles.formInput.container} >
         <Text style={Styles.formInput.text} >Email</Text>
         <TextInput 
@@ -63,6 +62,9 @@ const LoginForm = (props) => {
 }
 
 const Styles = {
+  container: {
+    marginTop: 20
+  },
   title: {
     fontSize: 30,
     textAlign: 'center',

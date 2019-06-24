@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import { View, Text } from 'react-native'
 import firebase from 'firebase'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import reducers from './reducers/index'
-import LoginForm from './components/LoginForm'
 import config from 'react-native-config'
 import thunk from 'redux-thunk';
+import RouterComponent from './RouterComponent'
 
 const store = createStore(reducers, applyMiddleware(thunk))
 
@@ -22,19 +21,9 @@ export default () => {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
-  firebase.database().ref('/test3').set('ok com config')
   return (
     <Provider store={store} >
-      <View style={Styles.App} >
-        <LoginForm />
-      </View>
+      <RouterComponent />
     </Provider>
   )
-}
-
-const Styles = {
-  App: {
-    padding: 10
-  }
 }

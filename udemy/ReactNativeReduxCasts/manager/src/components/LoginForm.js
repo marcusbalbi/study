@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { View, Text, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native'
 import { emailChange, passwordChange, login } from '../actions'
+import { CardSection, Input } from '../common/components';
 
 const LoginForm = (props) => {
   const onEmailChange = (value) => {
@@ -37,33 +38,26 @@ const LoginForm = (props) => {
         </View>
       )
     }
-  }
+  } 
   return (
     <View style={Styles.container}>
-      <View style={Styles.formInput.container} >
-        <Text style={Styles.formInput.text} >Email</Text>
-        <TextInput 
-          style={Styles.formInput.input} 
-          onChangeText={onEmailChange}
-          value={props.auth.email} />
-      </View>
-      <View style={Styles.formInput.container} >
-        <Text style={Styles.formInput.text} >Password</Text>
-        <TextInput
-          secureTextEntry={true}
-          style={Styles.formInput.input}
-          onChangeText={onPasswordChange}
-          value={props.auth.password} />
-      </View>
+      <CardSection>
+        <Input label="Email" onTextChange={onEmailChange} value={props.auth.email} />
+      </CardSection>
+      <CardSection>
+        <Input hide label="Password" onTextChange={onPasswordChange} value={props.auth.password} />
+      </CardSection>
       {renderError()}
-      {renderAction()}
+      <CardSection>
+        {renderAction()}
+      </CardSection>
     </View>
   )
 }
 
 const Styles = {
   container: {
-    marginTop: 20
+    marginTop: 5
   },
   title: {
     fontSize: 30,

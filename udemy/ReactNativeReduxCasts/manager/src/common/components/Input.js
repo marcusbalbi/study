@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, TextInput, Text, StyleSheet } from 'react-native'
 
 const Input = props => {
+  const [hasFocus, setHasFocus] = useState(false)
+
   return (
     <View style={Styles.container} >
       <Text style={Styles.text} >{props.label}</Text>
       <TextInput
+        onFocus={() => { setHasFocus(true) }}
+        onBlur={() => { setHasFocus(false) }}
         secureTextEntry={props.hide}
-        style={Styles.input}
+        style={[Styles.input, hasFocus ? Styles.inputFocused : {}]}
         onChangeText={props.onTextChange}
         value={props.value} />
     </View>
@@ -26,6 +30,9 @@ const Styles = StyleSheet.create({
     borderColor: '#CCC',
     fontSize: 22,
     paddingLeft: 10
+  },
+  inputFocused: {
+    borderColor: '#0000A0'
   },
   container: {
     marginBottom: 10

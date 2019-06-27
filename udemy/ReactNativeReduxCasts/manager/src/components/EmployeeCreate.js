@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Picker  } from 'react-native'
+import { View, Picker, Text } from 'react-native'
 import { Input, CardSection, Button } from '../common/components'
 import { connect } from 'react-redux'
 import { updateEmployee } from '../actions'
@@ -15,6 +15,8 @@ const EmployeeCreate = props => {
         <Input label="Phone" value={props.form.phone} />
       </CardSection>
       <CardSection>
+        <Text style={{
+          fontSize: 26, color: '#666', textAlign: 'center', marginBottom: 5 }} >Shift</Text>
         <Picker selectedValue={props.form.shift}  onValueChange={value => { props.updateEmployee('shift', value) }} >
           <Picker.Item label="Sunday" value="SUNDAY"  />
           <Picker.Item label="Monday" value="MONDAY"  />

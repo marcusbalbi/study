@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { View, Text, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native'
-import { emailChange, passwordChange, login } from '../actions'
-import { CardSection, Input } from '../common/components';
+import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native'
+import { emailChange, login, passwordChange } from '../actions'
+import { CardSection, Input, Button } from '../common/components';
 
 const LoginForm = (props) => {
   const onEmailChange = (value) => {
@@ -31,11 +31,7 @@ const LoginForm = (props) => {
       )
     } else {
       return (
-        <View>
-          <TouchableOpacity onPress={login}>
-            <Text style={[Styles.formInput.text, Styles.formInput.button]}>Logon</Text>
-          </TouchableOpacity>
-        </View>
+        <Button text="Logon" onPress={login}/>
       )
     }
   } 

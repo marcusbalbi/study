@@ -1,16 +1,36 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React,{ useEffect } from 'react'
+import { Text, FlatList } from 'react-native'
+import { connect } from 'react-redux'
+import { EmployeeList } from '../components'
+import { fetchEmployees } from '../actions'
 
-const EmployeeList = () => {
+const EmployeeList = props => {
+  const renderItem = ({item}) => {
+    return (
+      <EmployeeList employee={item} />
+    )
+  }
   return (
-    <View>
-      <Text>EmployeeList</Text>
-      <Text>EmployeeList</Text>
-      <Text>EmployeeList</Text>
-      <Text>EmployeeList</Text>
-    </View>
+    <FlatList
+      data={props.employees}
+      keyExtractor={({item}) => item.id}
+      renderItem={renderItem}
+    />
   )
 }
 
+const MapActionsToProps = dispatch => {
+  return {
+    fetchEmployees: dispatch(fetchEmployees())
+  }
+}
 
-export default EmployeeList
+const MapStateToProps = state => {
+  return {
+    employees: Object.keys(state.employeeList).map((key) => {
+      return { ...state.employeeList[key], id: key }
+    })
+  }
+}
+
+export default connect(MapStateToProps, MapActionsToProps)(EmployeeList)

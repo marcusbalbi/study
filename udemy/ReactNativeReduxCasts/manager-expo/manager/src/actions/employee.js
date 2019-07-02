@@ -3,7 +3,9 @@ import { Actions } from 'react-native-router-flux'
 import {
   EMPLOYEE_UPDATE,
   EMPLOYEE_CREATE,
-  FETCH_EMPLOYEES
+  FETCH_EMPLOYEES,
+  RESET_EMPLOYEE,
+  SELECT_EMPLOYEE
 } from './types'
 
 export const updateEmployee = (prop, value) => {
@@ -36,5 +38,19 @@ export const fetchEmployees = () => {
         }
         return data
       })
+  }
+}
+
+export const selectEmployee = (employee) => {
+  Actions.employeeUpdate()
+  return {
+    type: SELECT_EMPLOYEE,
+    payload: employee
+  }
+}
+
+export const resetEmployee = () => {
+  return {
+    type: RESET_EMPLOYEE
   }
 }

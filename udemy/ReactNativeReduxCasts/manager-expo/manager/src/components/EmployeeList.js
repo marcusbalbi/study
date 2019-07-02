@@ -2,12 +2,19 @@ import React,{ useEffect } from 'react'
 import { Text, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import EmployeeListItem from './EmployeeListItem'
-import { fetchEmployees } from '../actions'
+import { fetchEmployees, selectEmployee } from '../actions'
 
 const EmployeeList = props => {
+  useEffect(() => {
+    props.fetchEmployees()
+  }, [])
+
   const renderItem = ({item}) => {
     return (
-      <EmployeeListItem employee={item} />
+      <EmployeeListItem 
+        employee={item}
+        onEmployeeSelected={(employee) => { props.editSelectedEmployee(employee) }}
+      />
     )
   }
   if (props.employees.length <= 0) {
@@ -26,7 +33,8 @@ const EmployeeList = props => {
 
 const MapActionsToProps = dispatch => {
   return {
-    fetchEmployees: dispatch(fetchEmployees())
+    fetchEmployees: () => { dispatch(fetchEmployees()) },
+    editSelectedEmployee: (employee) => { dispatch(selectEmployee(employee)) }
   }
 }
 

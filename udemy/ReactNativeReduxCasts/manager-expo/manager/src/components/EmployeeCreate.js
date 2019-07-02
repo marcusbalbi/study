@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Picker, Text } from 'react-native'
 import { Input, CardSection, Button } from '../common/components'
 import { connect } from 'react-redux'
-import { updateEmployee, saveEmployee } from '../actions'
+import { updateEmployee, saveEmployee, resetEmployee } from '../actions'
 
 const EmployeeCreate = props => {
+  useEffect(() => {
+    props.resetEmployee()
+  }, [])
   const onButtonPressed = () => {
     const { name, phone, shift } = props.form
     props.saveEmployee({name, phone, shift: shift || 'SUNDAY'})
@@ -51,7 +54,8 @@ const MapStateToProps = state => {
 const MapActionsToProps = (dispatch) => {
   return {
     updateEmployee: (prop, value) => dispatch(updateEmployee(prop, value)) ,
-    saveEmployee: (data) => dispatch(saveEmployee(data))
+    saveEmployee: (data) => dispatch(saveEmployee(data)),
+    resetEmployee: () => dispatch(resetEmployee()),
   }
 }
 

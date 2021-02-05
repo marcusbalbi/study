@@ -11,7 +11,7 @@ func createSliceOfNumbers(len int) []int {
 }
 
 func main() {
-	data := createSliceOfNumbers(600)
+	data := createSliceOfNumbers(10)
 
 	for _, n := range data {
 		if n%2 == 0 {

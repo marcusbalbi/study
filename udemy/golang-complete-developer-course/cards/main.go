@@ -29,6 +29,10 @@ func main() {
 
 	fmt.Println(cards.toString())
 
+	cards.saveToFile("first_deck.deck")
+
+	savedCards := newDeckFromFile("first_deck.deck")
+	savedCards.print()
 }
 
 // func newCard() string {

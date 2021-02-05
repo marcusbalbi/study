@@ -13,7 +13,11 @@ func main() {
 	// cards.print()
 
 	cards := newDeck()
-	cards.print()
+
+	hand, remainingCards := deal(cards, 5)
+
+	remainingCards.print()
+	hand.print()
 
 }
 

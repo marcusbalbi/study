@@ -8,12 +8,15 @@ func main() {
 	// fmt.Println(card)
 
 	// cards := []string{newCard(), "Ace of spades"}
-	cards := deck{newCard(), "Ace of spades"}
-	cards = append(cards, "two of hearts")
+	// cards := deck{newCard(), "Ace of spades"}
+	// cards = append(cards, "two of hearts")
+	// cards.print()
+
+	cards := newDeck()
 	cards.print()
 
 }
 
-func newCard() string {
-	return "five of Diamonds"
-}
+// func newCard() string {
+// 	return "five of Diamonds"
+// }

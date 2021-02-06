@@ -38,6 +38,9 @@ func main() {
 	marcus.updateName("Silva")
 	marcus.print()
 
+	test := "teste"
+	fmt.Println(&test)
+
 }
 
 func (p person) updateName(newName string) {

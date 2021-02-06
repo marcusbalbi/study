@@ -14,5 +14,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("Resp", resp)
+	bs := make([]byte, 99999)
+	dataRead, error := resp.Body.Read(bs)
+
+	fmt.Println(string(bs), dataRead)
 }

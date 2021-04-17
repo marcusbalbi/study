@@ -39,6 +39,9 @@ class Root extends React.Component {
   }
   SearchVideos (term) {
     search(term, { key: window.YOUTUBE_KEY, maxResults: 10 }, (err, res) => {
+      if (!res) {
+        return [];
+      }
       const videos = res.filter((item) => {
         item.link = item.link.replace('watch?v=', 'embed/')
         return item.kind.includes('video')

@@ -1,0 +1,1 @@
+window.YOUTUBE_KEY = "AABBCCDEE";

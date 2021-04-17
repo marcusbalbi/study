@@ -1,4 +1,5 @@
 import React from 'react'
+import VideoItem from './VideoItem'
 
 class VideoList extends React.Component {
   render () {
@@ -11,10 +12,7 @@ class VideoList extends React.Component {
   renderVideos () {
     return this.props.list.map((item) => {
       return (
-        <li onClick={() => { this.selectVideo(item) }} key={item.id} >
-          <img src={item.thumbnails.default.url} alt="IMAGEM AQUI"  />
-          <span>{item.title}</span>
-        </li>)
+        <VideoItem key={item.id} onClick={() => { this.selectVideo(item) }} video={item} />)
     })
   }
   selectVideo (item) {

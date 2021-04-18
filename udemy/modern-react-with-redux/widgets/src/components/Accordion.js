@@ -1,13 +1,15 @@
 import React from "react";
+import useItems from "../hooks/useItems";
 
-const Accordion = ({items}) => {
-  const renderedItems = () => {
-    return items.map((item) => {
+const Accordion = () => {
+  const {items, selectedItem, setSelectedItem} = useItems();
+  const renderItems = () => {
+    return items.map((item, i) => {
       return (
         <React.Fragment key={item.title} >
-          <div className="title active">
+          <div className="title active" onClick={() => { onTitleClicked(i); }}>
             <i className="dropdown icon"></i>
-            {item.title}
+            {item.title} - {selectedItem === i ? "SELECIONADO" : ""}
           </div>
           <div className="content active">
             <p>{item.content}</p>
@@ -16,9 +18,10 @@ const Accordion = ({items}) => {
       );
     })
   }
-  return (
-    <div className="ui styled accordion" >{renderedItems()}</div>
-  )
+  const onTitleClicked = (index) => {
+    setSelectedItem(index);
+  }
+  return <div className="ui styled accordion">{renderItems()}</div>;
 }
 
 

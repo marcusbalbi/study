@@ -3,17 +3,16 @@ import axios from "axios";
 
 const Search = () => {
   const [term, setTerm] = useState("");
-  const [debouncedTerm, setDebouncedTerm] = useState(term);
+  const [debouncedTerm, setDebouncedTerm] = useState("");
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
       setDebouncedTerm(term);
-
-      return () => {
-        clearTimeout(timerId);
-      };
-    }, 500);
+    }, 1000);
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [term]);
 
   useEffect(() => {
@@ -29,7 +28,9 @@ const Search = () => {
       });
       setResults(data.query.search);
     };
-    search();
+    if (debouncedTerm) {
+      search();
+    }
   }, [debouncedTerm]);
 
   const renderedResults = results.map((item) => {

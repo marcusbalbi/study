@@ -18,13 +18,18 @@ const Search = () => {
       });
       setResults(data.query.search);
     };
-    const timeoutId = setTimeout(() => {
-      if (term) {
-        search();
-      }
-    }, 500)
-    return () => {
-      clearTimeout(timeoutId);
+
+    if (term && !results.length) {
+      search();
+    } else {
+      const timeoutId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+        return () => {
+          clearTimeout(timeoutId);
+        };
+      }, 500);
     }
   }, [term]);
 
@@ -32,7 +37,12 @@ const Search = () => {
     return (
       <div className="item" key={item.pageid}>
         <div className="right floated content">
-          <a  href={`https://en.mediawiki.org/?curid=${item.pageid}`} className="ui button">Go</a>
+          <a
+            href={`https://en.mediawiki.org/?curid=${item.pageid}`}
+            className="ui button"
+          >
+            Go
+          </a>
         </div>
         <div className="content">
           <div className="header">{item.title}</div>

@@ -23,6 +23,7 @@ const App = () => {
       <Dropdown 
         options={options}
         onSelectedChange={(item) => { setSelected(item) }}
+        label={"Select a Color"}
         selected={selected} />
       {/* <Accordion /> */}
     </>

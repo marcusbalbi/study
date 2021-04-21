@@ -15,6 +15,10 @@ const options = [
     label: "Hindi",
     value: "hi",
   },
+  {
+    label: "Portuguese",
+    value: "pt",
+  },
 ];
 
 const Translate = () => {
@@ -23,7 +27,7 @@ const Translate = () => {
   return (
     <div>
       <div className="ui form">
-        <div className="field" >
+        <div className="field">
           <label>Enter Text</label>
           <input
             value={text}
@@ -32,16 +36,16 @@ const Translate = () => {
             }}
           />
         </div>
+        <Dropdown
+          selected={language}
+          label="Select a Language"
+          onSelectedChange={setLanguage}
+          options={options}
+        />
         <hr />
-        <h3 className="ui header" >Output</h3>
+        <h3 className="ui header">Output</h3>
         <Convert language={language} text={text} />
       </div>
-      <Dropdown
-        selected={language}
-        label="Select a Language"
-        onSelectedChange={setLanguage}
-        options={options}
-      />
     </div>
   );
 };

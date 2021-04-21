@@ -16,7 +16,6 @@ const options = [
     value: "hi",
   },
 ];
-// URL: https://translation.googleapis.com/language/translate/v2
 
 const Translate = () => {
   const [language, setLanguage] = useState(options[0]);

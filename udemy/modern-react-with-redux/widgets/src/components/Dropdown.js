@@ -1,5 +1,8 @@
 const Dropdown = ({ options, selected, onSelectedChange }) => {
   const renderedOptions = options.map((option) => {
+    if (selected === option) {
+      return null;
+    }
     return (
       <div key={option.value} className="item" onClick={() => {
         onSelectedChange(option)

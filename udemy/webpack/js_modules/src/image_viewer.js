@@ -1,3 +1,5 @@
+import "../styles/image_viewer.css";
+
 const image = document.createElement("img");
 
 image.src = "http://lorempixel.com.br/500/400/?1";

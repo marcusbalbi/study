@@ -3,13 +3,13 @@
 
 // console.log(sum(10, 5));
 
-
 const button = document.createElement("button");
-button.innerText = "Click me!"
+button.innerText = "Click me!";
 
 button.onclick = () => {
-  import()
-}
-
+  import("./image_viewer").then((module) => {
+    module.default();
+  });
+};
 
 document.body.appendChild(button);

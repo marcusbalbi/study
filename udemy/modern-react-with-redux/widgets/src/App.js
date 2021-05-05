@@ -4,6 +4,7 @@ import Dropdown from "./components/Dropdown";
 import Translate from "./components/Translate";
 import Search from "./components/Search";
 import Route from "./components/Route";
+import Header from "./components/Header";
 
 const dropDownOptions = [
   { label: "Black", value: "#0000" },
@@ -14,6 +15,7 @@ const App = () => {
   const [selected, setSelected] = useState(dropDownOptions[0]);
   return (
     <>
+      <Header />
       <Route path="/">
         <Accordion />
       </Route>

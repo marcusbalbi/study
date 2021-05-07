@@ -1,19 +1,22 @@
-import React from 'react'
+import React from "react";
 
-const VideoDetail = ({selected}) => {
+const VideoDetail = ({ selected }) => {
   if (selected === null) {
-    return <div>
-      
-    </div>
+    return <div />;
   }
   return (
     <div className="video-detail">
       <h3>{selected.title}</h3>
-      <iframe title="video player" width="853" height="480" src={selected.link} 
+      <iframe
+        title="video player"
+        width="853"
+        height="480"
+        src={selected.link}
         frameBorder="0"
-        allowFullScreen />
+        allowFullScreen
+      />
     </div>
-  )
-}
+  );
+};
 
-export default VideoDetail
+export default VideoDetail;

@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import youtubeSearch from "youtube-search";
 import _ from "lodash";
 
-const useVideos = ({ debounceTime }) => {
+const useVideos = ({ debounceTime, defaultTerm }) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videosList, setVideosList] = useState([]);
+
+  useEffect(() => {
+    search(defaultTerm);
+  }, [defaultTerm]);
 
   const search = _.debounce((term) => {
     searchVideos(term);

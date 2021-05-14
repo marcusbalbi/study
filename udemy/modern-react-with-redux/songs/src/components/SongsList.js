@@ -8,7 +8,7 @@ const SongsList = () => {
       {songs.map((song) => {
         return (
           <li>
-            {song.name} - {song.group}
+            {song.title} - {song.duration}
           </li>
         );
       })}

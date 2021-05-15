@@ -1,11 +1,12 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchPosts } from "../store/actions";
 const PostList = () => {
-  return (
-    <div>
-      Post List
-    </div>
-  )
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchPosts());
+  }, [dispatch]);
+  return <div>Post List</div>;
 };
 
 export default PostList;

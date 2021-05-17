@@ -1,15 +1,9 @@
 import { combineReducers } from "redux";
+import postReducer from "./postReducer";
 
-const posts = (posts = [], action) => {
-  if (action.type === "FETCH_POSTS") {
-    console.log("cheguei")
-    return action.payload
-  }
-  return posts;
-};
 
 const reducers = combineReducers({
-  posts,
+  posts: postReducer,
 });
 
 export default reducers;

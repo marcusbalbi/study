@@ -11,7 +11,11 @@ const PostList = () => {
     <div>
       <ul>
         {posts.map((post) => {
-          return <li>{post.title}</li>;
+          return (
+            <li>
+              <b>{post.title}</b><br />{post.body.substr(0, 150).concat("...")}.
+            </li>
+          );
         })}
       </ul>
     </div>

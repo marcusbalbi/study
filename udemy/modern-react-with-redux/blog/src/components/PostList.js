@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPosts } from "../store/actions";
+import { fetchPostsAndUsers } from "../store/actions";
 import UserHeader from "./UserHeader";
 const PostList = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   useEffect(() => {
-    dispatch(fetchPosts());
+    dispatch(fetchPostsAndUsers());
   }, [dispatch]);
 
   function renderPosts() {

@@ -7,19 +7,23 @@ const PostList = () => {
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
-  return (
-    <div>
-      <ul>
-        {posts.map((post) => {
-          return (
-            <li>
-              <b>{post.title}</b><br />{post.body.substr(0, 150).concat("...")}.
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
+
+  function renderPosts() {
+    return posts.map((post) => {
+      return (
+        <div className="item">
+          <i className="large middle aligned icon user" />
+          <div className="content">
+            <div className="description">
+              <h2>{post.title}</h2>
+              <p>{post.body}</p>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  }
+  return <div className="ui relaxed divided list">{renderPosts()}</div>;
 };
 
 export default PostList;

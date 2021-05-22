@@ -8,8 +8,7 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
   const users = new Set(posts.map((post) => post.userId));
   for (let id of users) {
-    console.log(id);
-    await dispatch(fetchUser(id));
+    dispatch(fetchUser(id));
   }
 };
 

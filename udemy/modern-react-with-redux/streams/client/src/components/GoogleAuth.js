@@ -13,9 +13,14 @@ const GoogleAuth = () => {
         .then(() => {
           auth.current = window.gapi.auth2.getAuthInstance();
           setIsSignedIn(auth.current.isSignedIn.get());
+          auth.current.isSignedIn.listen(onAuthChanged);
         });
     });
   }, []);
+
+  function onAuthChanged() {
+    setIsSignedIn(auth.current.isSignedIn.get());
+  }
 
   function renderAuthButton() {
     if (isSignedIn === null) {

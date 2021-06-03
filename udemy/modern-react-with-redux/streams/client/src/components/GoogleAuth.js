@@ -22,19 +22,27 @@ const GoogleAuth = () => {
     setIsSignedIn(auth.current.isSignedIn.get());
   }
 
+  function onSignin() {
+    auth.current.signIn();
+  }
+
+  function onSignout() {
+    auth.current.signOut();
+  }
+
   function renderAuthButton() {
     if (isSignedIn === null) {
       return null;
     } else if (isSignedIn === true) {
       return (
-        <button className="ui red google button">
-          <i className="google icon" ></i>
+        <button className="ui red google button" onClick={onSignout}>
+          <i className="google icon"></i>
           Sign out
         </button>
       );
     } else {
       return (
-        <button className="ui red google button">
+        <button className="ui red google button" onClick={onSignin}>
           <i className="google icon"></i>
           Sign in with Google
         </button>

@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { signIn, signOut } from "../store/actions";
 
 const GoogleAuth = () => {
-  const [isSignedIn, setIsSignedIn] = useState(null);
+  const isSignedIn = useSelector((state) => state.auth.isSignedIn);
   const dispatch = useDispatch();
   let auth = useRef();
   useEffect(() => {
@@ -16,7 +16,7 @@ const GoogleAuth = () => {
         })
         .then(() => {
           auth.current = window.gapi.auth2.getAuthInstance();
-          setIsSignedIn(auth.current.isSignedIn.get());
+          onAuthChanged(auth.current.isSignedIn.get());
           auth.current.isSignedIn.listen(onAuthChanged);
         });
     });
@@ -24,7 +24,7 @@ const GoogleAuth = () => {
 
   function onAuthChanged(isSignedIn) {
     if (isSignedIn) {
-      dispatch(signIn())
+      dispatch(signIn());
     } else {
       dispatch(signOut());
     }

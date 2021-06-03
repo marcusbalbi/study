@@ -24,7 +24,7 @@ const GoogleAuth = () => {
 
   function onAuthChanged(isSignedIn) {
     if (isSignedIn) {
-      dispatch(signIn());
+      dispatch(signIn(auth.current.currentUser.get().getId()));
     } else {
       dispatch(signOut());
     }

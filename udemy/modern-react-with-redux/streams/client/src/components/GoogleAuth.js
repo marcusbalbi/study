@@ -24,11 +24,21 @@ const GoogleAuth = () => {
 
   function renderAuthButton() {
     if (isSignedIn === null) {
-      return <div>"loading..."</div>;
+      return null;
     } else if (isSignedIn === true) {
-      return <div>"SignedIN!"</div>;
+      return (
+        <button className="ui red google button">
+          <i className="google icon" ></i>
+          Sign out
+        </button>
+      );
     } else {
-      return <div>"Not SIGNEDIN!"</div>;
+      return (
+        <button className="ui red google button">
+          <i className="google icon"></i>
+          Sign in with Google
+        </button>
+      );
     }
   }
 

@@ -1,14 +1,19 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 const StreamCreate = (props) => {
-  function renderInput(formProps) {
-    return <input {...formProps.input} />;
+  function renderInput({ input, label }) {
+    return (
+      <div className="field">
+        <label>{label}</label>
+        <input {...input} />
+      </div>
+    );
   }
 
   return (
-    <form>
-      <Field name="title" component={renderInput} />
-      <Field name="description" component={renderInput} />
+    <form className="ui form" >
+      <Field name="title" component={renderInput} label="Titulo:" />
+      <Field name="description" component={renderInput} label="Descrição:" />
     </form>
   );
 };

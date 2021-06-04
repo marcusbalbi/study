@@ -6,8 +6,10 @@ const StreamCreate = (props) => {
     return (
       <div className="field">
         <label>{label}</label>
-        <input {...input} />
-        {meta.error && <div className="ui pointing red basic label">{meta.error}</div>}
+        <input {...input} autoComplete="off" />
+        {meta.error && meta.touched && (
+          <div className="ui pointing red basic label">{meta.error}</div>
+        )}
       </div>
     );
   }, []);

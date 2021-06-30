@@ -70,8 +70,12 @@ export const deleteStream = (id) => {
 };
 
 export const editStream = (id, formValues) => {
-  return async (dispatch) => {
-    const response = await streams.put(`/streams/${id}`, formValues);
+  return async (dispatch, getState) => {
+    const { auth } = getState();
+    const response = await streams.put(`/streams/${id}`, {
+      ...formValues,
+      userId: auth.userId,
+    });
 
     dispatch({
       type: EDIT_STREAM,

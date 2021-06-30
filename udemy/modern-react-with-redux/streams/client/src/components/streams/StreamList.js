@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchStreams } from "../../store/actions";
 
 const StreamList = () => {
-  return <h2>Liost Streams</h2>;
+  const dispath = useDispatch();
+  useEffect(() => {
+    dispath(fetchStreams());
+  }, [dispath]);
+  return <h2>List Streams</h2>;
 };
 
 export default StreamList;

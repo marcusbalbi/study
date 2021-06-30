@@ -1,4 +1,4 @@
-import { omit } from "lodash";
+import { mapKeys, omit } from "lodash";
 import {
   FETCH_STREAM,
   FETCH_STREAMS,
@@ -9,6 +9,9 @@ import {
 
 const streamReducer = (state = {}, action) => {
   switch (action.type) {
+    case FETCH_STREAMS: {
+      return { ...state, ...mapKeys(action.payload, "id") };
+    }
     case FETCH_STREAM: {
       return { ...state, [action.payload.id]: action.payload };
     }

@@ -2,9 +2,11 @@ import React, { useCallback } from "react";
 import { Field, reduxForm } from "redux-form";
 import { useDispatch } from "react-redux";
 import { createStream } from "../../store/actions";
+import { useHistory } from "react-router-dom";
 
 const StreamCreate = (props) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const renderInput = useCallback(({ input, label, meta }) => {
     return (
       <div className="field">
@@ -18,7 +20,12 @@ const StreamCreate = (props) => {
   }, []);
 
   function onSubmit(formValues) {
-    dispatch(createStream(formValues));
+    const result = dispatch(createStream(formValues));
+    result.then(() => {
+      history.push("/");
+    }).catch(err => {
+      console.log("Falha ao gravar Stream: " + err.message);
+    });
   }
 
   return (

@@ -8,6 +8,13 @@ const GoogleAuth = () => {
   const dispatch = useDispatch();
   let auth = useRef();
   useEffect(() => {
+    function onAuthChanged(isSignedIn) {
+      if (isSignedIn) {
+        dispatch(signIn(auth.current.currentUser.get().getId()));
+      } else {
+        dispatch(signOut());
+      }
+    }
     window.gapi.load("client:auth2", () => {
       window.gapi.client
         .init({
@@ -20,15 +27,7 @@ const GoogleAuth = () => {
           auth.current.isSignedIn.listen(onAuthChanged);
         });
     });
-  }, []);
-
-  function onAuthChanged(isSignedIn) {
-    if (isSignedIn) {
-      dispatch(signIn(auth.current.currentUser.get().getId()));
-    } else {
-      dispatch(signOut());
-    }
-  }
+  }, [dispatch]);
 
   function onSignin() {
     auth.current.signIn();

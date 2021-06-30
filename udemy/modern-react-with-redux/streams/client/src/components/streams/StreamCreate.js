@@ -1,7 +1,10 @@
 import React, { useCallback } from "react";
 import { Field, reduxForm } from "redux-form";
+import { useDispatch } from "react-redux";
+import { createStream } from "../../store/actions";
 
 const StreamCreate = (props) => {
+  const dispatch = useDispatch();
   const renderInput = useCallback(({ input, label, meta }) => {
     return (
       <div className="field">
@@ -15,7 +18,7 @@ const StreamCreate = (props) => {
   }, []);
 
   function onSubmit(formValues) {
-    console.log(formValues);
+    dispatch(createStream(formValues));
   }
 
   return (

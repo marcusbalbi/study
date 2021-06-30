@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchStreams } from "../../store/actions";
 
 const StreamList = () => {
   const dispath = useDispatch();
   const streams = Object.values(useSelector((state) => state.streams));
-  const currentUserId = useSelector((state) => state.auth.userId);
+  const auth = useSelector((state) => state.auth);
 
   const renderAdmin = (stream) => {
-    if (stream.userId === currentUserId) {
+    if (stream.userId === auth.userId) {
       return (
         <div className="right floated content">
           <button className="ui button primary">Edit</button>
@@ -33,6 +34,16 @@ const StreamList = () => {
     });
   };
 
+  const renderCreate = () => {
+    if (auth.isSignedIn) {
+      return (
+        <div style={{ textAlign: 'right' }} >
+          <Link to="/streams/new" className="ui button primary" >Create Stream</Link>
+        </div>
+      );
+    }
+  };
+
   useEffect(() => {
     dispath(fetchStreams());
   }, [dispath]);
@@ -40,6 +51,7 @@ const StreamList = () => {
     <div>
       <h2>Streams:</h2>
       <div className="ui celled list">{renderList()}</div>
+      {renderCreate()}
     </div>
   );
 };

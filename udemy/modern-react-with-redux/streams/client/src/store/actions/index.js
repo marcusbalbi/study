@@ -8,7 +8,6 @@ import {
   FETCH_STREAM,
   FETCH_STREAMS,
 } from "../types";
-
 export const signIn = (userId) => {
   return {
     type: SIGN_IN,

@@ -12,8 +12,12 @@ const StreamList = () => {
     if (stream.userId === auth.userId) {
       return (
         <div className="right floated content">
-          <Link to={`/streams/edit/${stream.id}`}  className="ui button primary">Edit</Link>
-          <Link className="ui button negative">Delete</Link>
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+            Edit
+          </Link>
+          <Link to={`/streams/delete/`} className="ui button negative">
+            Delete
+          </Link>
         </div>
       );
     }
@@ -37,8 +41,10 @@ const StreamList = () => {
   const renderCreate = () => {
     if (auth.isSignedIn) {
       return (
-        <div style={{ textAlign: 'right' }} >
-          <Link to="/streams/new" className="ui button primary" >Create Stream</Link>
+        <div style={{ textAlign: "right" }}>
+          <Link to="/streams/new" className="ui button primary">
+            Create Stream
+          </Link>
         </div>
       );
     }

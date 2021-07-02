@@ -13,13 +13,10 @@ const Modal = (props) => {
         onClick={(e) => e.stopPropagation()}
         className="ui standard modal visible active"
       >
-        <div className="header">Remover Stream</div>
-        <div className="content">
-          Tem certeza que deseja excluir esta Stream ?
-        </div>
+        <div className="header">{props.title || "Modal"}</div>
+        <div className="content">{props.message || ""}</div>
         <div className="actions">
-          <button className="ui button primary">Remover</button>
-          <button className="ui button">Cancelar</button>
+          {props.actions || ""}
         </div>
       </div>
     </div>,

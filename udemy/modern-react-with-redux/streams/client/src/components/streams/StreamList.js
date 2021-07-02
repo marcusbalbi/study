@@ -15,7 +15,10 @@ const StreamList = () => {
           <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
             Edit
           </Link>
-          <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className="ui button negative"
+          >
             Delete
           </Link>
         </div>
@@ -30,7 +33,7 @@ const StreamList = () => {
           {renderAdmin(item)}
           <i className="large middle aligned icon camera" />
           <div className="content">
-            {item.title}
+            <Link to={`/streams/${item.id}`}>{item.title}</Link>
             <div className="description">{item.description}</div>
           </div>
         </div>

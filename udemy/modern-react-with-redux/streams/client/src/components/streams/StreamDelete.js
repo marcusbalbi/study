@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Modal from "../Modal";
-import { useHistory } from "react-router-dom";
-import { fetchStream } from "../../store/actions";
+import { useHistory, Link } from "react-router-dom";
+import { deleteStream, fetchStream } from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 
 const StreamDelete = ({ match }) => {
@@ -13,23 +13,40 @@ const StreamDelete = ({ match }) => {
   const renderActions = () => {
     return (
       <>
-        <button className="ui button negative" onClick={() => {}}>
+        <button
+          className="ui button negative"
+          onClick={() => {
+            const result = dispatch(deleteStream(match.params.id));
+            result
+              .then(() => {
+                history.push("/");
+              })
+              .catch((err) => {
+                console.log("Falha ao excluir Stream: " + err.message);
+              });
+          }}
+        >
           Remover
         </button>
-        <button className="ui button" onClick={() => {}}>
+        <Link to="/" className="ui button">
           Cancelar
-        </button>
+        </Link>
       </>
     );
   };
-    const stream = useSelector((state) => state.streams[match.params.id]);
+  const stream = useSelector((state) => state.streams[match.params.id]);
+
+  const renderMessage = () => {
     if (!stream) {
-      return <div>Loading...</div>;
+      return "Tem certeza que deseja excluir esta Stream ?";
     }
+    return `Tem certeza que deseja excluir a Stream ${stream.title} ?`;
+  };
+
   return (
     <Modal
       title="Remover Stream"
-      message={`Tem certeza que deseja excluir a Stream ${stream.title} ?`}
+      message={renderMessage()}
       actions={renderActions()}
       onDismiss={() => {
         history.push("/");

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "../Modal";
+import { useHistory } from "react-router-dom";
+import { fetchStream } from "../../store/actions";
+import { useDispatch, useSelector } from "react-redux";
 
-const StreamDelete = () => {
+const StreamDelete = ({ match }) => {
+  const history = useHistory();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchStream(match.params.id));
+  }, [dispatch, match.params.id]);
   const renderActions = () => {
     return (
       <>
@@ -14,15 +22,19 @@ const StreamDelete = () => {
       </>
     );
   };
+    const stream = useSelector((state) => state.streams[match.params.id]);
+    if (!stream) {
+      return <div>Loading...</div>;
+    }
   return (
-    <div>
-      Delete a Stream
-      <Modal
-        title="Remover Stream"
-        message="Tem certeza que deseja excluir esta Stream ?"
-        actions={renderActions()}
-      />
-    </div>
+    <Modal
+      title="Remover Stream"
+      message={`Tem certeza que deseja excluir a Stream ${stream.title} ?`}
+      actions={renderActions()}
+      onDismiss={() => {
+        history.push("/");
+      }}
+    />
   );
 };
 

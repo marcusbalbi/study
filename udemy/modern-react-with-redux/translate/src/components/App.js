@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import UserCreate from "./UserCreate";
 
 const App = () => {
   const [language, setLanguage] = useState("english");
 
   return (
     <div className="ui container">
-      <div>
+      <h2>
         Select a Language:
         <i className="flag us" onClick={() => setLanguage("english")} />
         <i className="flag fr" onClick={() => setLanguage("french")} />
-      </div>
+      </h2>
+      <UserCreate />
     </div>
   );
 };

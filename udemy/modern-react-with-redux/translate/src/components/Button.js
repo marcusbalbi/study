@@ -1,9 +1,9 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import LanguageContext from "../contexts/LanguageContext";
 const Button = () => {
-  return (
-    <button className="ui button primary">Submit</button>
-  );
+  const language = useContext(LanguageContext);
+  const text = language === "french" ? "Envoyer" : "Send";
+  return <button className="ui button primary">{text}</button>;
 };
 
 export default Button;

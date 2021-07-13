@@ -19,7 +19,7 @@
     "jquery": "^3.1.0",
     "jquery-mask-plugin": "^1.14.0",
     "lodash": "^4.16.6",
-    "node-sass": "^3.10.0",
+    "node-sass": "^4.13.1",
     "sass-loader": "^4.0.2",
     "toastr": "^2.1.2",
     "vue": "^2.0.1",

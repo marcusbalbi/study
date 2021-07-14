@@ -1,0 +1,32 @@
+{
+  "name": "",
+  "short_name": "",
+  "start_url": "",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#FFF",
+  "theme_color": "#3F51B5",
+  "description": "TESTE",
+  "dir": "ltr",
+  "lang": "en-US",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "",
+      "type": "",
+      "sizes": ""
+    },
+    {
+      "src": "",
+      "type": "",
+      "sizes": ""
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "",
+      "id": ""
+    }
+  ]
+}

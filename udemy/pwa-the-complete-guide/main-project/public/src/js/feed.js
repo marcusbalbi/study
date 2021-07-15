@@ -4,6 +4,14 @@ var closeCreatePostModalButton = document.querySelector('#close-create-post-moda
 
 function openCreatePostModal() {
   createPostArea.style.display = 'block';
+  console.log(deferredPrompt,"=============================");
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then(console.log)
+
+    deferredPrompt = null;
+  }
 }
 
 function closeCreatePostModal() {

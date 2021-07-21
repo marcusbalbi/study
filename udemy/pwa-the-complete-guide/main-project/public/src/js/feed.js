@@ -33,23 +33,23 @@ closeCreatePostModalButton.addEventListener("click", closeCreatePostModal);
 //   }
 // }
 
-function createCard() {
+function createCard(data) {
   var cardWrapper = document.createElement("div");
   cardWrapper.className = "shared-moment-card mdl-card mdl-shadow--2dp";
   var cardTitle = document.createElement("div");
   cardTitle.className = "mdl-card__title";
-  cardTitle.style.backgroundImage = 'url("/src/images/sf-boat.jpg")';
+  cardTitle.style.backgroundImage = `url("${data.image}")`;
   cardTitle.style.backgroundSize = "cover";
   cardTitle.style.height = "180px";
   cardWrapper.appendChild(cardTitle);
   var cardTitleTextElement = document.createElement("h2");
   cardTitleTextElement.className = "mdl-card__title-text";
-  cardTitleTextElement.textContent = "San Francisco Trip";
+  cardTitleTextElement.textContent = data.title;
   cardTitleTextElement.style.color = "white";
   cardTitle.appendChild(cardTitleTextElement);
   var cardSupportingText = document.createElement("div");
   cardSupportingText.className = "mdl-card__supporting-text";
-  cardSupportingText.textContent = "In San Francisco";
+  cardSupportingText.textContent =  data.location;
   cardSupportingText.style.textAlign = "center";
   // var cardSaveButton = document.createElement("button");
   // cardSaveButton.textContent = "Save";
@@ -60,10 +60,18 @@ function createCard() {
   sharedMomentsArea.appendChild(cardWrapper);
 }
 
-fetch("https://httpbin.org/get")
+function updateUI(data) {
+  for(let i=0;i< data.length;i++) {
+    createCard(data[i]);
+  }
+}
+
+fetch("https://balbigram-default-rtdb.firebaseio.com/posts.json")
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
-    createCard();
+    const dataArray = Object.values(data).map(v => v);
+    console.log(dataArray);
+    updateUI(dataArray);
   });

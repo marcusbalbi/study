@@ -35,6 +35,7 @@ closeCreatePostModalButton.addEventListener("click", closeCreatePostModal);
 
 function createCard(data) {
   var cardWrapper = document.createElement("div");
+  cardWrapper.className = "post-card-item";
   cardWrapper.className = "shared-moment-card mdl-card mdl-shadow--2dp";
   var cardTitle = document.createElement("div");
   cardTitle.className = "mdl-card__title";
@@ -49,7 +50,7 @@ function createCard(data) {
   cardTitle.appendChild(cardTitleTextElement);
   var cardSupportingText = document.createElement("div");
   cardSupportingText.className = "mdl-card__supporting-text";
-  cardSupportingText.textContent =  data.location;
+  cardSupportingText.textContent = data.location;
   cardSupportingText.style.textAlign = "center";
   // var cardSaveButton = document.createElement("button");
   // cardSaveButton.textContent = "Save";
@@ -61,17 +62,28 @@ function createCard(data) {
 }
 
 function updateUI(data) {
-  for(let i=0;i< data.length;i++) {
+  document.querySelector("#shared-moments").innerHTML = "";
+  for (let i = 0; i < data.length; i++) {
     createCard(data[i]);
   }
 }
 
-fetch("https://balbigram-default-rtdb.firebaseio.com/posts.json")
+const url = "https://balbigram-default-rtdb.firebaseio.com/posts.json";
+let networkDataReceived = false;
+fetch(url)
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
-    const dataArray = Object.values(data).map(v => v);
-    console.log(dataArray);
+    networkDataReceived = true;
+    const dataArray = Object.values(data).map((v) => v);
     updateUI(dataArray);
   });
+
+if ("indexedDB" in window) {
+  readAllData("posts").then((data) => {
+    if (!networkDataReceived) {
+      updateUI(data);
+    }
+  });
+}

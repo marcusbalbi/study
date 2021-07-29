@@ -180,7 +180,7 @@ self.addEventListener("sync", function (event) {
     event.waitUntil(
       readAllData("sync-posts").then(function (data) {
         for (var dt of data) {
-          fetch("https://balbigram-default-rtdb.firebaseio.com/posts.json", {
+          fetch("https://us-central1-balbigram.cloudfunctions.net/storePostData", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -190,14 +190,16 @@ self.addEventListener("sync", function (event) {
               id: dt.id,
               title: dt.title,
               location: dt.location,
-              // image:
-              //   "https://firebasestorage.googleapis.com/v0/b/pwagram-99adf.appspot.com/o/sf-boat.jpg?alt=media&token=19f4770c-fc8c-4882-92f1-62000ff06f16",
+              image:
+                "https://firebasestorage.googleapis.com/v0/b/balbigram.appspot.com/o/Marcos_0052.jpg?alt=media&token=8b157646-2c27-4128-a988-34f8db7ecc04",
             }),
           })
             .then(function (res) {
               console.log("Sent data", res);
               if (res.ok) {
-                deleteItemFromData("sync-posts", dt.id); // Isn't working correctly!
+                res.json().then(resData => {
+                  deleteItemFromData("sync-posts", resData.id);
+                })
               }
             })
             .catch(function (err) {

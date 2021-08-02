@@ -24,7 +24,7 @@ function readAllData(st) {
   });
 }
 
-function clearAllData() {
+function clearAllData(st) {
   return dbPromise.then((db) => {
     const tx = db.transaction(st, "readwrite");
     var store = tx.objectStore(st);

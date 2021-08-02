@@ -20,10 +20,20 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 function displayConfirmPermission() {
   const options = {
-    body: "Obrigado!!!"
+    body: "Obrigado por se registrar no app!",
+    icon: "/src/images/icons/app-icon-96x96.png",
+    image: "/src/images/sf-boat.jpg",
+    dir: "ltr",
+    lang: "en-US",
+    vibrate: [100, 50, 200],
+    badge: "/src/images/icons/app-icon-96x96.png",
   };
 
-  new Notification("Notificações ativas", options);
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.ready.then((swreg) => {
+      swreg.showNotification("Notificações ativas", options);
+    });
+  }
 }
 
 function askForNotificationPermission() {

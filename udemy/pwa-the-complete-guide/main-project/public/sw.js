@@ -230,3 +230,19 @@ self.addEventListener("notificationclose", function (event) {
   const notification = event.notification;
   console.log(notification);
 });
+
+self.addEventListener("push", function (event) {
+  console.log(event);
+  let data = { title: "New", content: "something new Happend!" };
+  if (event.data) {
+    data = JSON.parse(event.data.text());
+  }
+  const options = {
+    body: data.content,
+    icon: "/src/images/icons/app-icon-96x96.png",
+    vibrate: [100, 50, 200],
+    badge: "/src/images/icons/app-icon-96x96.png",
+  };
+
+  event.waitUntil(self.registration.showNotification(data.title, options));
+});

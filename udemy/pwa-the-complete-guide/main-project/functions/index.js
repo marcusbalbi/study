@@ -34,7 +34,7 @@ exports.storePostData = functions.https.onRequest((request, response) => {
           "BA5Kjx6HISaokoS5YRKLfWpi-gwE4Ly9L98uK_aMPxGXWsoVnmbVRKS83prFhzEzxoDxSmJTi4UUTFMAXCOMmf4",
           "vc2H0PFG8DXqdJnUiH8AwU5V7aXaBlArFvkZtyGSSu4"
       );
-      return admin.database().ref("subsscriptions").once("value");
+      return admin.database().ref("subscriptions").once("value");
     }).then((subs) => {
       subs.forEach((sub) => {
         const pushConfig = {

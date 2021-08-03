@@ -226,14 +226,38 @@ self.addEventListener("notificationclick", function (event) {
   }
 });
 
-self.addEventListener("notificationclose", function (event) {
-  const notification = event.notification;
+self.addEventListener("notificationclick", function (event) {
+  var notification = event.notification;
+  var action = event.action;
+
   console.log(notification);
+
+  if (action === "confirm") {
+    console.log("Confirm was chosen");
+    notification.close();
+  } else {
+    console.log(action);
+    event.waitUntil(
+      clients.matchAll().then(function (clis) {
+        var client = clis.find(function (c) {
+          return c.visibilityState === "visible";
+        });
+
+        if (client !== undefined) {
+          client.navigate(notification.data.url);
+          client.focus();
+        } else {
+          clients.openWindow(notification.data.url);
+        }
+        notification.close();
+      })
+    );
+  }
 });
 
 self.addEventListener("push", function (event) {
   console.log(event);
-  let data = { title: "New", content: "something new Happend!" };
+  let data = { title: "New", content: "something new Happend!", openUrl: "/" };
   if (event.data) {
     data = JSON.parse(event.data.text());
   }
@@ -242,6 +266,9 @@ self.addEventListener("push", function (event) {
     icon: "/src/images/icons/app-icon-96x96.png",
     vibrate: [100, 50, 200],
     badge: "/src/images/icons/app-icon-96x96.png",
+    data: {
+      url: data.openUrl,
+    },
   };
 
   event.waitUntil(self.registration.showNotification(data.title, options));

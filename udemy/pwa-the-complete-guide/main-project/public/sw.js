@@ -180,26 +180,29 @@ self.addEventListener("sync", function (event) {
     event.waitUntil(
       readAllData("sync-posts").then(function (data) {
         for (var dt of data) {
-          fetch("https://us-central1-balbigram.cloudfunctions.net/storePostData", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-            },
-            body: JSON.stringify({
-              id: dt.id,
-              title: dt.title,
-              location: dt.location,
-              image:
-                "https://firebasestorage.googleapis.com/v0/b/balbigram.appspot.com/o/Marcos_0052.jpg?alt=media&token=8b157646-2c27-4128-a988-34f8db7ecc04",
-            }),
-          })
+          fetch(
+            "https://us-central1-balbigram.cloudfunctions.net/storePostData",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify({
+                id: dt.id,
+                title: dt.title,
+                location: dt.location,
+                image:
+                  "https://firebasestorage.googleapis.com/v0/b/balbigram.appspot.com/o/Marcos_0052.jpg?alt=media&token=8b157646-2c27-4128-a988-34f8db7ecc04",
+              }),
+            }
+          )
             .then(function (res) {
               console.log("Sent data", res);
               if (res.ok) {
-                res.json().then(resData => {
+                res.json().then((resData) => {
                   deleteItemFromData("sync-posts", resData.id);
-                })
+                });
               }
             })
             .catch(function (err) {
@@ -211,14 +214,19 @@ self.addEventListener("sync", function (event) {
   }
 });
 
-self.addEventListener('notificationclick', function(event) {
+self.addEventListener("notificationclick", function (event) {
   const notification = event.notification;
   const action = event.action;
 
   console.log(notification);
 
   if (action === "confirm") {
-    console.log("confirmed!")
+    console.log("confirmed!");
     notification.close();
   }
-})
+});
+
+self.addEventListener("notificationclose", function (event) {
+  const notification = event.notification;
+  console.log(notification);
+});

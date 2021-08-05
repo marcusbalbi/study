@@ -1,4 +1,3 @@
-let deferredPrompt = null;
 
 let enablePushNotificationsButtons = document.querySelectorAll(
   ".enable-notifications"

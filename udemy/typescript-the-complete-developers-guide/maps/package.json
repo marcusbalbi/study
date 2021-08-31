@@ -9,6 +9,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/faker": "^5.5.8",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }

@@ -1,10 +1,11 @@
 /// <reference types="@types/google.maps" />
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     lng: number;
   };
-  markerContent(): string;
+  markerContent(): string;,
+  color: string;
 }
 
 export class CustomMap {

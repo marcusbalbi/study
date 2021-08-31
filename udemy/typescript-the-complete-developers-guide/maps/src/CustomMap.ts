@@ -11,18 +11,25 @@ export class CustomMap {
 
   constructor(elementId: string) {
     this.googleMap = new google.maps.Map(document.getElementById(elementId), {
-      zoom: 3,
+      zoom: 1,
       center: { lat: 0, lng: 0 },
     });
   }
 
   addMarker(mappeble: Mappable) {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mappeble.location.lat,
         lng: mappeble.location.lng,
       },
+    });
+
+    marker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: "hi there!",
+      });
+      infoWindow.open({ map: this.googleMap }, marker);
     });
   }
 }

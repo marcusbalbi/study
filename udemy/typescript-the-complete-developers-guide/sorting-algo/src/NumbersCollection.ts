@@ -1,4 +1,5 @@
-export class NumbersCollection {
+import { Sortable } from "./Sorter";
+export class NumbersCollection implements Sortable {
   constructor(private data: number[]) {}
 
   public swap(leftIndex: number, rightIndex: number): void {

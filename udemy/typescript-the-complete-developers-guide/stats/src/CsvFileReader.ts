@@ -1,9 +1,9 @@
 import fs from "fs";
 
 export class CsvFileReader {
-  private data: string[][] = [];
+  public data: string[][] = [];
 
-  constructor(private filename: string) {}
+  constructor(public filename: string) {}
 
   read(): void {
     this.data = fs

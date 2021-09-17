@@ -15,7 +15,6 @@ export class User {
 
   set(update: UserProps): void {
     Object.assign(this.data, update);
-    this.trigger("change");
   }
 
   on(eventName: string, callback: Callback): void {

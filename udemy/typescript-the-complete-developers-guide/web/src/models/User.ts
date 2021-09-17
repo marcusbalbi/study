@@ -15,6 +15,7 @@ export class User {
 
   set(update: UserProps): void {
     Object.assign(this.data, update);
+    this.trigger("change");
   }
 
   on(eventName: string, callback: Callback): void {
@@ -22,5 +23,16 @@ export class User {
       this.events[eventName] = [];
     }
     this.events[eventName].push(callback);
+  }
+
+  trigger(eventName: string): void {
+    const handlers = this.events[eventName];
+
+    if (!handlers || handlers.length == 0) {
+      return;
+    }
+    handlers.forEach((callback) => {
+      callback();
+    });
   }
 }

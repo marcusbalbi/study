@@ -16,10 +16,12 @@ import { User } from "./models/User";
 
 // console.log(user);
 
-const user = new User({ name: "new user", age: 45 });
+const user = User.buildUser({ name: "new user", age: 45 });
 
 user.on("change", () => {
   console.log("user changed!");
 });
 
 user.set({ age: 32 });
+
+user.save();

@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { Attributes } from "./Attributes";
 import { Eventing } from "./Eventing";
 import { Sync } from "./Sync";
 
@@ -13,13 +14,8 @@ const rootURL = "http://localhost:3000/users";
 export class User {
   events: Eventing = new Eventing();
   sync: Sync<UserProps> = new Sync(rootURL);
-  constructor(private data: UserProps) {}
-
-  get(propName: string): number | string {
-    return this.data[propName];
-  }
-
-  set(update: UserProps): void {
-    Object.assign(this.data, update);
+  attributes: Attributes<UserProps>;
+  constructor(attrs: UserProps) {
+    this.attributes = new Attributes(attrs);
   }
 }

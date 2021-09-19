@@ -1,4 +1,3 @@
-import axios, { AxiosResponse } from "axios";
 import { Attributes } from "./Attributes";
 import { Eventing } from "./Eventing";
 import { Sync } from "./Sync";
@@ -17,5 +16,21 @@ export class User {
   attributes: Attributes<UserProps>;
   constructor(attrs: UserProps) {
     this.attributes = new Attributes(attrs);
+  }
+
+  get get() {
+    return this.attributes.get;
+  }
+
+  set(update: UserProps): void {
+    this.attributes.set(update);
+  }
+
+  get on() {
+    return this.events.on;
+  }
+
+  get trigger() {
+    return this.events.trigger;
   }
 }

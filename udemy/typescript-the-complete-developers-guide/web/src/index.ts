@@ -27,10 +27,7 @@ import { User, UserProps } from "./models/User";
 
 // user.save();
 
-const collection = new Collection<User, UserProps>(
-  "http://localhost:3000/users",
-  User.buildUser
-);
+const collection = User.buildUserCollection();
 
 collection.on("change", () => {
   console.log(collection.models);

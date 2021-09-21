@@ -1,3 +1,4 @@
+import { Collection } from "./models/Collection";
 import { User } from "./models/User";
 
 // const user = new User({ name: "Balbi", age: 32 });
@@ -16,12 +17,20 @@ import { User } from "./models/User";
 
 // console.log(user);
 
-const user = User.buildUser({ name: "new user", age: 45 });
+// const user = User.buildUser({ name: "new user", age: 45 });
 
-user.on("change", () => {
-  console.log("user changed!");
+// user.on("change", () => {
+//   console.log("user changed!");
+// });
+
+// user.set({ age: 32 });
+
+// user.save();
+
+const collection = new Collection("http://localhost:3000/users");
+
+collection.on("change", () => {
+  console.log(collection.models);
 });
 
-user.set({ age: 32 });
-
-user.save();
+collection.fetch();

@@ -1,5 +1,5 @@
 import { Collection } from "./models/Collection";
-import { User } from "./models/User";
+import { User, UserProps } from "./models/User";
 
 // const user = new User({ name: "Balbi", age: 32 });
 
@@ -27,7 +27,10 @@ import { User } from "./models/User";
 
 // user.save();
 
-const collection = new Collection("http://localhost:3000/users");
+const collection = new Collection<User, UserProps>(
+  "http://localhost:3000/users",
+  User.buildUser
+);
 
 collection.on("change", () => {
   console.log(collection.models);

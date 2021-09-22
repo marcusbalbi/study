@@ -1,5 +1,11 @@
-import { Collection } from "./models/Collection";
-import { User, UserProps } from "./models/User";
+import { UserForm } from "./views/UserForm";
+
+const userForm = new UserForm(document.getElementById("root"));
+
+userForm.render();
+
+// import { Collection } from "./models/Collection";
+// import { User, UserProps } from "./models/User";
 
 // const user = new User({ name: "Balbi", age: 32 });
 
@@ -27,10 +33,10 @@ import { User, UserProps } from "./models/User";
 
 // user.save();
 
-const collection = User.buildUserCollection();
+// const collection = User.buildUserCollection();
 
-collection.on("change", () => {
-  console.log(collection.models);
-});
+// collection.on("change", () => {
+//   console.log(collection.models);
+// });
 
-collection.fetch();
+// collection.fetch();

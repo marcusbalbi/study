@@ -3,9 +3,14 @@ import { UserForm } from "./views/UserForm";
 
 const user = User.buildUser({ name: "Balbi", age: 25 });
 
-const userForm = new UserForm(document.getElementById("root"), user);
+const el = document.getElementById("root");
 
-userForm.render();
+if (el) {
+  const userForm = new UserForm(el, user);
+  userForm.render();
+} else {
+  throw new Error("Element root not found!");
+}
 
 // import { Collection } from "./models/Collection";
 // import { User, UserProps } from "./models/User";

@@ -1,15 +1,6 @@
-import { User } from "../models/User";
-export class UserForm {
-  constructor(public parent: Element, public model: User) {
-    this.bindModel();
-  }
-
-  bindModel(): void {
-    this.model.on("change", () => {
-      this.render();
-    });
-  }
-
+import { User, UserProps } from "../models/User";
+import { View } from "./View";
+export class UserForm extends View<User, UserProps> {
   eventsMap(): { [key: string]: () => void } {
     return {
       "click:.set-age": this.onSetAgeClick,

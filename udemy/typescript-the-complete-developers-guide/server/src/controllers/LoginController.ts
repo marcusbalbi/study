@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { requireAuth } from "../middlewares/requireAuth";
-import { get, controller, post } from "./decorators";
-import { use } from "./decorators/use";
+import { get, controller, post, use, bodyValidator } from "./decorators";
 
 @controller("")
 export class LoginController {
@@ -42,14 +41,10 @@ export class LoginController {
   }
 
   @post("/login")
+  @bodyValidator("email", "password")
   login(req: Request, res: Response): void {
     const { email, password } = req.body;
-    if (
-      email &&
-      password &&
-      email === "balbimarcus@gmail.com" &&
-      password === "abc123"
-    ) {
+    if (email === "balbimarcus@gmail.com" && password === "abc123") {
       req.session = { loggedIn: true };
       // res.send(`${email.toUpperCase()}:${password}`);
       res.redirect("/");

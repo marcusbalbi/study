@@ -13,7 +13,7 @@ const bodyValidators = function (keys: string[]): RequestHandler {
 
     for (let key of keys) {
       if (!req.body[key]) {
-        res.status(422).send("Invalid Request");
+        res.status(422).send(`Missing prop ${key}`);
         return;
       }
     }

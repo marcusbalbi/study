@@ -4,6 +4,10 @@ import { get, controller, post, use, bodyValidator } from "./decorators";
 
 @controller("")
 export class LoginController {
+  // @get("/add")
+  // add(a: number, b: number) {}
+
+
   @get("/")
   main(req: Request, res: Response): void {
     if (req.session?.loggedIn) {

@@ -1,10 +1,18 @@
-import e, { Request, Response, Router } from "express";
+import e, { NextFunction, Request, Response, Router } from "express";
 
 interface RequestWithBody extends Request {
   body: { [key: string]: string | undefined };
 }
 
 const router = Router();
+
+const requireAuth = (req: Request, res: Response, next: NextFunction) => {
+  if (req.session && req.session.loggedIn === true) {
+    next();
+    return;
+  }
+  return res.status(403).send("Not Allowed!");
+};
 
 router.get("/login", (req: Request, res: Response) => {
   res.send(`
@@ -56,5 +64,20 @@ router.get("/", (req: RequestWithBody, res: Response) => {
     `);
   }
 });
+
+router.get("/logout", (req: RequestWithBody, res: Response) => {
+  req.session = undefined;
+  res.redirect("/");
+});
+
+router.get(
+  "/protected",
+  [requireAuth],
+  (req: RequestWithBody, res: Response) => {
+    res.send(`
+    <h1>Welcome!!</h1>
+  `);
+  }
+);
 
 export { router };

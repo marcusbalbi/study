@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import e, { Request, Response, Router } from "express";
 
 interface RequestWithBody extends Request {
   body: { [key: string]: string | undefined };
@@ -25,10 +25,35 @@ router.get("/login", (req: Request, res: Response) => {
 router.post("/login", (req: RequestWithBody, res: Response) => {
   const { email, password } = req.body;
 
-  if (email) {
-    res.send(`${email.toUpperCase()}:${password}`);
+  if (
+    email &&
+    password &&
+    email === "balbimarcus@gmail.com" &&
+    password === "abc123"
+  ) {
+    req.session = { loggedIn: true };
+    // res.send(`${email.toUpperCase()}:${password}`);
+    res.redirect("/");
   } else {
-    res.status(422).send("Error: Email is required!");
+    res.status(422).send("Error: Invalid email or passord!");
+  }
+});
+
+router.get("/", (req: RequestWithBody, res: Response) => {
+  if (req.session?.loggedIn) {
+    res.send(`
+      <div>
+        <div>You are LoggedIn</div>
+        <a href="/logout">Logout!</a>
+      </div>
+    `);
+  } else {
+    res.send(`
+      <div>
+        <div>You are not LoggedIn</div>
+        <a href="/login">Login!</a>
+      </div>
+    `);
   }
 });
 

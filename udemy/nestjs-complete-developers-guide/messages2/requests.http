@@ -12,5 +12,5 @@ Content-Type: application/json
 }
 
 ### get a particular Message
-GET http://localhost:3000/messages/0
+GET http://localhost:3000/messages/22
 Accept: application/json

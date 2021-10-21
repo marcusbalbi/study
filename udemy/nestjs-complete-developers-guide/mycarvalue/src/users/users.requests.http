@@ -6,3 +6,13 @@ Content-Type: application/json
   "email": "blalba@blalba.com",
   "password": "21312312"
 }
+
+
+### find user
+GET http://localhost:3000/auth/3
+Content-Type: application/json
+
+
+### find all users
+GET http://localhost:3000/auth/?email=blalba@blalba.com
+Content-Type: application/json

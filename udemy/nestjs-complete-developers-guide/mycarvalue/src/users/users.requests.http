@@ -16,3 +16,18 @@ Content-Type: application/json
 ### find all users
 GET http://localhost:3000/auth/?email=blalba@blalba.com
 Content-Type: application/json
+
+
+### Remove a user
+DELETE  http://localhost:3000/auth/5
+Content-Type: application/json
+
+
+### Remove a user
+PATCH   http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+  "email": "blalba@blalba.com",
+  "password": "222222"
+}

@@ -9,7 +9,7 @@ Content-Type: application/json
 
 
 ### find user
-GET http://localhost:3000/auth/3
+GET http://localhost:3000/auth/33
 Content-Type: application/json
 
 
@@ -28,6 +28,5 @@ PATCH   http://localhost:3000/auth/1
 Content-Type: application/json
 
 {
-  "email": "blalba@blalba.com",
-  "password": "222222"
+  "password": "sssdas2"
 }

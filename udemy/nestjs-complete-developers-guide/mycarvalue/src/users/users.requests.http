@@ -9,7 +9,7 @@ Content-Type: application/json
 
 
 ### find user
-GET http://localhost:3000/auth/33
+GET http://localhost:3000/auth/1
 Content-Type: application/json
 
 

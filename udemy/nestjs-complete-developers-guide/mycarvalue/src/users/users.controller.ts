@@ -42,6 +42,12 @@ export class UsersController {
     return user;
   }
 
+  @Post('/signout')
+  async signout(@Session() session: any) {
+    session.userId = null;
+    return null;
+  }
+
   @Get('/:id')
   findUser(@Param('id') id: string) {
     return this.service.findOne(parseInt(id));

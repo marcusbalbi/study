@@ -22,9 +22,13 @@ export class UsersController {
     private service: UsersService,
     private authService: AuthService,
   ) {}
-  @Post('signup')
+  @Post('/signup')
   createUser(@Body() body: CreateUserDto) {
     return this.authService.signUp(body.email, body.password);
+  }
+  @Post('/signin')
+  signin(@Body() body: CreateUserDto) {
+    return this.authService.signIn(body.email, body.password);
   }
 
   @Get('/:id')

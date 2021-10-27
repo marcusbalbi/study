@@ -8,16 +8,20 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
+import { AuthService } from './auth.service';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UsersService } from './users.service';
 
 @Controller('auth')
 export class UsersController {
-  constructor(private service: UsersService) {}
+  constructor(
+    private service: UsersService,
+    private authService: AuthService,
+  ) {}
   @Post('signup')
   createUser(@Body() body: CreateUserDto) {
-    return this.service.create(body);
+    return this.authService.signUp(body.email, body.password);
   }
 
   @Get('/:id')

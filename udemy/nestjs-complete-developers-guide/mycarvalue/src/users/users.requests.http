@@ -16,6 +16,10 @@ Content-Type: application/json
   "password": "abc123"
 }
 
+### who am I
+GET http://localhost:3000/auth/whoami
+Content-Type: application/json
+
 
 ### find user
 GET http://localhost:3000/auth/1

@@ -52,6 +52,38 @@ describe('AuthService', () => {
       .then(() => {
         done(new Error('email should be in use'));
       })
-      .catch((err) => done());
+      .catch(() => done());
+  });
+  it('throws if signin is called with an unused email', (done) => {
+    service
+      .signIn('teste@test.com', 'abc123')
+      .then(() => {
+        done(new Error('email shouldnt  be found'));
+      })
+      .catch(() => done());
+  });
+  it('throws if an invalid password is provided', (done) => {
+    fakeUserService.find = () => {
+      return Promise.resolve([
+        { id: 1, email: 'teste@test.com', password: 'abc1234' } as User,
+      ]);
+    };
+    service
+      .signIn('teste@test.com', 'abc123')
+      .then(() => {
+        done(new Error('email shouldnt  be found'));
+      })
+      .catch((err) => {
+        done();
+      });
+  });
+  it('returns a user with email and password is provided correctly', async () => {
+    const userStored = await service.signUp('teste@test.com', 'abc123');
+
+    fakeUserService.find = () => {
+      return Promise.resolve([userStored]);
+    };
+    const user = await service.signIn('teste@test.com', 'abc123');
+    expect(user).toBeDefined();
   });
 });

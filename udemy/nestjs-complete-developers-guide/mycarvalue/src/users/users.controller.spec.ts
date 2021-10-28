@@ -1,4 +1,3 @@
-import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AuthService } from './auth.service';
 import { User } from './user.entity';
@@ -26,7 +25,9 @@ describe('UsersController', () => {
     };
     fakeAuthService = {
       // signup: () => {},
-      // signin: () => {},
+      signIn: (email: string, password: string) => {
+        return Promise.resolve({ id: 1, email, password } as User);
+      },
     };
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
@@ -63,5 +64,15 @@ describe('UsersController', () => {
     fakeUsersService.findOne = (id) => Promise.resolve(null);
     const user = await controller.findUser('223');
     expect(user).toBeNull();
+  });
+  it('signin updates session and returns user', async () => {
+    const session = { userId: -10 };
+
+    const user = await controller.signin(
+      { email: 'test@test.com', password: '123' },
+      session,
+    );
+    expect(user.id).toEqual(1);
+    expect(session.userId).toEqual(1);
   });
 });

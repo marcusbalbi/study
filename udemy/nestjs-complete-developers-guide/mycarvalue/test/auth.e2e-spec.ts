@@ -15,17 +15,16 @@ describe('Auth (e2e)', () => {
     await app.init();
   });
 
-  it('handles signup request', (done) => {
-    const email = 'abcde@test.com';
+  it('handles signup request', () => {
+    const email = 'abcde3323@test.com';
     return request(app.getHttpServer())
       .post('/auth/signup')
       .send({ email, password: 'test123' })
       .expect(201)
       .then((res) => {
-        const { id, emailCreated } = res.body;
+        const { id, email: emailCreated } = res.body;
         expect(id).toBeDefined();
         expect(emailCreated).toBe(email);
-        done();
       });
   });
 });

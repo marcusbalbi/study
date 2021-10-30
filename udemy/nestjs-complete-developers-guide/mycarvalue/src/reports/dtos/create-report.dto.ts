@@ -1,3 +1,4 @@
+import { Expose } from 'class-transformer';
 import {
   IsLatitude,
   IsLongitude,

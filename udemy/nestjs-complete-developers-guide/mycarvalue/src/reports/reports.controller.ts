@@ -1,9 +1,11 @@
 import {
   Body,
   Controller,
+  Get,
   Param,
   Patch,
   Post,
+  Query,
   UseGuards,
 } from '@nestjs/common';
 import { AdminGuard } from 'src/guards/admin.guard';
@@ -13,6 +15,7 @@ import { CurrentUser } from 'src/users/decorators/current-user.decorator';
 import { User } from 'src/users/user.entity';
 import { ApproveReportDto } from './dtos/approve-report.dto';
 import { CreateReportDto } from './dtos/create-report.dto';
+import { getEstimatesDto } from './dtos/get-estimates.dto';
 import { ReportDto } from './dtos/report.dto';
 import { ReportsService } from './reports.service';
 
@@ -31,5 +34,10 @@ export class ReportsController {
   @UseGuards(AdminGuard)
   approvedRpeort(@Param() id: string, @Body() body: ApproveReportDto) {
     return this.service.changeApproval(id, body.approved);
+  }
+
+  @Get()
+  getEstimate(@Query() query: getEstimatesDto) {
+    console.log(query);
   }
 }

@@ -19,3 +19,8 @@ Content-Type: application/json
 {
   "approved": true
 }
+
+### get estimates
+
+GET  http://localhost:3000/reports?make=Vw&model=up!&year=2015&lng=0&lat=0&mileage=2000
+Content-Type: application/json

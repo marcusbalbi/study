@@ -1,0 +1,12 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "price": 25000,
+  "make": "Vw",
+  "year": 2015,
+  "model": "up!",
+  "mileage": 35000,
+  "lng": 12.1255456,
+  "lat": 12.6654552
+}

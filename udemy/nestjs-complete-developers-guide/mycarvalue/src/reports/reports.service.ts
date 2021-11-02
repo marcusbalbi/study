@@ -30,14 +30,16 @@ export class ReportsService {
   async createEstimate(estimateDto: getEstimatesDto) {
     return this.repo
       .createQueryBuilder()
-      .select('*')
+      .select('AVG(price)', 'price')
       .where('make = :make', { make: estimateDto.make })
       .andWhere('model = :model', { model: estimateDto.model })
       .andWhere('lng - :lng BETWEEN -5 AND 5', { lng: estimateDto.lng })
       .andWhere('lat - :lat BETWEEN -5 AND 5', { lat: estimateDto.lat })
       .andWhere('year - :year BETWEEN -3 AND 3', { year: estimateDto.year })
+      .andWhere('approved IS TRUE')
       .orderBy('ABS(mileage - :mileage)', 'ASC')
       .setParameters({ mileage: estimateDto.mileage })
-      .getRawMany();
+      .limit(3)
+      .getRawOne();
   }
 }

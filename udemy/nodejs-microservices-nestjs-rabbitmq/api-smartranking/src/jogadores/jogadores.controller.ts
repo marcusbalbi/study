@@ -7,8 +7,8 @@ export class JogadoresController {
   constructor(private jogadoresService: JogadoresService) {}
 
   @Get()
-  obterJogadores() {
-    return this.jogadoresService.obterTodos();
+  consultarJogadores() {
+    return this.jogadoresService.consultarTodosJogadores();
   }
 
   @Post()

@@ -6,6 +6,8 @@ import {
   Param,
   Post,
   Query,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { CriarJogadorDto } from './dto/criar-jogador.dto';
 import { JogadoresService } from './jogadores.service';
@@ -23,6 +25,7 @@ export class JogadoresController {
   }
 
   @Post()
+  @UsePipes(ValidationPipe)
   async criarAtualizarJogador(@Body() criarJogadorDto: CriarJogadorDto) {
     await this.jogadoresService.criarAtualizarJogador(criarJogadorDto);
   }

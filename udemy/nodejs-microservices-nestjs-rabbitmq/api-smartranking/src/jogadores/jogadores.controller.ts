@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  Param,
   Post,
   Query,
   UsePipes,
@@ -11,13 +10,16 @@ import {
 } from '@nestjs/common';
 import { CriarJogadorDto } from './dto/criar-jogador.dto';
 import { JogadoresService } from './jogadores.service';
+import { JogadoresValidacaoParametrosPipe } from './pipes/jogadores-validacao-parametros-pipe';
 
 @Controller('api/v1/jogadores')
 export class JogadoresController {
   constructor(private jogadoresService: JogadoresService) {}
 
   @Get()
-  consultarJogadores(@Query('email') email: string) {
+  consultarJogadores(
+    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
+  ) {
     if (email) {
       return this.jogadoresService.consultarJogadoresPeloEmail(email);
     }
@@ -31,7 +33,9 @@ export class JogadoresController {
   }
 
   @Delete()
-  async removerJogador(@Query('email') email: string) {
+  async removerJogador(
+    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
+  ) {
     this.jogadoresService.removeJogadorPeloEmail(email);
   }
 }

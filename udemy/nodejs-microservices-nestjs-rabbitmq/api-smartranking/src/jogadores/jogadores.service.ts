@@ -30,7 +30,7 @@ export class JogadoresService {
   }
 
   async removeJogadorPeloEmail(email: string) {
-    return this.jogadorModel.remove({ email }).exec();
+    return this.jogadorModel.deleteOne({ email }).exec();
   }
 
   async criarAtualizarJogador(

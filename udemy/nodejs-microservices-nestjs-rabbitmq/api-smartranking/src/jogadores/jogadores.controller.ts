@@ -3,7 +3,9 @@ import {
   Controller,
   Delete,
   Get,
+  Param,
   Post,
+  Put,
   Query,
   UsePipes,
   ValidationPipe,
@@ -17,25 +19,36 @@ export class JogadoresController {
   constructor(private jogadoresService: JogadoresService) {}
 
   @Get()
-  consultarJogadores(
-    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
-  ) {
-    if (email) {
-      return this.jogadoresService.consultarJogadoresPeloEmail(email);
-    }
+  consultarJogadores() {
     return this.jogadoresService.consultarTodosJogadores();
+  }
+
+  @Get('/:_id')
+  consultarJogadorPeloId(
+    @Param('_id', JogadoresValidacaoParametrosPipe) id: string,
+  ) {
+    return this.jogadoresService.consultarJogadorPeloId(id);
   }
 
   @Post()
   @UsePipes(ValidationPipe)
-  async criarAtualizarJogador(@Body() criarJogadorDto: CriarJogadorDto) {
-    await this.jogadoresService.criarAtualizarJogador(criarJogadorDto);
+  async criarJogador(@Body() criarJogadorDto: CriarJogadorDto) {
+    await this.jogadoresService.criarJogador(criarJogadorDto);
   }
 
-  @Delete()
-  async removerJogador(
-    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
+  @Put('/:_id')
+  @UsePipes(ValidationPipe)
+  async atualizarJogador(
+    @Param('_id', JogadoresValidacaoParametrosPipe) id: string,
+    @Body() criarJogadorDto: CriarJogadorDto,
   ) {
-    this.jogadoresService.removeJogadorPeloEmail(email);
+    await this.jogadoresService.atualizarJogador(id, criarJogadorDto);
+  }
+
+  @Delete('/:_id')
+  async removerJogador(
+    @Param('_id', JogadoresValidacaoParametrosPipe) id: string,
+  ) {
+    this.jogadoresService.removeJogadorPeloId(id);
   }
 }

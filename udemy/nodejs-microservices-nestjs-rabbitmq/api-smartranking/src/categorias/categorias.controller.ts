@@ -1,6 +1,8 @@
 import {
   Body,
   Controller,
+  Get,
+  Param,
   Post,
   UsePipes,
   ValidationPipe,
@@ -40,5 +42,15 @@ export class CategoriasController {
         }
      */
     return this.categoriasService.criarCategoria(criarCategoriaDto);
+  }
+
+  @Get()
+  async consultarCategorias() {
+    return this.categoriasService.consultarTodasCategorias();
+  }
+
+  @Get('/:id')
+  async consultarCategoriaPeloId(@Param() id: string) {
+    return this.categoriasService.consultarCategoriaPeloId(id);
   }
 }

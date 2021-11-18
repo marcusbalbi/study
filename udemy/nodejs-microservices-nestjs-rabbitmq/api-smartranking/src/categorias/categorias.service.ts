@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CriarCategoriaDto } from './dto/CriarCatregoriaDto';
@@ -23,5 +27,19 @@ export class CategoriasService {
     const categoriaCriada = new this.categoriaModel(criarCategoriaDto);
 
     return categoriaCriada.save();
+  }
+
+  async consultarTodasCategorias(): Promise<Categoria[]> {
+    return this.categoriaModel.find().exec();
+  }
+
+  async consultarCategoriaPeloId(id: string): Promise<Categoria> {
+    const categoria = await this.categoriaModel.findOne({ _id: id }).exec();
+
+    if (!categoria) {
+      throw new NotFoundException(`Categoria com o id ${id} não encontrada!`);
+    }
+
+    return categoria;
   }
 }

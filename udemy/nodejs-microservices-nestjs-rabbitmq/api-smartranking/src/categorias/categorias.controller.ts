@@ -57,10 +57,19 @@ export class CategoriasController {
   }
 
   @Put('/:id')
+  @UsePipes(ValidationPipe)
   async atualizarCategoria(
     @Param('id') id: string,
     @Body() atualizarCategoriDto: AtualizarCategoriaDto,
   ) {
     return this.categoriasService.atualizarCategoria(id, atualizarCategoriDto);
+  }
+
+  @Post('/:id/jogadores/:idJogador')
+  async atribuirJogadorCategoria(
+    @Param('id') id: string,
+    @Param('idJogador') idJogador: string,
+  ) {
+    return this.categoriasService.atribuirJogador(id, idJogador);
   }
 }

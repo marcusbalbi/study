@@ -1,7 +1,6 @@
 import {
   Body,
   Controller,
-  Get,
   Logger,
   Post,
   UsePipes,

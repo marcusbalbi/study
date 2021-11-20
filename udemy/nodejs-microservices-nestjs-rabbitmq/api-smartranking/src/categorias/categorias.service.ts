@@ -5,7 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Jogador } from 'src/jogadores/interfaces/Jogador.interface';
+import { JogadoresService } from 'src/jogadores/jogadores.service';
 import { AtualizarCategoriaDto } from './dto/AtualizarCategoriaDto';
 import { CriarCategoriaDto } from './dto/CriarCatregoriaDto';
 import { Categoria } from './interfaces/categoria.interface';
@@ -13,9 +13,30 @@ import { Categoria } from './interfaces/categoria.interface';
 @Injectable()
 export class CategoriasService {
   constructor(
-    @InjectModel('Categoria') private categoriaModel: Model<Categoria>,
-    @InjectModel('Jogador') private jogadorModel: Model<Jogador>,
+    @InjectModel('Categoria') private readonly categoriaModel: Model<Categoria>,
+    private readonly jogadoresService: JogadoresService,
   ) {}
+
+  async consultarCategoriaDoJogador(idJogador: any): Promise<Categoria> {
+    //await this.jogadoresService.consultarJogadorPeloId(idJogador)
+
+    const jogadores = await this.jogadoresService.consultarTodosJogadores();
+
+    const jogadorFilter = jogadores.filter(
+      (jogador) => jogador._id == idJogador,
+    );
+
+    if (jogadorFilter.length == 0) {
+      throw new BadRequestException(`O id ${idJogador} não é um jogador!`);
+    }
+
+    return await this.categoriaModel
+      .findOne()
+      .where('jogadores')
+      .in(idJogador)
+      .exec();
+  }
+
   async criarCategoria(
     criarCategoriaDto: CriarCategoriaDto,
   ): Promise<Categoria> {
@@ -80,9 +101,9 @@ export class CategoriasService {
         );
       }
 
-      const jogador = await this.jogadorModel
-        .findOne({ _id: idJogador })
-        .exec();
+      const jogador = await this.jogadoresService.consultarJogadorPeloId(
+        idJogador,
+      );
 
       if (!jogador) {
         throw new BadRequestException(

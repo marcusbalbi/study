@@ -1,4 +1,9 @@
-import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  Logger,
+  NotFoundException,
+} from '@nestjs/common';
 import { RpcException } from '@nestjs/microservices';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -36,6 +41,22 @@ export class AppService {
 
   async consultarTodasCategorias(): Promise<Categoria[]> {
     return this.categoriaModel.find().populate('jogadores').exec();
+  }
+
+  async atualizarCategoria(id: string, categoria: Categoria) {
+    try {
+      const categoriaEncontrada = await this.categoriaModel.findOne({ _id: id }).exec();
+
+      if (!categoriaEncontrada) {
+        throw new RpcException(`Categoria com o id ${id} não encontrada!`);
+      }
+
+      return this.categoriaModel
+        .findOneAndUpdate({ _id: id }, { $set: categoria })
+        .exec();
+    } catch (e) {
+      throw new RpcException(e.message);
+    }
   }
 
   async consultarCategoriaPeloId(id: string): Promise<Categoria> {

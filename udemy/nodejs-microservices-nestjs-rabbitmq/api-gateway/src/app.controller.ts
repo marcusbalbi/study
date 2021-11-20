@@ -5,6 +5,7 @@ import {
   Logger,
   Param,
   Post,
+  Put,
   Query,
   UsePipes,
   ValidationPipe,
@@ -15,6 +16,7 @@ import {
   Transport,
 } from '@nestjs/microservices';
 import { Observable } from 'rxjs';
+import { AtualizarCategoriaDto } from './dtos/atualizar-categoria.dto';
 import { CriarCategoriaDto } from './dtos/criar-catregoria.dto';
 
 @Controller('api/v1')
@@ -41,6 +43,18 @@ export class AppController {
   }
   @Get('categorias')
   consultarCategoriaPeloId(@Query('id') id: string): Observable<any> {
-    return this.clientAdminBackend.send('consultar-categorias', {id});
+    return this.clientAdminBackend.send('consultar-categorias', { id });
+  }
+
+  @Put('categorias/:id')
+  @UsePipes(ValidationPipe)
+  atualizarCategoria(
+    @Param('id') id: string,
+    @Body() categoria: AtualizarCategoriaDto,
+  ): Observable<any> {
+    return this.clientAdminBackend.emit('atualizar-categoria', {
+      id,
+      categoria,
+    });
   }
 }

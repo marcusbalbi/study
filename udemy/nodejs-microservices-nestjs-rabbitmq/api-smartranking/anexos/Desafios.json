@@ -1,0 +1,68 @@
+// /desafios
+[{
+	"_id": "1f35042a-8bba-11ea-bc55-0242ac130003",
+	"dataHoraDesafio": "2020-05-04 18:00:00",
+	"status": "REALIZADO",
+	"dataHoraSolicitacao": "2020-04-25 08:30:00",
+	"dataHoraResposta": "2020-04-26 08:30:00",
+	"solicitante": "534e5168-8baf-11ea-bc55-0242ac130003",
+	"categoria": "A",
+	"jogadores": [{
+			"_id": "534e5168-8baf-11ea-bc55-0242ac130003"
+		},
+		{
+			"_id": "f27263d6-8bb6-11ea-bc55-0242ac130003"
+		}
+	],
+	"partida": {
+		"_id": "1f35042a-8bba-11ea-bc55-0242ac130003",
+		"def": "534e5168-8baf-11ea-bc55-0242ac130003",
+		"resultado": [{
+			"set": "6-1"
+		}, {
+			"set": "6-3"
+		}],
+		"jogadores": [{
+				"_id": "534e5168-8baf-11ea-bc55-0242ac130003"
+			},
+			{
+				"_id": "f27263d6-8bb6-11ea-bc55-0242ac130003"
+			}
+		]
+	}
+},
+{
+	"_id": "1f35042a-8bba-11ea-bc55-0242ac130003",
+	"dataHoraDesafio": "2020-06-01 18:00:00",
+	"status": "PENDENTE",
+	"dataHoraSolicitacao": "2020-05-20 08:30:00",
+	"dataHoraResposta": "",
+	"solicitante": "884e5168-8baf-11ea-bc55-0242ac130003",
+	"categoria": "B",
+	"jogadores": [{
+			"_id": "884e5168-8baf-11ea-bc55-0242ac130003"
+		},
+		{
+			"_id": "997263d6-8bb6-11ea-bc55-0242ac130003"
+		}
+	],
+	"partida": {}
+},
+{
+	"_id": "1f35042a-8bba-11ea-bc55-0242ac130003",
+	"dataHoraDesafio": "2020-01-10 18:00:00",
+	"status": "NEGADO",
+	"dataHoraResposta":"2020-01-05 08:30:00",
+	"dataHoraSolicitacao": "2020-01-01 08:30:00",
+	"solicitante": "534e5168-8baf-11ea-bc55-0242ac130003",
+	"jogadores": [{
+			"_id": "884e5168-8baf-11ea-bc55-0242ac130003"
+		},
+		{
+			"_id": "997263d6-8bb6-11ea-bc55-0242ac130003"
+		}
+	],
+	"categoria": "A",
+	"partida": {}
+}
+]

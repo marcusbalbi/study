@@ -1,0 +1,29 @@
+//Rankings - usar lodash para montar o ranking
+[{
+	"desafio":"",
+	"partida":"",
+	"categoria": "A",
+	"jogador":"534e5168-8baf-11ea-bc55-0242ac130003",
+	"evento":"VITORIA",
+	"operacao":"+",
+	"pontos":"100"
+},
+{
+	"desafio":"",
+	"partida":"",
+	"categoria": "A",
+	"jogador":"534e5168-8baf-11ea-bc55-0242ac130003",
+	"evento":"VITORIA_LIDER",
+	"operacao":"+",
+	"pontos":"100"
+},
+{
+	"desafio":"",
+	"partida":"",
+	"categoria": "A",
+	"jogador":"534e5168-8baf-11ea-bc55-0242ac130003",
+	"evento":"DERROTA",
+	"operacao":"+",
+	"pontos":"0"
+}
+]

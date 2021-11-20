@@ -15,6 +15,7 @@ async function bootstrap() {
       transport: Transport.RMQ,
       options: {
         urls: [process.env.RABBITMQ_URL],
+        noAck: false,
         queue: process.env.RABBITMQ_QUEUE_ADMIN,
       },
     },

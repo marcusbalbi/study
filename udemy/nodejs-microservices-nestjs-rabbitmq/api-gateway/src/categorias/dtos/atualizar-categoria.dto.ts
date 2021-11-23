@@ -6,7 +6,6 @@ export interface Evento {
   valor: number;
 }
 
-
 export class AtualizarCategoriaDto {
   @IsString()
   @IsOptional()

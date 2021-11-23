@@ -19,14 +19,14 @@ import { Observable } from 'rxjs';
 import { AtualizarCategoriaDto } from './dtos/atualizar-categoria.dto';
 import { CriarCategoriaDto } from './dtos/criar-catregoria.dto';
 
-@Controller('api/v1')
-export class AppController {
+@Controller('api/v1/categorias')
+export class CategoriasController {
   private logger: Logger;
 
   private clientAdminBackend: ClientProxy;
 
   constructor() {
-    this.logger = new Logger(AppController.name);
+    this.logger = new Logger(CategoriasController.name);
     this.clientAdminBackend = ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
@@ -36,17 +36,17 @@ export class AppController {
     });
   }
 
-  @Post('categorias')
+  @Post()
   @UsePipes(ValidationPipe)
   criarCategoria(@Body() dto: CriarCategoriaDto) {
     this.clientAdminBackend.emit('criar-categoria', dto);
   }
-  @Get('categorias')
+  @Get()
   consultarCategoriaPeloId(@Query('id') id: string): Observable<any> {
     return this.clientAdminBackend.send('consultar-categorias', { id });
   }
 
-  @Put('categorias/:id')
+  @Put(':id')
   @UsePipes(ValidationPipe)
   atualizarCategoria(
     @Param('id') id: string,

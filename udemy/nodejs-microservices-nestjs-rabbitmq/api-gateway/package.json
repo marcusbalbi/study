@@ -27,6 +27,7 @@
     "@nestjs/platform-express": "^8.0.0",
     "amqp-connection-manager": "^3.7.0",
     "amqp-lib": "^0.3.4",
+    "amqplib": "^0.8.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.2",
     "dotenv": "^10.0.0",

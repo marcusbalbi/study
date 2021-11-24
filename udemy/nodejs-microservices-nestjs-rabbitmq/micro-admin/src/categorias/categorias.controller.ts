@@ -1,4 +1,4 @@
-import { Controller, Get, Logger, Param } from '@nestjs/common';
+import { Controller, Logger } from '@nestjs/common';
 import {
   Ctx,
   EventPattern,
@@ -13,7 +13,7 @@ const ackErrors = ['E11000'];
 
 @Controller()
 export class CategoriasController {
-  private logger = new Logger(AppController.name);
+  private logger = new Logger(CategoriasController.name);
   constructor(private readonly appService: CategoriasService) {}
 
   @EventPattern('criar-categoria')

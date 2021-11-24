@@ -7,6 +7,7 @@ import {
   Param,
   Post,
   Put,
+  Query,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
@@ -36,13 +37,9 @@ export class JogadoresController {
   }
 
   @Get()
-  consultarJogadores() {
-    return this.clientAdminBackend.send('consultar-jogadores', {});
-  }
-
-  @Get('/:_id')
-  consultarJogadorPeloId(@Param('_id', ValidacaoParametrosPipe) id: string) {
-    return this.clientAdminBackend.send('consultar-jogador-por-id', { id });
+  consultarJogadores(@Query('id') id: string) {
+    console.log('aqui', id);
+    return this.clientAdminBackend.send('consultar-jogadores', { id });
   }
 
   @Post()

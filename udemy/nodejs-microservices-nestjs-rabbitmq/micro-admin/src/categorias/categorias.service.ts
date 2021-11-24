@@ -7,12 +7,12 @@ import {
 import { RpcException } from '@nestjs/microservices';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Categoria } from './interfaces/categorias/categoria.interface';
-import { Jogador } from './interfaces/jogadores/Jogador.interface';
+import { Jogador } from 'src/jogadores/Jogador.interface';
+import { Categoria } from './categoria.interface';
 
 @Injectable()
-export class AppService {
-  private logger = new Logger(AppService.name);
+export class CategoriasService {
+  private logger = new Logger(CategoriasService.name);
 
   constructor(
     @InjectModel('Categoria') private readonly categoriaModel: Model<Categoria>,
@@ -45,7 +45,9 @@ export class AppService {
 
   async atualizarCategoria(id: string, categoria: Categoria) {
     try {
-      const categoriaEncontrada = await this.categoriaModel.findOne({ _id: id }).exec();
+      const categoriaEncontrada = await this.categoriaModel
+        .findOne({ _id: id })
+        .exec();
 
       if (!categoriaEncontrada) {
         throw new RpcException(`Categoria com o id ${id} não encontrada!`);

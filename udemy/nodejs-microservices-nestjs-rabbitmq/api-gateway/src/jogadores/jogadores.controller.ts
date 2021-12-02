@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Delete,
@@ -45,6 +46,13 @@ export class JogadoresController {
   @Post()
   @UsePipes(ValidationPipe)
   async criarJogador(@Body() criarJogadorDto: CriarJogadorDto) {
+
+    const categoria = await this.clientAdminBackend.send('consultar-categoria', criarJogadorDto.categoria).toPromise();
+
+    if(!categoria) {
+      throw new BadRequestException('Categoria Invalida para Jogador!');
+    }
+
     this.clientAdminBackend.emit('criar-jogador', criarJogadorDto);
   }
 

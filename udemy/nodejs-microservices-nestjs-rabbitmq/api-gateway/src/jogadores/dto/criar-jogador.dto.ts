@@ -9,4 +9,8 @@ export class CriarJogadorDto {
   @IsString()
   @IsNotEmpty()
   nome: string;
+
+  @IsString()
+  @IsNotEmpty()
+  categoria: string;
 }

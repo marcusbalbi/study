@@ -7,4 +7,8 @@ export class AtualizarJogadorDto {
   @IsString()
   @IsNotEmpty()
   nome: string;
+
+  @IsString()
+  @IsNotEmpty()
+  categoria: string;
 }

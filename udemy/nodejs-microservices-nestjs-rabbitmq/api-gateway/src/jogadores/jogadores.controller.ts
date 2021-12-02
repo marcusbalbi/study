@@ -62,6 +62,13 @@ export class JogadoresController {
     @Param('_id', ValidacaoParametrosPipe) id: string,
     @Body() atualizarJogadorDto: AtualizarJogadorDto,
   ) {
+
+    const categoria = await this.clientAdminBackend.send('consultar-categoria', atualizarJogadorDto.categoria).toPromise();
+
+    if(!categoria) {
+      throw new BadRequestException('Categoria Invalida para Jogador!');
+    }
+
     this.clientAdminBackend.emit('atualizar-jogador', {
       id,
       jogador: atualizarJogadorDto,

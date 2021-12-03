@@ -6,9 +6,12 @@ import {
   Get,
   Logger,
   Param,
+  Patch,
   Post,
   Put,
   Query,
+  UploadedFile,
+  UseInterceptors,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
@@ -17,6 +20,7 @@ import {
   ClientProxyFactory,
   Transport,
 } from '@nestjs/microservices';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { ValidacaoParametrosPipe } from 'src/pipes/validacao-parametros.pipe';
 import { AtualizarJogadorDto } from './dto/atualizar-jogador.dto';
 import { CriarJogadorDto } from './dto/criar-jogador.dto';
@@ -46,10 +50,11 @@ export class JogadoresController {
   @Post()
   @UsePipes(ValidationPipe)
   async criarJogador(@Body() criarJogadorDto: CriarJogadorDto) {
+    const categoria = await this.clientAdminBackend
+      .send('consultar-categorias', criarJogadorDto.categoria)
+      .toPromise();
 
-    const categoria = await this.clientAdminBackend.send('consultar-categoria', criarJogadorDto.categoria).toPromise();
-
-    if(!categoria) {
+    if (!categoria) {
       throw new BadRequestException('Categoria Invalida para Jogador!');
     }
 
@@ -62,10 +67,11 @@ export class JogadoresController {
     @Param('_id', ValidacaoParametrosPipe) id: string,
     @Body() atualizarJogadorDto: AtualizarJogadorDto,
   ) {
+    const categoria = await this.clientAdminBackend
+      .send('consultar-categorias', atualizarJogadorDto.categoria)
+      .toPromise();
 
-    const categoria = await this.clientAdminBackend.send('consultar-categoria', atualizarJogadorDto.categoria).toPromise();
-
-    if(!categoria) {
+    if (!categoria) {
       throw new BadRequestException('Categoria Invalida para Jogador!');
     }
 
@@ -78,5 +84,15 @@ export class JogadoresController {
   @Delete('/:_id')
   async removerJogador(@Param('_id', ValidacaoParametrosPipe) id: string) {
     this.clientAdminBackend.emit('remover-jogador', { id });
+  }
+
+  @Patch('/:_id/avatar')
+  @UseInterceptors(FileInterceptor('avatar'))
+  async carregarAvavar(
+    @Param('_id', ValidacaoParametrosPipe) id: string,
+    @UploadedFile() file,
+  ) {
+    console.log(id, file, '====');
+    // this.clientAdminBackend.emit('remover-jogador', { id });
   }
 }

@@ -20,7 +20,7 @@ export class JogadoresController {
   async criarJogador(@Payload() jogador: Jogador, @Ctx() context: RmqContext) {
     const channel = context.getChannelRef();
     const originalMessage = context.getMessage();
-    this.logger.log(`Jogador Recebida: ${JSON.stringify(jogador)}`);
+    this.logger.log(`Jogador Recebido: ${JSON.stringify(jogador)}`);
     try {
       await this.service.criarJogador(jogador);
       await channel.ack(originalMessage);

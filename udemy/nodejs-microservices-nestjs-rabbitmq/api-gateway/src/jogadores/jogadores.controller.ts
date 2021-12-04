@@ -20,8 +20,9 @@ import {
   ClientProxyFactory,
   Transport,
 } from '@nestjs/microservices';
-import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { ValidacaoParametrosPipe } from 'src/pipes/validacao-parametros.pipe';
+import { GoogleStorageService } from 'src/storage/google-storage.service';
 import { AtualizarJogadorDto } from './dto/atualizar-jogador.dto';
 import { CriarJogadorDto } from './dto/criar-jogador.dto';
 
@@ -30,7 +31,7 @@ export class JogadoresController {
   private logger: Logger;
   private clientAdminBackend: ClientProxy;
 
-  constructor() {
+  constructor(private readonly uploadFileService: GoogleStorageService) {
     this.logger = new Logger(JogadoresController.name);
     this.clientAdminBackend = ClientProxyFactory.create({
       transport: Transport.RMQ,
@@ -43,7 +44,6 @@ export class JogadoresController {
 
   @Get()
   consultarJogadores(@Query('id') id: string) {
-    console.log('aqui', id);
     return this.clientAdminBackend.send('consultar-jogadores', { id });
   }
 
@@ -92,7 +92,22 @@ export class JogadoresController {
     @Param('_id', ValidacaoParametrosPipe) id: string,
     @UploadedFile() file,
   ) {
-    console.log(id, file, '====');
-    // this.clientAdminBackend.emit('remover-jogador', { id });
+
+    const jogador = await this.clientAdminBackend.send('consultar-jogadores', { id });
+
+    if (!jogador) {
+      throw new BadRequestException('Invalid id');
+    }
+
+    const url = await this.uploadFileService.uploadFile(file, id);
+
+    const atualizarJogadorDto: AtualizarJogadorDto = {
+      urlFotoJogador: url,
+    };
+
+    this.clientAdminBackend.emit('atualizar-jogador', {
+      id,
+      jogador: atualizarJogadorDto,
+    });
   }
 }

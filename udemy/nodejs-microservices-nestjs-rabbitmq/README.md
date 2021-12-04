@@ -2,4 +2,4 @@
 
 - Criar vhost smartranking
 
-- baixar service-accound.json para google storage
+- baixar service-account.json para google storage

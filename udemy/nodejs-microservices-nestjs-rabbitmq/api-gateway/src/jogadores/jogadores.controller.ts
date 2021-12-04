@@ -15,6 +15,7 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import {
   ClientProxy,
   ClientProxyFactory,
@@ -31,13 +32,16 @@ export class JogadoresController {
   private logger: Logger;
   private clientAdminBackend: ClientProxy;
 
-  constructor(private readonly uploadFileService: GoogleStorageService) {
+  constructor(
+    private readonly uploadFileService: GoogleStorageService,
+    private readonly config: ConfigService,
+  ) {
     this.logger = new Logger(JogadoresController.name);
     this.clientAdminBackend = ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        urls: [process.env.RABBITMQ_URL],
-        queue: process.env.RABBITMQ_QUEUE_ADMIN,
+        urls: [config.get('RABBITMQ_URL')],
+        queue: config.get('RABBITMQ_QUEUE_ADMIN'),
       },
     });
   }
@@ -92,8 +96,9 @@ export class JogadoresController {
     @Param('_id', ValidacaoParametrosPipe) id: string,
     @UploadedFile() file,
   ) {
-
-    const jogador = await this.clientAdminBackend.send('consultar-jogadores', { id });
+    const jogador = await this.clientAdminBackend.send('consultar-jogadores', {
+      id,
+    });
 
     if (!jogador) {
       throw new BadRequestException('Invalid id');

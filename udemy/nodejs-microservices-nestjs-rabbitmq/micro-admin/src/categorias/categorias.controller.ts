@@ -1,4 +1,4 @@
-import { Controller, Get, Logger, Param } from '@nestjs/common';
+import { Controller, Logger } from '@nestjs/common';
 import {
   Ctx,
   EventPattern,
@@ -6,15 +6,15 @@ import {
   Payload,
   RmqContext,
 } from '@nestjs/microservices';
-import { AppService } from './app.service';
-import { Categoria } from './interfaces/categorias/categoria.interface';
+import { Categoria } from './categoria.interface';
+import { CategoriasService } from './categorias.service';
 
 const ackErrors = ['E11000'];
 
 @Controller()
-export class AppController {
-  private logger = new Logger(AppController.name);
-  constructor(private readonly appService: AppService) {}
+export class CategoriasController {
+  private logger = new Logger(CategoriasController.name);
+  constructor(private readonly appService: CategoriasService) {}
 
   @EventPattern('criar-categoria')
   async criarCategoria(
@@ -56,10 +56,7 @@ export class AppController {
   }
 
   @EventPattern('atualizar-categoria')
-  async atualizarCategoria(
-    @Payload() data: any,
-    @Ctx() context: RmqContext,
-  ) {
+  async atualizarCategoria(@Payload() data: any, @Ctx() context: RmqContext) {
     const channel = context.getChannelRef();
     const originalMessage = context.getMessage();
     this.logger.log(`Categoria para ser atualizada: ${JSON.stringify(data)}`);

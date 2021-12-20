@@ -21,7 +21,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@google-cloud/storage": "^5.16.1",
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.1.5",
     "@nestjs/core": "^8.0.0",
     "@nestjs/microservices": "^8.2.2",
     "@nestjs/platform-express": "^8.0.0",
@@ -31,6 +33,8 @@
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.2",
     "dotenv": "^10.0.0",
+    "firebase": "^9.6.0",
+    "firebase-admin": "^10.0.0",
     "moment-timezone": "^0.5.34",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

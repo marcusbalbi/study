@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # mongodb:
+  #   image: mongo:4.4.4
+  #   container_name: mongo-smartranking
+  #   ports:
+  #     - 27017:27017
+  #   volumes:
+  #     - ./.docker/mongo:/data/db
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=root
+  #     - MONGO_INITDB_ROOT_PASSWORD=secret
+  #     - MONGO_INITDB_ROOT_DATABASE=sradminbackend
+  #   networks:
+  #     - smartranking
+  # mongo-express:
+  #   image: mongo-express
+  #   restart: always
+  #   ports:
+  #     - 8081:8081
+  rabbitmq:
+    image: 'rabbitmq:3.8-management-alpine'
+    container_name: rabbitmq-smartranking
+    hostname: rabbitmq
+    ports:
+      - 15672:15672
+      - 5672:5672
+    volumes:
+      -  ./.docker/rabbitmqdata:/var/lib/rabbitmq/mnesia
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    networks:
+      - smartranking
+
+networks:
+  smartranking:
+    driver: bridge

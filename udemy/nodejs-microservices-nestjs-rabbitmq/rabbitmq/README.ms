@@ -1,1 +1,0 @@
-- Criar vhost smartranking

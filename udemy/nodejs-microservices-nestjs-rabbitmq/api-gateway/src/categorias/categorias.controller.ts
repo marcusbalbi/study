@@ -10,6 +10,7 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import {
   ClientProxy,
   ClientProxyFactory,
@@ -25,13 +26,13 @@ export class CategoriasController {
 
   private clientAdminBackend: ClientProxy;
 
-  constructor() {
+  constructor(private readonly config: ConfigService) {
     this.logger = new Logger(CategoriasController.name);
     this.clientAdminBackend = ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
-        urls: [process.env.RABBITMQ_URL],
-        queue: process.env.RABBITMQ_QUEUE_ADMIN,
+        urls: config.get('RABBITMQ_URL]'),
+        queue: config.get('RABBITMQ_QUEUE_ADMIN'),
       },
     });
   }

@@ -18,4 +18,9 @@ describe('Money', () => {
     expect(new Dollar(5).equals(new Dollar(5))).toBe(true)
     expect(new Dollar(5).equals(new Dollar(10))).toBe(false)
   })
+
+  test('should return true if euros of the same value are compared', () => {
+    expect(new Euro(5).equals(new Euro(5))).toBe(true)
+    expect(new Euro(5).equals(new Euro(10))).toBe(false)
+  })
 })

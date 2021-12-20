@@ -1,10 +1,3 @@
-export class Euro {
-  constructor(private readonly amount: number) {}
-  times(multiplier: number): Euro {
-    return new Euro(this.amount * multiplier)
-  }
+import { Money } from './Money'
 
-  equals(other: Euro): boolean {
-    return this.amount === other.amount
-  }
-}
+export class Euro extends Money {}

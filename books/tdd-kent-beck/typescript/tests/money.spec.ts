@@ -2,25 +2,29 @@ import { Dollar } from '../src/Dollar'
 import { Euro } from '../src/Euro'
 
 describe('Money', () => {
-  test('should return 10 when five dollars mutiply by 2', () => {
+  test.only('should handle dollar multiplication', () => {
     const five = new Dollar(5)
     expect(five.times(2).equals(new Dollar(10))).toBe(true)
     expect(five.times(3).equals(new Dollar(15))).toBe(true)
   })
 
-  test('should return 10 when five Euros mutiply by 2', () => {
+  test('should handle Euro multiplication', () => {
     const five = new Euro(5)
     expect(five.times(2).equals(new Euro(10))).toBe(true)
     expect(five.times(3).equals(new Euro(15))).toBe(true)
   })
 
-  test('should return true if dollars of the same value are compared', () => {
+  test('should compare dollars with dollars', () => {
     expect(new Dollar(5).equals(new Dollar(5))).toBe(true)
     expect(new Dollar(5).equals(new Dollar(10))).toBe(false)
   })
 
-  test('should return true if euros of the same value are compared', () => {
+  test('should compare euros with euros', () => {
     expect(new Euro(5).equals(new Euro(5))).toBe(true)
     expect(new Euro(5).equals(new Euro(10))).toBe(false)
+  })
+
+  test('should compare dollars with euros', () => {
+    expect(new Dollar(5).equals(new Euro(5))).toBe(false)
   })
 })

@@ -8,4 +8,9 @@ describe('Dollar', () => {
     product = five.times(3)
     expect(product.amount).toEqual(15)
   })
+
+  test('should return true if dollars of the same value are compared', () => {
+    expect(new Dollar(5).equals(new Dollar(5))).toBe(true)
+    expect(new Dollar(5).equals(new Dollar(10))).toBe(false)
+  })
 })

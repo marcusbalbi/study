@@ -26,4 +26,9 @@ describe('Money', () => {
   test('should compare dollars with euros', () => {
     expect(Money.dollar(5).equals(Money.euro(5))).toBe(false)
   })
+
+  test('should correcly handle currency', () => {
+    expect(Money.dollar(1).getCurrency()).toEqual('USD')
+    expect(Money.euro(1).getCurrency()).toEqual('EUR')
+  })
 })

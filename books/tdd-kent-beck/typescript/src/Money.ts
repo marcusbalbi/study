@@ -1,35 +1,30 @@
-export abstract class Money {
-  constructor(protected readonly amount: number) {}
+export class Money {
+  constructor(protected readonly amount: number, protected currency: string) {}
 
   static dollar(amount: number): Money {
-    return new Dollar(amount)
+    return new Money(amount, 'USD')
   }
 
   static euro(amount: number): Money {
-    return new Euro(amount)
+    return new Money(amount, 'EUR')
   }
 
   getAmount(): number {
     return this.amount
   }
 
+  getCurrency(): string {
+    return this.currency
+  }
+
+  times(multiplier: number): Money {
+    return new Money(this.amount * multiplier, this.currency)
+  }
+
   equals(other: Money): boolean {
-    if (this.constructor !== other.constructor) {
+    if (this.currency !== other.getCurrency()) {
       return false
     }
     return this.amount === other.getAmount()
-  }
-
-  abstract times(multiplier: number): Money
-}
-
-export class Dollar extends Money {
-  times(multiplier: number): Dollar {
-    return new Dollar(this.amount * multiplier)
-  }
-}
-export class Euro extends Money {
-  times(multiplier: number): Euro {
-    return new Euro(this.amount * multiplier)
   }
 }

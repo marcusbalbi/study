@@ -6,8 +6,8 @@ import { Sum } from '../src/Sum'
 describe('Money', () => {
   test('should handle money multiplication', () => {
     const five: Money = Money.dollar(5)
-    expect(five.times(2).equals(Money.dollar(10))).toBe(true)
-    expect(five.times(3).equals(Money.dollar(15))).toBe(true)
+    expect(five.times(2)).toEqual(Money.dollar(10))
+    expect(five.times(3)).toEqual(Money.dollar(15))
   })
 
   test('should compare money', () => {
@@ -59,5 +59,14 @@ describe('Money', () => {
 
   test('should handle identity rate', () => {
     expect(new Bank().rate('USD', 'USD')).toBe(1)
+  })
+
+  test('should handle sum of different currencies', () => {
+    const fiveDollars: Expression = Money.dollar(5)
+    const tenEuros: Expression = Money.euro(10)
+    const bank = new Bank()
+    bank.addRate('EUR', 'USD', 2)
+    const result = bank.reduce(fiveDollars.plus(tenEuros), 'USD')
+    expect(result).toEqual(Money.dollar(10))
   })
 })

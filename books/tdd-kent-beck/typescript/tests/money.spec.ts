@@ -69,4 +69,24 @@ describe('Money', () => {
     const result = bank.reduce(fiveDollars.plus(tenEuros), 'USD')
     expect(result).toEqual(Money.dollar(10))
   })
+
+  test('should handle plus in a sum', () => {
+    const fiveDollars: Expression = Money.dollar(5)
+    const tenEuros: Expression = Money.euro(10)
+    const bank = new Bank()
+    bank.addRate('EUR', 'USD', 2)
+    const sum: Expression = new Sum(fiveDollars, tenEuros).plus(fiveDollars)
+    const result: Money = bank.reduce(sum, 'USD')
+    expect(result).toEqual(Money.dollar(15))
+  })
+
+  test('should handle times in a sum', () => {
+    const fiveDollars: Expression = Money.dollar(5)
+    const tenEuros: Expression = Money.euro(10)
+    const bank = new Bank()
+    bank.addRate('EUR', 'USD', 2)
+    const sum: Expression = new Sum(fiveDollars, tenEuros).times(2)
+    const result: Money = bank.reduce(sum, 'USD')
+    expect(result).toEqual(Money.dollar(20))
+  })
 })

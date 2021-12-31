@@ -25,6 +25,10 @@ describe('Email validation', () => {
     const email = 'm'.repeat(65) + '@mail.com';
     expect(Email.validate(email)).toBeFalsy();
   });
+  test('should not accept local part with invalid char', () => {
+    const email = ' ' + '@mail.com';
+    expect(Email.validate(email)).toBeFalsy();
+  });
 
   test('should not accept domain part larger than 255 chars', () => {
     const email = `balbimarcus@${'gmail'.repeat(60)}.com`;

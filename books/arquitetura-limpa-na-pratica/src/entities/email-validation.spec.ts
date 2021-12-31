@@ -30,4 +30,19 @@ describe('Email validation', () => {
     const email = `balbimarcus@${'gmail'.repeat(60)}.com`;
     expect(Email.validate(email)).toBeFalsy();
   });
+
+  test('should not accept empty local part', () => {
+    const email = '@gmail.com';
+    expect(Email.validate(email)).toBeFalsy();
+  });
+
+  test('should not accept empty domain part', () => {
+    const email = 'balbimarcus@';
+    expect(Email.validate(email)).toBeFalsy();
+  });
+
+  test('should not accept domain with a part greater than 63 chars', () => {
+    const email = `balbimarcus@${'d'.repeat(64)}.com`;
+    expect(Email.validate(email)).toBeFalsy();
+  });
 });

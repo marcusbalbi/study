@@ -8,4 +8,12 @@ describe('In Memory User Repository', () => {
     const user = await userRepo.findUSerByEmail('any@mail.com');
     expect(user).toBeNull();
   });
+  test('should return user if its found on repo', async () => {
+    const userData = { name: 'Balbi', email: 'any@mail.com' };
+    const users: UserData[] = [];
+    const userRepo = new InMemoryUserRepository(users);
+    await userRepo.add(userData);
+    const user = await userRepo.findUSerByEmail('any@mail.com');
+    expect(user).toEqual(userData);
+  });
 });

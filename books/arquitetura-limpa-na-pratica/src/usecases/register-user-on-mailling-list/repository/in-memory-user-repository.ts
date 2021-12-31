@@ -8,8 +8,10 @@ export class InMemoryUserRepository implements UserRepository {
     this.userData = userData;
   }
 
-  add(user: UserData): Promise<void> {
-    throw new Error('Method not implemented.');
+  async add(user: UserData): Promise<void> {
+    if (!(await this.exists(user))) {
+      this.userData = this.userData.concat(user);
+    }
   }
 
   async findUSerByEmail(email: string): Promise<UserData> {
@@ -21,7 +23,7 @@ export class InMemoryUserRepository implements UserRepository {
     throw new Error('Method not implemented.');
   }
 
-  exists(user: UserData): Promise<boolean> {
-    throw new Error('Method not implemented.');
+  async exists(user: UserData): Promise<boolean> {
+    return this.userData.some((u) => u.email === user.email);
   }
 }

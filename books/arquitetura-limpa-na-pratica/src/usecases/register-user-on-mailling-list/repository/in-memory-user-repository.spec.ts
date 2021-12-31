@@ -16,4 +16,12 @@ describe('In Memory User Repository', () => {
     const user = await userRepo.findUSerByEmail('any@mail.com');
     expect(user).toEqual(userData);
   });
+  test('should return all users', async () => {
+    const users: UserData[] = [];
+    const userRepo = new InMemoryUserRepository(users);
+    await userRepo.add({ name: 'Balbi', email: 'any@mail.com' });
+    await userRepo.add({ name: 'Balbi2', email: 'any2@mail.com' });
+    const usersFound = await userRepo.findAllUsers();
+    expect(usersFound.length).toBe(2);
+  });
 });

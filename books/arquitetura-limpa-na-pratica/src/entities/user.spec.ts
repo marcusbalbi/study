@@ -1,4 +1,4 @@
-import { left } from '../shared';
+import { left, right } from '../shared';
 import { InvalidEmailError } from './errors/invalid-email-error';
 import { InvalidNameError } from './errors/invalid-name-error';
 import { User } from './user';
@@ -19,5 +19,13 @@ describe('User domain entity', () => {
     const invalidName = 'O'.repeat(257);
     const error = User.create({ email: 'any@mail.com', name: invalidName });
     expect(error).toEqual(left(new InvalidNameError()));
+  });
+
+  test('should create user with valid data', () => {
+    const user = User.create({ email: 'any@mail.com', name: 'Jhon doe' });
+    expect(user.isRight()).toBe(true);
+    const userCreated = user.value as User;
+    expect(userCreated.name.value).toBe('Jhon doe');
+    expect(userCreated.email.value).toBe('any@mail.com');
   });
 });

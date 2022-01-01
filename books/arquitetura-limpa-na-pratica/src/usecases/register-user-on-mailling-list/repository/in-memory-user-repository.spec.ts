@@ -5,7 +5,7 @@ describe('In Memory User Repository', () => {
   test('should return null if user not found', async () => {
     const users: UserData[] = [];
     const userRepo = new InMemoryUserRepository(users);
-    const user = await userRepo.findUSerByEmail('any@mail.com');
+    const user = await userRepo.findUserByEmail('any@mail.com');
     expect(user).toBeNull();
   });
   test('should return user if its found on repo', async () => {
@@ -13,7 +13,7 @@ describe('In Memory User Repository', () => {
     const users: UserData[] = [];
     const userRepo = new InMemoryUserRepository(users);
     await userRepo.add(userData);
-    const user = await userRepo.findUSerByEmail('any@mail.com');
+    const user = await userRepo.findUserByEmail('any@mail.com');
     expect(user).toEqual(userData);
   });
   test('should return all users', async () => {

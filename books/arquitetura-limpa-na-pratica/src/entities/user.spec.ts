@@ -1,4 +1,4 @@
-import { left, right } from '../shared';
+import { left } from '../shared';
 import { InvalidEmailError } from './errors/invalid-email-error';
 import { InvalidNameError } from './errors/invalid-name-error';
 import { User } from './user';

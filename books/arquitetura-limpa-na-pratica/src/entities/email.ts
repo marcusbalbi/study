@@ -2,35 +2,36 @@ import { Either, left, right } from '../shared';
 import { InvalidEmailError } from './errors/invalid-email-error';
 
 export class Email {
-  private readonly email: string;
-  constructor(email: string) {
-    this.email = email;
+  private readonly value: string;
+
+  private constructor(value: string) {
+    this.value = value;
   }
 
-  static create(email: string): Either<InvalidEmailError, Email> {
-    if (Email.validate(email)) {
-      return right(new Email(email));
+  static create(value: string): Either<InvalidEmailError, Email> {
+    if (Email.validate(value)) {
+      return right(new Email(value));
     }
 
     return left(new InvalidEmailError());
   }
 
-  static validate(email: string): boolean {
+  static validate(value: string): boolean {
     const emailRegex =
       /^[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
-    if (!email) {
+    if (!value) {
       return false;
     }
 
-    if (email.length > 320) {
+    if (value.length > 320) {
       return false;
     }
 
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(value)) {
       return false;
     }
 
-    const [local, domain] = email.split('@');
+    const [local, domain] = value.split('@');
 
     if (local.length <= 0 || local.length > 64) {
       return false;

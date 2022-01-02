@@ -8,6 +8,12 @@ import { MissingParamError } from '@/web-controllers/errors';
 import { HttpRequest, HttpResponse } from '@/web-controllers/ports';
 import { RegisterUserController } from '@/web-controllers/register-user-controller';
 
+class StubErrorUseCase implements UseCase {
+  perform(request: any): Promise<any> {
+    throw new Error('Error UseCase.');
+  }
+}
+
 describe('Register User web Controller', () => {
   const users: UserData[] = [];
   const repo: UserRepository = new InMemoryUserRepository(users);
@@ -87,7 +93,9 @@ describe('Register User web Controller', () => {
         email: 'any@mail.com',
       },
     };
-    const response: HttpResponse = await controller.handle(request);
+    const stubErrorUsecase: UseCase = new StubErrorUseCase();
+    const errorController = new RegisterUserController(stubErrorUsecase);
+    const response: HttpResponse = await errorController.handle(request);
     expect(response.statusCode).toBe(500);
   });
 });

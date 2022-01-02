@@ -1,6 +1,5 @@
 import { UserData } from '@/entities';
-import { UseCase } from '@/usecases/ports/use-case';
-import { RegisterUserOnMaillingList } from '@/usecases/register-user-on-mailling-list';
+import { UseCase } from '@/usecases/ports';
 import { MissingParamError } from './errors';
 import { HttpRequest, HttpResponse } from './ports';
 import { badRequest, created, serverError } from './utils/http-helpers';

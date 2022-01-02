@@ -1,4 +1,4 @@
-import { Either, left, right } from '../shared';
+import { Either, left, right } from '@/shared';
 import { Email, Name, UserData } from './';
 import { InvalidEmailError, InvalidNameError } from './errors';
 

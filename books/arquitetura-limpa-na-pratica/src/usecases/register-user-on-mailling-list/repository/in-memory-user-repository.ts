@@ -1,4 +1,4 @@
-import { UserData } from '../../../entities';
+import { UserData } from '@/entities';
 import { UserRepository } from '../ports/user-repository';
 
 export class InMemoryUserRepository implements UserRepository {

@@ -1,6 +1,6 @@
-import { InvalidEmailError, InvalidNameError } from '../../entities/errors';
-import { User, UserData } from '../../entities';
-import { Either, left, right } from '../../shared';
+import { InvalidEmailError, InvalidNameError } from '@/entities/errors';
+import { User, UserData } from '@/entities';
+import { Either, left, right } from '@/shared';
 import { UserRepository } from './ports/user-repository';
 
 type Result = Either<InvalidEmailError | InvalidNameError, UserData>;

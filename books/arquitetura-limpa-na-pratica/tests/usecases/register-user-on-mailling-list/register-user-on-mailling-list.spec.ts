@@ -11,7 +11,7 @@ describe('Register user on mailling list use case', () => {
     const name = 'any_name';
     const email = 'any@email.com';
 
-    const response = await usecase.registerUserOnMaillingList({ name, email });
+    const response = await usecase.perform({ name, email });
     const user = await repo.findUserByEmail(email);
     expect(user.name).toBe(name);
     expect(response.value.name).toBe('any_name');
@@ -24,7 +24,7 @@ describe('Register user on mailling list use case', () => {
     const name = 'Jhon doe';
     const email = 'invalidemail';
 
-    const response = await usecase.registerUserOnMaillingList({ name, email });
+    const response = await usecase.perform({ name, email });
     const user = await repo.findUserByEmail(email);
     expect(user).toBeFalsy();
     expect(response.isLeft()).toBe(true);
@@ -38,7 +38,7 @@ describe('Register user on mailling list use case', () => {
     const name = 'O     ';
     const email = 'any@email.com';
 
-    const response = await usecase.registerUserOnMaillingList({ name, email });
+    const response = await usecase.perform({ name, email });
     const user = await repo.findUserByEmail(email);
     expect(user).toBeFalsy();
     expect(response.isLeft()).toBe(true);

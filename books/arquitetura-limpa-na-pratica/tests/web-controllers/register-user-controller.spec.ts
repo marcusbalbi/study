@@ -1,5 +1,6 @@
 import { UserData } from '@/entities';
 import { InvalidEmailError, InvalidNameError } from '@/entities/errors';
+import { UseCase } from '@/usecases/ports/use-case';
 import { RegisterUserOnMaillingList } from '@/usecases/register-user-on-mailling-list';
 import { UserRepository } from '@/usecases/register-user-on-mailling-list/ports';
 import { InMemoryUserRepository } from '@/usecases/register-user-on-mailling-list/repository';
@@ -8,6 +9,11 @@ import { HttpRequest, HttpResponse } from '@/web-controllers/ports';
 import { RegisterUserController } from '@/web-controllers/register-user-controller';
 
 describe('Register User web Controller', () => {
+  const users: UserData[] = [];
+  const repo: UserRepository = new InMemoryUserRepository(users);
+  const usecase: UseCase = new RegisterUserOnMaillingList(repo);
+  const controller = new RegisterUserController(usecase);
+
   test('should return status code 201 when signup user', async () => {
     const request: HttpRequest = {
       body: {
@@ -15,10 +21,6 @@ describe('Register User web Controller', () => {
         name: 'Jhon doe',
       },
     };
-    const users: UserData[] = [];
-    const repo: UserRepository = new InMemoryUserRepository(users);
-    const usecase = new RegisterUserOnMaillingList(repo);
-    const controller = new RegisterUserController(usecase);
     const response: HttpResponse = await controller.handle(request);
     expect(response.statusCode).toBe(201);
     expect(response.body).toEqual(request.body);
@@ -33,10 +35,6 @@ describe('Register User web Controller', () => {
         name: 'J     ',
       },
     };
-    const users: UserData[] = [];
-    const repo: UserRepository = new InMemoryUserRepository(users);
-    const usecase = new RegisterUserOnMaillingList(repo);
-    const controller = new RegisterUserController(usecase);
     const response: HttpResponse = await controller.handle(request);
     expect(response.statusCode).toBe(400);
     expect(response.body).toBeInstanceOf(InvalidNameError);
@@ -49,10 +47,6 @@ describe('Register User web Controller', () => {
         name: 'Jhon doe',
       },
     };
-    const users: UserData[] = [];
-    const repo: UserRepository = new InMemoryUserRepository(users);
-    const usecase = new RegisterUserOnMaillingList(repo);
-    const controller = new RegisterUserController(usecase);
     const response: HttpResponse = await controller.handle(request);
     expect(response.statusCode).toBe(400);
     expect(response.body).toBeInstanceOf(InvalidEmailError);
@@ -64,14 +58,12 @@ describe('Register User web Controller', () => {
         email: 'any@mail.com',
       },
     };
-    const users: UserData[] = [];
-    const repo: UserRepository = new InMemoryUserRepository(users);
-    const usecase = new RegisterUserOnMaillingList(repo);
-    const controller = new RegisterUserController(usecase);
     const response: HttpResponse = await controller.handle(request);
     expect(response.statusCode).toBe(400);
     expect(response.body).toBeInstanceOf(MissingParamError);
-    expect(response.body.message).toEqual('Missing parameter name from request');
+    expect(response.body.message).toEqual(
+      'Missing parameter name from request'
+    );
   });
 
   test('should return status code 400 when missing email parameter', async () => {
@@ -80,13 +72,22 @@ describe('Register User web Controller', () => {
         name: 'Jhon Doe',
       },
     };
-    const users: UserData[] = [];
-    const repo: UserRepository = new InMemoryUserRepository(users);
-    const usecase = new RegisterUserOnMaillingList(repo);
-    const controller = new RegisterUserController(usecase);
     const response: HttpResponse = await controller.handle(request);
     expect(response.statusCode).toBe(400);
     expect(response.body).toBeInstanceOf(MissingParamError);
-    expect(response.body.message).toEqual('Missing parameter email from request');
+    expect(response.body.message).toEqual(
+      'Missing parameter email from request'
+    );
+  });
+
+  test('should return status code 500 when exceptional problem happens', async () => {
+    const request: HttpRequest = {
+      body: {
+        name: 'Jhon Doe',
+        email: 'any@mail.com',
+      },
+    };
+    const response: HttpResponse = await controller.handle(request);
+    expect(response.statusCode).toBe(500);
   });
 });

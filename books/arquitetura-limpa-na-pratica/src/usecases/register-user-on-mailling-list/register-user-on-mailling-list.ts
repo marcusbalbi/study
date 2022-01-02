@@ -3,7 +3,7 @@ import { User, UserData } from '@/entities';
 import { Either, left, right } from '@/shared';
 import { UserRepository } from './ports/user-repository';
 
-type Result = Either<InvalidEmailError | InvalidNameError, UserData>;
+type Error = InvalidEmailError | InvalidNameError
 
 export class RegisterUserOnMaillingList {
   private repository: UserRepository;
@@ -11,7 +11,7 @@ export class RegisterUserOnMaillingList {
     this.repository = repository;
   }
 
-  public async registerUserOnMaillingList(request: UserData): Promise<Result> {
+  public async registerUserOnMaillingList(request: UserData): Promise<Either<Error, UserData>> {
     const userOrError = User.create(request);
     if (userOrError.isLeft()) {
       return left(userOrError.value);

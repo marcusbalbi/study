@@ -13,7 +13,7 @@ export class Name {
       return right(new Name(value));
     }
 
-    return left(new InvalidNameError());
+    return left(new InvalidNameError(value));
   }
 
   static validate(value: string): boolean {

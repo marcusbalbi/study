@@ -1,6 +1,7 @@
 import { UserData } from '@/entities';
 import { RegisterUserOnMaillingList } from '@/usecases/register-user-on-mailling-list';
 import { HttpRequest, HttpResponse } from './ports';
+import { created } from './utils/http-helpers';
 
 export class RegisterUserController {
   private readonly usecase: RegisterUserOnMaillingList;
@@ -13,10 +14,7 @@ export class RegisterUserController {
     const result = await this.usecase.registerUserOnMaillingList(userData);
 
     if (result.isRight()) {
-      return {
-        statusCode: 201,
-        body: result.value,
-      };
+      return created(result.value);
     }
   }
 }

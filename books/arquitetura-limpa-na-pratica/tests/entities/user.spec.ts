@@ -1,5 +1,5 @@
 
-import { User } from '../../src/entities/user';
+import { User } from '../../src/entities';
 
 describe('User domain entity', () => {
   test('should not create with invalid email', () => {

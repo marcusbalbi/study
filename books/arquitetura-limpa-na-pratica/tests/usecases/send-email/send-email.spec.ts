@@ -1,4 +1,5 @@
-import { Either, right } from '@/shared';
+import { InvalidEmailError } from '@/entities/errors';
+import { Either, left, right } from '@/shared';
 import { MailServiceError } from '@/usecases/errors/mail-service-error';
 import {
   EmailOptions,
@@ -40,6 +41,13 @@ class MailServiceStub implements EmailService {
     return right(true);
   }
 }
+class MailServiceErrorStub implements EmailService {
+  async send(
+    options: EmailOptions
+  ): Promise<Either<MailServiceError, boolean>> {
+    return left(new MailServiceError());
+  }
+}
 
 describe('Send Email', () => {
   test('should email user with valid name and email address', async () => {
@@ -48,5 +56,19 @@ describe('Send Email', () => {
     const response = await useCase.perform({ name: toName, email: toEmail });
     expect(response.isRight()).toBe(true);
     expect(response.value).toBe(true);
+  });
+  test('should not send email with invalid data', async () => {
+    const stub = new MailServiceStub();
+    const useCase = new SendEmail(emailOptions, stub);
+    const response = await useCase.perform({ name: toName, email: 'invalid' });
+    expect(response.isLeft()).toBe(true);
+    expect(response.value).toBeInstanceOf(InvalidEmailError);
+  });
+  test('should return error when service fails', async () => {
+    const stub = new MailServiceErrorStub();
+    const useCase = new SendEmail(emailOptions, stub);
+    const response = await useCase.perform({ name: toName, email: toEmail });
+    expect(response.isLeft()).toBe(true);
+    expect(response.value).toBeInstanceOf(MailServiceError);
   });
 });

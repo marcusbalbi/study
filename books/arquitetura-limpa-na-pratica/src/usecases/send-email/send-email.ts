@@ -17,13 +17,15 @@ export class SendEmail implements UseCase {
     userData: UserData
   ): Promise<Either<MailServiceError, boolean>> {
     const user = User.create(userData);
-
     if (user.isLeft()) {
       return left(user.value);
     }
 
+    const greetings = `E ai <b>${user.value.name}</b> beleza ?`;
+    const customizedHtml = `${greetings}<br><br>${this.emailOptions.html}`;
     const emailInfo: EmailOptions = Object.assign({}, this.emailOptions, {
       to: `${user.value.name} <${user.value.email}>`,
+      html: customizedHtml,
     });
     return this.emailService.send(emailInfo);
   }

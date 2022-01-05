@@ -1,13 +1,11 @@
-import { UserData } from '@/entities';
+import { MongodbUserRepository } from '@/external/repositories/mondogb/mondogb-user-repository';
 import { RegisterUserOnMaillingList } from '@/usecases/register-user-on-mailling-list';
-import { InMemoryUserRepository } from '@/usecases/register-user-on-mailling-list/repository';
 import { RegisterUserController } from '@/web-controllers/register-user-controller';
 
 export const makeRegisterUserController = (): RegisterUserController => {
-  const userCollection: UserData[] = [];
-  const inMemoryUserRepository = new InMemoryUserRepository(userCollection);
+  const mondogbUserRepository = new MongodbUserRepository();
   const registerUserOnMaillingListUseCase = new RegisterUserOnMaillingList(
-    inMemoryUserRepository
+    mondogbUserRepository
   );
 
   return new RegisterUserController(registerUserOnMaillingListUseCase);

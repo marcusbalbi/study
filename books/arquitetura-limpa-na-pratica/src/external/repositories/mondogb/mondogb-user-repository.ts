@@ -26,20 +26,16 @@ export class MongodbUserRepository implements UserRepository {
   }
 
   async findAllUsers(): Promise<UserData[]> {
-    return [];
-    // const userCollection = MongoHelper.getCollection('users');
+    const userCollection = MongoHelper.getCollection('users');
 
-    // const users = await userCollection.find();
+    const users = await userCollection.find().toArray();
 
-    // if (!users) {
-    //   return [];
-    // }
-    // return users.map((u) => {
-    //   return {
-    //     name: u.name,
-    //     email: u.email,
-    //   };
-    // });
+    return users.map((u) => {
+      return {
+        name: u.name,
+        email: u.email,
+      };
+    });
   }
 
   async exists(user: UserData): Promise<boolean> {

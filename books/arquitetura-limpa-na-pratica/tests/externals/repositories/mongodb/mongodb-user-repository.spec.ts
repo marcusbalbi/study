@@ -24,4 +24,23 @@ describe('Mongodb User Reposotory', () => {
     await userRepository.add(user);
     expect(await userRepository.exists(user)).toBeTruthy();
   });
+
+  test('find all users should return all added users', async () => {
+    const userRepository = new MongodbUserRepository();
+
+    await userRepository.add({
+      name: 'Jhon doe',
+      email: 'jhon@mail.com',
+    });
+    await userRepository.add({
+      name: 'Jane doe',
+      email: 'jane@mail.com',
+    });
+    await userRepository.add({
+      name: 'Josh doe',
+      email: 'josh@mail.com',
+    });
+    const users = await userRepository.findAllUsers();
+    expect(users.length).toBe(3);
+  });
 });

@@ -1,12 +1,16 @@
 import { UserData } from '@/entities';
 import { InvalidEmailError, InvalidNameError } from '@/entities/errors';
 import { UseCase } from '@/usecases/ports/use-case';
+import { RegisterUserAndSendEmailUseCase } from '@/usecases/register-user-and-send-email/regiser-user-and-send-email';
 import { RegisterUserOnMaillingList } from '@/usecases/register-user-on-mailling-list';
 import { UserRepository } from '@/usecases/register-user-on-mailling-list/ports';
 import { InMemoryUserRepository } from '@/usecases/register-user-on-mailling-list/repository';
+import { SendEmail } from '@/usecases/send-email/send-email';
 import { MissingParamError } from '@/web-controllers/errors';
 import { HttpRequest, HttpResponse } from '@/web-controllers/ports';
-import { RegisterUserController } from '@/web-controllers/register-user-controller';
+import { RegisterUserAndSendEmailController } from '@/web-controllers/register-user-and-send-email-controller';
+import { createEmailOptions } from '@tests/fixtures/email';
+import { MailServiceMock } from '@tests/utils/mocks/mail-service-mock';
 
 class StubErrorUseCase implements UseCase {
   perform(request: any): Promise<any> {
@@ -17,8 +21,11 @@ class StubErrorUseCase implements UseCase {
 describe('Register User web Controller', () => {
   const users: UserData[] = [];
   const repo: UserRepository = new InMemoryUserRepository(users);
-  const usecase: UseCase = new RegisterUserOnMaillingList(repo);
-  const controller = new RegisterUserController(usecase);
+  const registerUserUseCase = new RegisterUserOnMaillingList(repo);
+  const options = createEmailOptions();
+  const sendEmailUseCase = new SendEmail(options, new MailServiceMock());
+  const useCase = new RegisterUserAndSendEmailUseCase(registerUserUseCase, sendEmailUseCase);
+  const controller = new RegisterUserAndSendEmailController(useCase);
 
   test('should return status code 201 when signup user', async () => {
     const request: HttpRequest = {
@@ -94,7 +101,7 @@ describe('Register User web Controller', () => {
       },
     };
     const stubErrorUsecase: UseCase = new StubErrorUseCase();
-    const errorController = new RegisterUserController(stubErrorUsecase);
+    const errorController = new RegisterUserAndSendEmailController(stubErrorUsecase);
     const response: HttpResponse = await errorController.handle(request);
     expect(response.statusCode).toBe(500);
   });

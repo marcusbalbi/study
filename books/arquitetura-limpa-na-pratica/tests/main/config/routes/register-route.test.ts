@@ -25,6 +25,6 @@ describe('Register route', () => {
         name: 'Jhon Doe',
         email: 'jhondoe@mail.com',
       })
-      .expect(201);
+      .expect(200);
   });
 });

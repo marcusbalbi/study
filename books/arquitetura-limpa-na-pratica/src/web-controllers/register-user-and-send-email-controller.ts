@@ -2,7 +2,7 @@ import { UserData } from '@/entities';
 import { UseCase } from '@/usecases/ports';
 import { MissingParamError } from './errors';
 import { HttpRequest, HttpResponse } from './ports';
-import { badRequest, created, serverError } from './utils/http-helpers';
+import { badRequest, ok, serverError } from './utils/http-helpers';
 
 export class RegisterUserAndSendEmailController {
   private readonly usecase: UseCase;
@@ -26,7 +26,7 @@ export class RegisterUserAndSendEmailController {
       if (result.isLeft()) {
         return badRequest(result.value);
       }
-      return created(result.value);
+      return ok(result.value);
     } catch (err) {
       return serverError(err);
     }

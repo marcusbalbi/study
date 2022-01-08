@@ -27,7 +27,7 @@ describe('Register User web Controller', () => {
   const useCase = new RegisterUserAndSendEmailUseCase(registerUserUseCase, sendEmailUseCase);
   const controller = new RegisterUserAndSendEmailController(useCase);
 
-  test('should return status code 201 when signup user', async () => {
+  test('should return status code 200 when signup user', async () => {
     const request: HttpRequest = {
       body: {
         email: 'any@mail.com',
@@ -35,7 +35,7 @@ describe('Register User web Controller', () => {
       },
     };
     const response: HttpResponse = await controller.handle(request);
-    expect(response.statusCode).toBe(201);
+    expect(response.statusCode).toBe(200);
     expect(response.body).toEqual(request.body);
 
     const user = repo.findUserByEmail(response.body.email);

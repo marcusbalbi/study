@@ -74,9 +74,29 @@
 
 
 
+; Sets
 
+(println #{"Kurt vonnegut" 20 :circle})
 
+(println #{"Kurt vonnegut" 20 :circle 20}) ;duplicated exception
 
+(println (hash-set  1 1 2 2 3 3 4 4))
 
+(println (conj #{:a :b} :b))
 
+(println (set [3 3 3 4 4 4]))
+
+(println (contains? #{:a :b} :a))
+
+(println (contains? #{:a :b} 5))
+
+(println (contains? #{nil} nil))
+
+(println (:a #{:a :b}))
+
+(println (get #{:a :b} :a))
+
+(println (get #{:a nil} nil))
+
+(println (get #{:a :b} "Kurt Vonnegut"))
 

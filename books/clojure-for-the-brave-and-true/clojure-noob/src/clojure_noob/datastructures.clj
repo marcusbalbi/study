@@ -100,3 +100,24 @@
 
 (println (get #{:a :b} "Kurt Vonnegut"))
 
+
+; Functions
+
+(println ((get map-function "string-key") 1 2 3))
+
+(println ((get map-function "inv" -) 1 2 3))
+
+(or + - )
+
+(println ((or + -) 1 2 3))
+
+(and (= 1 1) +)
+((and (= 1 1) +) 1 2 3)
+
+((first [+ 0]) 1 2 3)
+
+
+(inc 1.1)
+
+(map inc [0 1 2 3])
+

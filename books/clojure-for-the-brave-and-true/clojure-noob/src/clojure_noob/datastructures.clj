@@ -121,3 +121,10 @@
 
 (map inc [0 1 2 3])
 
+(defn example-fn
+  "This is an Example of a Function with all its 5 parts"
+  [name]
+  (str "Oh my good! " name "I am enjoying learning clojure and emacs")
+)
+
+(example-fn "Julia!")

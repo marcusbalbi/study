@@ -127,4 +127,19 @@
   (str "Oh my good! " name "I am enjoying learning clojure and emacs")
 )
 
-(example-fn "Julia!")
+(println (example-fn "Julia!"))
+
+
+
+
+
+(defn multi-arity
+  ([x y]
+   (str "Hello " x " and " y))
+  ([x y z]
+   (str "Hi " x " and " y " and " z)))
+
+
+(println (multi-arity "Marcus" "Julia"))
+
+(println (multi-arity "Marcus" "Julia" "Isabela"))

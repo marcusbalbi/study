@@ -196,3 +196,68 @@
 (announce-treasure-location {:lat 15.10 :lng 45.33})
 
 
+;; Functions Body
+
+
+(defn returns-last-form 
+  []
+  (+ 1 2 3 4)
+  30
+  "Joe")
+
+(returns-last-form)
+
+
+(defn number-comment [n]
+(if (> n 6) 
+  "Oh My God! this is a really big number"
+  "That number is ok!, i Guess!"))
+
+
+(number-comment 5)
+
+(number-comment 7)
+
+
+
+;; Anonymous Functions
+
+((fn [x] (* x 3)) 8)
+
+(map (fn [name] (str "Hi " name)) ["Darth Vader" "Spock"])
+
+
+(def my-special-multiply (fn [x] (* x 3)))
+
+(my-special-multiply 12)
+
+
+(#(* % 3) 8)
+
+(map #(str "Hi " %) ["Marcus Balbi" "Julia Balbi"])
+
+
+(#(str %1 " and " %2) "Joao" "Joana")
+
+
+(#(identity %&) "amanha" :amanha 2)
+
+
+
+;; returning functions 
+
+
+(defn inc-maker
+  "Create a custom incrementor"
+  [inc-by]
+  #(+ % inc-by))
+
+(def inc3 (inc-maker 3))
+
+(inc3 7)
+
+
+
+
+
+

@@ -143,3 +143,21 @@
 (println (multi-arity "Marcus" "Julia"))
 
 (println (multi-arity "Marcus" "Julia" "Isabela"))
+
+
+(defn x-chop 
+  ([name chop-type] 
+   (str "I " chop-type " chop " name "! Take that!"))
+  ([name]
+   (x-chop name "Karate")))
+
+(x-chop "Kanye West" "slap")
+
+(x-chop "Kanye West")
+
+
+
+
+
+
+

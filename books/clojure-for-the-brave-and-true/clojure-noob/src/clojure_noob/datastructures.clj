@@ -131,6 +131,7 @@
 
 
 
+;; Functions Multi-arity
 
 
 (defn multi-arity
@@ -156,8 +157,42 @@
 (x-chop "Kanye West")
 
 
+(defn call-names [& names]
+  (str "Hello " names))
+
+(println (call-names " Marcus" "Isabela" "Julia"))
+
+(defn favorite-things [name & things]
+  (str "Hi! this is the favorite things of " name ": " things))
+
+(println (favorite-things "Marcus" "Books" "Computer" "Cars"))
 
 
 
+;; Functions Destructuring
+
+
+(defn my-first [[first-thing]] 
+  first-thing)
+
+
+(my-first ["Car" "candy"])
+
+
+(defn announce-treasure-location 
+[{lat :lat lng :lng }]
+  (println (str "Treasure lat " lat))
+  (println (str "Treasure lng " lng)))
+
+(announce-treasure-location {:lat 28.22 :lng 81.33})
+
+
+(defn announce-treasure-location 
+[{:keys [lat lng] :as treasure-location}] ; as is options to get access the original map
+  (println treasure-location)
+  (println (str "Treasure lat " lat))
+  (println (str "Treasure lng " lng)))
+
+(announce-treasure-location {:lat 15.10 :lng 45.33})
 
 

@@ -140,4 +140,7 @@
 
 (def inc3 (inc-maker 3))
 
-(inc3 7)
+(inc3 30)
+
+
+

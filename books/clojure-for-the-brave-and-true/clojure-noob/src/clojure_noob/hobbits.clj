@@ -1,5 +1,44 @@
 (ns clojure-noob.hobbits)
 
+;; let
+
+(println (let [x 3] x))
+
+(def dalmatians-list ["Pongo" "Perdita" "Puppy 1" "Puppy 2"])
+
+(let [dalmatians (take 2 dalmatians-list)] dalmatians)
+
+(def x 0)
+
+(let [x 10] x)
+
+(let [x (inc x)] x)
+
+(let [[pongo & rest] dalmatians-list] [pongo rest])
+
+
+(into [] (set [:a :a]))
+
+
+(loop [iteration 0]
+  (println "iteration: " iteration)
+  (if (> iteration 3)
+    (println "Goodbye!")
+    (recur (inc iteration))))
+
+
+(re-find #"^left-" "left-eye")
+
+(re-find #"^left-" "left-chin")
+
+(re-find #"^left-" "cleft-body")
+
+
+
+
+
+;; Hobbits 
+
 (def asym-hobbit-body-parts [
                              {:name "head" :size 3}
                              {:name "left-eye" :size 1}
@@ -40,5 +79,17 @@
                      (set [part (matching-part part)])))))))
 
 (symmetrize-body-parts asym-hobbit-body-parts)
+
+
+
+
+
+
+
+
+
+
+
+
 
 

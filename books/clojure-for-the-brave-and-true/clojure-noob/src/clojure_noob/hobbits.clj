@@ -1,4 +1,5 @@
-(ns clojure-noob.hobbits)
+(ns clojure-noob.hobbits 
+  (:require [clojure.string :as string]))
 
 ;; let
 
@@ -34,6 +35,10 @@
 (re-find #"^left-" "cleft-body")
 
 
+(reduce + [1 2 3 4])
+
+(reduce + 15 [1 2 3 4])
+
 
 
 
@@ -63,8 +68,17 @@
 
 (defn matching-part
   [part]
-  {:name (clojure.string/replace (:name part) #"^left-" "right-")
-   :size (:size part)})
+  {:name (string/replace (:name part) #"^left-" "right-")}
+  :size (:size part))
+
+
+(defn better-symmetrize-body-parts
+  "Expects a seq of maps that a :name and :size"
+  [asym-body-parts]
+  (reduce (fn [final-body-parts part]
+            (into final-body-parts (set [part (matching-part part)]))), [] asym-body-parts))
+
+(better-symmetrize-body-parts asym-hobbit-body-parts)
 
 
 (defn symmetrize-body-parts 

@@ -42,6 +42,9 @@
 
 
 
+
+
+
 ;; Hobbits 
 
 (def asym-hobbit-body-parts [
@@ -63,13 +66,18 @@
                              {:name "left-thigh" :size 4}
                              {:name "left-lower-leg" :size 3}
                              {:name "left-achilles" :size 1}
-                             {:name "left-foot" :size 2}])
+                             {:name "left-foot" :size 2} ])
 
 
 (defn matching-part
   [part]
-  {:name (string/replace (:name part) #"^left-" "right-")}
-  :size (:size part))
+  {:name (string/replace (:name part) #"^left-" "right-")
+  :size (:size part)})
+
+(string/replace "left-eye" #"^left-" "right-")
+
+(println (matching-part {:name "left-eye" :size 1}))
+
 
 
 (defn better-symmetrize-body-parts
@@ -78,7 +86,7 @@
   (reduce (fn [final-body-parts part]
             (into final-body-parts (set [part (matching-part part)]))), [] asym-body-parts))
 
-(better-symmetrize-body-parts asym-hobbit-body-parts)
+(println (better-symmetrize-body-parts asym-hobbit-body-parts))
 
 
 (defn symmetrize-body-parts 
@@ -92,8 +100,23 @@
                (into final-body-parts
                      (set [part (matching-part part)])))))))
 
-(symmetrize-body-parts asym-hobbit-body-parts)
+(println (symmetrize-body-parts asym-hobbit-body-parts))
 
+(println (filter (fn [part] (= (:name part) "right-eye")) (symmetrize-body-parts asym-hobbit-body-parts)))
+
+
+(defn hit [asym-body-part]
+  (let [sym-parts (better-symmetrize-body-parts asym-hobbit-body-parts)
+        body-part-size-sum (reduce + (map :size sym-parts))
+        target (rand body-part-size-sum)]
+    (loop [[part & remaining ] sym-parts
+           accumulated-size (:size part)]
+      (if (> accumulated-size target)
+        part
+        (recur remaining (+ accumulated-size (:size (first remaining)))))
+      )))
+
+(hit asym-hobbit-body-parts)
 
 
 

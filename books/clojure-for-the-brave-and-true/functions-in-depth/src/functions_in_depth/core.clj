@@ -9,3 +9,13 @@
 
 (map (fn [p] (println (first p))) person)
 
+(defn titleize [topic] (str topic " for the brave and true"))
+
+(println (map titleize ["Hamsters" "Ragnarok"]))
+
+(println (map titleize '("Empathy" "Decorating")))
+
+(println (map titleize #{"Elbows" "Soap Carving"}))
+
+(println (map #(titleize (second %)) {:uncomfortable-thing "winking"}))
+

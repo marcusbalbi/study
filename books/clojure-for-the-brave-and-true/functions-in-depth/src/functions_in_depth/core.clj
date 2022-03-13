@@ -19,3 +19,16 @@
 
 (println (map #(titleize (second %)) {:uncomfortable-thing "winking"}))
 
+
+(println (seq '(1 2 3)))
+
+(println (seq  [1 2 3]))
+
+(println (seq #{1 2 3}))
+
+(println (seq person))
+
+(println (into {} (seq person)))
+
+
+

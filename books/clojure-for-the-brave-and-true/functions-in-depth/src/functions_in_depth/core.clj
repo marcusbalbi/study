@@ -74,8 +74,8 @@
 ;; reduce
 
 
-(reduce 
- (fn)) [new-map [key val]] (assoc new-map key (inc val)) {} {:max 31 :min 10}
+(reduce
+ (fn [new-map [key val]] (assoc new-map key (inc val))) {} {:max 31 :min 10})
 
 
 
@@ -102,7 +102,7 @@
                    {:id 1 :amount 30 :description "Teste 1" :enabled true}
                    {:id 2 :amount 23.50 :description "Teste 3" :enabled true}
                    {:id 3 :amount 15 :description "Teste 2" :enabled true}
-))                   {:id 4 :amount 5.50 :description "Teste 4" :enabled false}])
+                   {:id 4 :amount 5.50 :description "Teste 4" :enabled false}])
 
 (println (reduce only-enabled [] transactions))
 
@@ -117,8 +117,45 @@
 
 (println (drop 3 transactions))
 
+(def food-journal [
+                   {:month 1 :day 1 :human 5.3 :critter 2.3}
+                   {:month 1 :day 2 :human 5.1 :critter 2.0}
+                   {:month 2 :day 1 :human 4.9 :critter 2.1}
+                   {:month 2 :day 2 :human 5.0 :critter 2.5}
+                   {:month 3 :day 1 :human 4.2 :critter 3.3}
+                   {:month 3 :day 2 :human 4.0 :critter 3.8}
+                   {:month 4 :day 1 :human 3.7 :critter 3.9}
+                   {:month 4 :day 2 :human 3.7 :critter 3.6}
+                   ])
+
+;; jan and feb
+(println (take-while (fn [m] (< (:month m) 3)) food-journal))
+
+;; only mars
+(println (drop-while (fn [m] (< (:month m) 3)) food-journal))
 
 
+
+(println (filter #(< (:human %) 5) food-journal))
+
+(println (filter #(< (:month %) 3) food-journal))
+
+
+(println (some #(> (:month %) 4) food-journal))
+
+(println (some #(< (:human %) 4) food-journal))
+
+(println (some #(and (< (:human %) 4) %) food-journal))
+
+
+;; sort
+
+
+(println (sort [3 2 1]))
+
+(println (sort-by count ["aa" "a" "aaaa" "b"]))
+
+(println (concat [1 2] [3 4]))
 
 
 

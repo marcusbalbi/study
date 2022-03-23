@@ -191,6 +191,27 @@
 
 (time (get mapped-details 2 0))
 
+;(time (identify-vampires (range 1 1000000)))
+
+
+;; infinite lists
+
+
+(concat (take 8 (repeat "na")) ["Batman"])
+
+(def bla (take 10 (repeat "bla")))
+
+(println bla)
+
+
+(take 3 (repeatedly (fn [] (rand-int 10))))
+
+(defn even-numbers
+  ([] (even-numbers 0))
+  ([n] (cons n (lazy-seq (even-numbers (+ n 2))))))
+
+(take 50 (even-numbers))
+
 
 
 

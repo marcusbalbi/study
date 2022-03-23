@@ -158,6 +158,36 @@
 (println (concat [1 2] [3 4]))
 
 
+;; lazy seqs
+
+(def vampire-database {
+                       0 {:makes-blood-puns? false :has-pulse? true :name "Mcfishick"}
+                       1 {:makes-blood-puns? false :has-pulse? true :name "Marcus"}
+                       2 {:makes-blood-puns? true :has-pulse? false :name "Joao"}
+                       3 {:makes-blood-puns? true :has-pulse? true :name "Julio"}
+})
+
+(defn vampire-related-details 
+  [social-securirt-number]
+  (Thread/sleep 1000)
+  (get vampire-database social-securirt-number))
+
+
+(defn vampire?
+  "Is a Vampire"
+  [record]
+  (and (:makes-blood-puns? record)
+       (not (:has-pulse? record))
+       record))
+
+(defn identify-vampires 
+  [social-security-numbers]
+  (first (filter vampire? (map vampire-related-details social-security-numbers))))
+
+
+(time (vampire-related-details 0))
+
+
 
 
 

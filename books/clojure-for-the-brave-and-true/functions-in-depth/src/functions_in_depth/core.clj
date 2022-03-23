@@ -212,6 +212,8 @@
 
 (take 50 (even-numbers))
 
+(cons 0 '(2 4 6))
+
 
 
 

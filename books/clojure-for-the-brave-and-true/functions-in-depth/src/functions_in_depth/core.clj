@@ -187,6 +187,12 @@
 
 (time (vampire-related-details 0))
 
+(time (def mapped-details (map vampire-related-details (range 1 1000000))))
+
+(time (get mapped-details 2 0))
+
+
+
 
 
 

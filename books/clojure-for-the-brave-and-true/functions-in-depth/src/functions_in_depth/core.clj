@@ -162,9 +162,9 @@
                        3 {:makes-blood-puns? true :has-pulse? true :name "Julio"}})
 
 (defn vampire-related-details
-  [social-securirt-number]
-  (Thread/sleep 1000)
-  (get vampire-database social-securirt-number))
+  [social-security-number]
+  (Thread/sleep 100)
+  (get vampire-database social-security-number))
 
 
 (defn vampire?
@@ -308,6 +308,36 @@
 
 (lousy-logs :emergency "This is an emergency log")
 (emergency "This is an Emergency")
+
+
+;; complement
+
+(defn identify-humans [social-security-numbers]
+  (filter #(not (vampire? %)) (map vampire-related-details social-security-numbers)))
+
+(identify-humans (range 1 5))
+
+(def not-vampire? (complement vampire?) )
+
+
+(defn identify-humans [social-security-numbers]
+  (filter not-vampire? (map vampire-related-details social-security-numbers)))
+
+
+(defn my-complement
+  [fun]
+  (fn [& args] 
+    (not (apply fun args))))
+
+(def my-pos? (my-complement neg?))
+
+(my-pos? 1)
+
+(my-pos? -1)
+
+
+
+
 
 
 

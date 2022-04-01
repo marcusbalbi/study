@@ -31,4 +31,18 @@
 (defn glitter-filter [minimum-glitter records]
   (filter #(>= (:glitter-index %) minimum-glitter), records))
 
-(glitter-filter 6 (mapify (parse (slurp filename))))
+(def suspects (mapify (parse (slurp filename))))
+
+(glitter-filter 6 suspects)
+
+(defn grab-names [suspects] (map #(:name %) suspects))
+
+(grab-names (glitter-filter 3 suspects))
+
+(defn append [suspect suspects] (conj suspects suspect))
+
+(defn validate [validate-map record] ())
+
+(append {:name "Samuel Oliver" :glitter-index 10} suspects)
+
+

@@ -1,4 +1,5 @@
-(ns fwpd.core)
+(ns fwpd.core 
+  (:require [clojure.string :as string]))
 (def filename "suspects.csv")
 ;(slurp filename)
 
@@ -9,15 +10,15 @@
 (def conversions {:name identity :glitter-index str->int})
 
 (defn convert [vamp-key, value]
-  ((get conversions vamp-key ) value))
+  ((get conversions vamp-key) value))
 
 (defn parse "Convert a CSV into rows of Columns" [string]
-  (map #(clojure.string/split % #",")
-       (clojure.string/split string #"\n")))
+  (map #(string/split % #",")
+       (string/split string #"\n")))
 
 (parse (slurp filename))
 
-(defn mapify "return  a seq of maps like {:name \"Edward\" :glitter-index 10}" 
+(defn mapify "return  a seq of maps like {:name \"Edward\" :glitter-index 10}"
   [rows]
   (map (fn [unmapped-row]
          (reduce (fn [row-map [vamp-key value]]
@@ -44,5 +45,18 @@
 (defn validate [validate-map record] ())
 
 (append {:name "Samuel Oliver" :glitter-index 10} suspects)
+
+
+(defn vampire-map->csv-string [vampires-map]
+               (map (fn [vampire]
+                      (let [name (:name vampire)
+                            glitter-index (:glitter-index vampire)]
+                        (string/join "," [name glitter-index]))) vampires-map))
+
+
+(def recriatedcsv (string/join "\n" (concat (vampire-map->csv-string suspects))))
+
+
+(= recriatedcsv (slurp filename))
 
 

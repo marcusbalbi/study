@@ -1,0 +1,9 @@
+* function for creating board data structure
+** get rid of adjacent-joiners, figure out joiners in add-peg?
+* display board
+* receive move
+* determine whether a move is legal
+* determine if game is over
+* tally score
+* debug
+a f g l

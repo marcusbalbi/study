@@ -127,6 +127,12 @@ great-baby-name
       "Mr memoized6"])
 
 
+;; assoc-in
+
+
+(assoc-in {} [:person :address :street-name] "Rua Joao Cardozo")
+
+
 
 
 

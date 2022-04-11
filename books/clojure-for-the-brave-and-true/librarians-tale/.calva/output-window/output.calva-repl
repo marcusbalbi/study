@@ -90,3 +90,161 @@ clj꞉librarians-tale.core꞉> 
 clj꞉librarians-tale.core꞉> 
 #'librarians-tale.core/great-books
 clj꞉librarians-tale.core꞉> 
+#namespace[cheese.taxonomy]
+clj꞉librarians-tale.core꞉> 
+cheese.taxonomy
+clj꞉librarians-tale.core꞉> 
+#namespace[cheese.analysis]
+clj꞉cheese.analysis꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7871 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+; Syntax error compiling at (src/librarians_tale/core.clj:36:1).
+; No such namespace: librarians-tale
+clj꞉librarians-tale.core꞉> 
+#namespace[cheese.analysis]
+clj꞉cheese.analysis꞉> 
+#namespace[cheese.analysis]
+clj꞉cheese.analysis꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7886 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7888 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7890 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+nil
+clj꞉librarians-tale.core꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7902 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7904 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+; Execution error (ArityException) at librarians-tale.core/eval7906 (form-init16117927319681359806.clj:35).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉librarians-tale.core꞉> 
+["The power of Bees" "Journey to the Upstairs"]
+clj꞉librarians-tale.core꞉> 
+; Syntax error compiling at (src/librarians_tale/core.clj:1:7950).
+; No such namespace: librarians-tale
+clj꞉librarians-tale.core꞉> 
+#namespace[cheese.analysis]
+clj꞉cheese.analysis꞉> 
+["The power of Bees" "Journey to the Upstairs"]
+clj꞉librarians-tale.core꞉> 
+; Syntax error compiling at (src/librarians_tale/core.clj:1:7950).
+; No such namespace: librarians-tale
+clj꞉librarians-tale.core꞉> 
+["The power of Bees" "Journey to the Upstairs"]
+clj꞉librarians-tale.core꞉> 
+#namespace[cheese.analysis]
+clj꞉cheese.analysis꞉> 
+["The power of Bees" "Journey to the Upstairs"]
+clj꞉librarians-tale.core꞉> 
+#'librarians-tale.lib/say-hello
+clj꞉librarians-tale.lib꞉> 
+#'librarians-tale.lib/hello
+clj꞉librarians-tale.lib꞉> 
+Hello,  Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+#'librarians-tale.lib/say-hello
+clj꞉librarians-tale.lib꞉> 
+#'librarians-tale.lib/hello
+clj꞉librarians-tale.lib꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+; Syntax error compiling at (src/librarians_tale/core.clj:40:1).
+; No such namespace: lib
+clj꞉librarians-tale.core꞉> 
+nil
+clj꞉librarians-tale.core꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+; Syntax error (IllegalStateException) compiling lib/say-hello at (src/librarians_tale/core.clj:41:1).
+; var: #'librarians-tale.lib/say-hello is not public
+clj꞉librarians-tale.core꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+#'librarians-tale.lib/greeting
+clj꞉librarians-tale.lib꞉> 
+#'librarians-tale.lib/say-hello
+clj꞉librarians-tale.lib꞉> 
+#'librarians-tale.lib/hello
+clj꞉librarians-tale.lib꞉> 
+Hello ,  Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+#'librarians-tale.lib/say-hello
+clj꞉librarians-tale.lib꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+; Execution error (ClassCastException) at librarians-tale.core/eval7993 (form-init16117927319681359806.clj:41).
+; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉librarians-tale.core꞉> 
+"Hello"
+clj꞉librarians-tale.core꞉> 
+"Hello"
+clj꞉librarians-tale.core꞉> 
+"Hello"
+clj꞉librarians-tale.core꞉> 
+; Syntax error reading source at (REPL:42:28).
+; Reader tag must be a symbol
+clj꞉librarians-tale.core꞉> 
+; Syntax error (IllegalStateException) compiling lib/say-hello at (src/librarians_tale/core.clj:42:3).
+; var: #'librarians-tale.lib/say-hello is not public
+clj꞉librarians-tale.core꞉> 
+; Syntax error (ClassCastException) compiling var at (src/librarians_tale/core.clj:1:7950).
+; class clojure.lang.PersistentList cannot be cast to class clojure.lang.Symbol (clojure.lang.PersistentList and clojure.lang.Symbol are in unnamed module of loader 'app')
+clj꞉librarians-tale.core꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/librarians_tale/core.clj:1:1).
+; alias - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+alias - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+alias - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+alias - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+alias - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+alias - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+alias - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉librarians-tale.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/librarians_tale/core.clj:1:1).
+; :alias - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+:alias - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+:alias - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+:alias - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+:alias - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+:alias - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+:alias - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉librarians-tale.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/librarians_tale/core.clj:1:1).
+; alias - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+alias - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+alias - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+alias - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+alias - failed: #{:refer} at: [:ns-clauses :refer :clause] spec: :clojure.core.specs.alpha/ns-refer
+alias - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+alias - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉librarians-tale.core꞉> 
+nil
+clj꞉librarians-tale.core꞉> 
+Hello, Balbi
+nil
+clj꞉librarians-tale.core꞉> 
+; Syntax error compiling at (src/librarians_tale/core.clj:39:1).
+; Unable to resolve symbol: hello in this context
+clj꞉librarians-tale.core꞉> 
+; Execution error at librarians-tale.core/eval8013 (form-init16117927319681359806.clj:39).
+; No namespace: librarians-tale.lib/hello found
+clj꞉librarians-tale.core꞉> 
+; Execution error at librarians-tale.core/eval8015 (form-init16117927319681359806.clj:39).
+; No namespace: librarians-tale.lib/hello found
+clj꞉librarians-tale.core꞉> 

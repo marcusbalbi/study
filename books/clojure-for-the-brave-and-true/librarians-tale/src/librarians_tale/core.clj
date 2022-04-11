@@ -1,5 +1,6 @@
 (ns librarians-tale.core
-  (:gen-class))
+  (:gen-class) 
+  (:require [librarians-tale.lib :as lib]))
 
 
 (ns-name *ns*)
@@ -25,6 +26,26 @@ great-books
 (deref #'great-books)
 
 (def great-books ["The power of Bees" "Journey to the Upstairs"])
+
+(create-ns 'cheese.taxonomy)
+
+(ns-name (create-ns 'cheese.taxonomy))
+
+(in-ns 'cheese.analysis)
+
+;;great-books
+;;librarians-tale/great-books
+
+;(alias 'hello 'librarians-tale.lib/hello)
+
+(lib/hello "Balbi")
+;(lib/say-hello "Balbino")
+
+
+
+
+
+
 
 
 (defn -main

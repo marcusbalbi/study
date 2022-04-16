@@ -1,8 +1,6 @@
 (ns the-divine-cheese-code.core
-  ;; way presented in the book
-  ;; way that code editor suggest
   (:require [the-divine-cheese-code.visualization.svg :as svg]
-            [clojure.pprint :refer [pprint]]) ;ns macro
+            [clojure.java.browse :as browse]) ;ns macro
   (:gen-class))
 
   ;;(require 'the-divine-cheese-code.visualization.svg) ; used in repl
@@ -32,14 +30,31 @@
               :lng 12.45}
 ])
 
-(defn test-latlng->point []
-  (svg/latlng->point { :lat 32.88 :lng 10.5}))
+;; (defn test-latlng->point []
+;;   (svg/latlng->point { :lat 32.88 :lng 10.5}))
 
-(test-latlng->point)
+;; (test-latlng->point)
+
+(defn url [filename]
+  (str "file:///"
+       (System/getProperty "user.dir")
+       "/"
+       filename))
+
+(defn template
+  [contents]
+  (str "<style>polyline { fill: none; stroke:#5881d8; stroke-width:3;}</style>" contents))
+
 
 (defn- main [& args]
-  (pprint heists)
-  (println (svg/points heists)))
+  (let [filename  "map.html"]
+    (->> heists
+         (svg/xml 50 100)
+         template
+         (spit filename))
+    (browse/browse-url (url filename))))
 
 (main)
+
+
 

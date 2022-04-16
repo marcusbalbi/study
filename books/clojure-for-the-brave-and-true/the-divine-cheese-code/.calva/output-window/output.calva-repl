@@ -18,3 +18,60 @@
 clj꞉the-divine-cheese-code.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.visualization.svg/latlng->point
+clj꞉the-divine-cheese-code.visualization.svg꞉> 
+#'the-divine-cheese-code.visualization.svg/points
+clj꞉the-divine-cheese-code.visualization.svg꞉> 
+; Syntax error compiling at (src/the_divine_cheese_code/visualization/svg.clj:13:3).
+; No such namespace: string
+clj꞉the-divine-cheese-code.visualization.svg꞉> 
+nil
+clj꞉the-divine-cheese-code.visualization.svg꞉> 
+#'the-divine-cheese-code.visualization.svg/points
+clj꞉the-divine-cheese-code.visualization.svg꞉> 
+#'the-divine-cheese-code.core/heists
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; ((require the-divine-cheese-code.visualization.svg) (refer (quote the-divine-cheese-code.visualization.svg)) (:gen-class)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; ((require (quote the-divine-cheese-code.visualization.svg)) (refer (quote the-divine-cheese-code.visualization.svg)) (:gen-class)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; ((require (quote the-divine-cheese-code.visualization.svg)) (refer (quote the-divine-cheese-code.visualization.svg)) (:gen-class)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error compiling at (src/the_divine_cheese_code/core.clj:34:12).
+; No such namespace: svg
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error compiling at (src/the_divine_cheese_code/core.clj:34:12).
+; No such namespace: svg
+clj꞉the-divine-cheese-code.core꞉> 
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/heists
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/main
+clj꞉the-divine-cheese-code.core꞉> 
+6.97,50.95 8.55,47.37 5.37,43.3 8.55,47.37 12.45,41.9
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error compiling at (src/the_divine_cheese_code/core.clj:34:12).
+; Unable to resolve symbol: points in this context
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/the_divine_cheese_code/core.clj:6:3).
+; the-divine-cheese-code.visualization.svg
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/the_divine_cheese_code/core.clj:7:3).
+; the-divine-cheese-code.visualization.svg
+clj꞉the-divine-cheese-code.core꞉> 
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/main
+clj꞉the-divine-cheese-code.core꞉> 
+6.97,50.95 8.55,47.37 5.37,43.3 8.55,47.37 12.45,41.9
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/test-latlng->point
+clj꞉the-divine-cheese-code.core꞉> 
+"10.5,32.88"
+clj꞉the-divine-cheese-code.core꞉> 

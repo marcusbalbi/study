@@ -75,3 +75,97 @@ clj꞉the-divine-cheese-code.core꞉> 
 clj꞉the-divine-cheese-code.core꞉> 
 "10.5,32.88"
 clj꞉the-divine-cheese-code.core꞉> 
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; :refer - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+:refer - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+:refer - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+:refer - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+[clojure.pprint :only [print]] - failed: simple-symbol? at: [:ns-clauses :refer :lib] spec: :clojure.core.specs.alpha/ns-refer
+:refer - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+:refer - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; ((:require [the-divine-cheese-code.visualization.svg :as svg clojure.pprint :as pprint]) (:gen-class)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error compiling at (src/the_divine_cheese_code/core.clj:41:3).
+; No such namespace: pprint
+clj꞉the-divine-cheese-code.core꞉> 
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/main
+clj꞉the-divine-cheese-code.core꞉> 
+"6.97,50.95 8.55,47.37 5.37,43.3 8.55,47.37 12.45,41.9"
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/main
+clj꞉the-divine-cheese-code.core꞉> 
+[{:location "Cologne, Germany",
+  :cheese-name "Archbishop Hildebolds Cheese Pretzel",
+  :lat 50.95,
+  :lng 6.97}
+ {:location "Zurich, Switezerland",
+  :cheese-name "The Standard Emmental",
+  :lat 47.37,
+  :lng 8.55}
+ {:location "Marseille, France",
+  :cheese-name "Le Fromage de Cosquer",
+  :lat 43.3,
+  :lng 5.37}
+ {:location "Zurich, Switezerland",
+  :cheese-name "The Lesser Emmental",
+  :lat 47.37,
+  :lng 8.55}
+ {:location "Vatican City",
+  :cheese-name "The Cheese of Turin",
+  :lat 41.9,
+  :lng 12.45}]
+6.97,50.95 8.55,47.37 5.37,43.3 8.55,47.37 12.45,41.9
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; :refer - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+:refer - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+:refer - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+:refer - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+[clojure.pprint :as pprint] - failed: simple-symbol? at: [:ns-clauses :refer :lib] spec: :clojure.core.specs.alpha/ns-refer
+:refer - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+:refer - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉the-divine-cheese-code.core꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/the_divine_cheese_code/core.clj:1:1).
+; :refer - failed: #{:refer-clojure} at: [:ns-clauses :refer-clojure :clause] spec: :clojure.core.specs.alpha/ns-refer-clojure
+:refer - failed: #{:require} at: [:ns-clauses :require :clause] spec: :clojure.core.specs.alpha/ns-require
+:refer - failed: #{:import} at: [:ns-clauses :import :clause] spec: :clojure.core.specs.alpha/ns-import
+:refer - failed: #{:use} at: [:ns-clauses :use :clause] spec: :clojure.core.specs.alpha/ns-use
+[clojure.pprint :only [pprint]] - failed: simple-symbol? at: [:ns-clauses :refer :lib] spec: :clojure.core.specs.alpha/ns-refer
+:refer - failed: #{:load} at: [:ns-clauses :load :clause] spec: :clojure.core.specs.alpha/ns-load
+:refer - failed: #{:gen-class} at: [:ns-clauses :gen-class :clause] spec: :clojure.core.specs.alpha/ns-gen-class
+clj꞉the-divine-cheese-code.core꞉> 
+nil
+clj꞉the-divine-cheese-code.core꞉> 
+#'the-divine-cheese-code.core/main
+clj꞉the-divine-cheese-code.core꞉> 
+[{:location "Cologne, Germany",
+  :cheese-name "Archbishop Hildebolds Cheese Pretzel",
+  :lat 50.95,
+  :lng 6.97}
+ {:location "Zurich, Switezerland",
+  :cheese-name "The Standard Emmental",
+  :lat 47.37,
+  :lng 8.55}
+ {:location "Marseille, France",
+  :cheese-name "Le Fromage de Cosquer",
+  :lat 43.3,
+  :lng 5.37}
+ {:location "Zurich, Switezerland",
+  :cheese-name "The Lesser Emmental",
+  :lat 47.37,
+  :lng 8.55}
+ {:location "Vatican City",
+  :cheese-name "The Cheese of Turin",
+  :lat 41.9,
+  :lng 12.45}]
+6.97,50.95 8.55,47.37 5.37,43.3 8.55,47.37 12.45,41.9
+nil
+clj꞉the-divine-cheese-code.core꞉> 

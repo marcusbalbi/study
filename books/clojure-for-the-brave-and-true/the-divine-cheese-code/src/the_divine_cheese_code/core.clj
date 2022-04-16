@@ -1,10 +1,13 @@
 (ns the-divine-cheese-code.core
   ;; way presented in the book
-  ;;(require 'the-divine-cheese-code.visualization.svg)
-  ;;(refer 'the-divine-cheese-code.visualization.svg)
   ;; way that code editor suggest
-  (:require [the-divine-cheese-code.visualization.svg :as svg])
+  (:require [the-divine-cheese-code.visualization.svg :as svg]
+            [clojure.pprint :refer [pprint]]) ;ns macro
   (:gen-class))
+
+  ;;(require 'the-divine-cheese-code.visualization.svg) ; used in repl
+  ;;(refer 'the-divine-cheese-code.visualization.svg) ; used in repl
+
 
 (def heists [
              {:location "Cologne, Germany"
@@ -35,6 +38,7 @@
 (test-latlng->point)
 
 (defn- main [& args]
+  (pprint heists)
   (println (svg/points heists)))
 
 (main)

@@ -1,0 +1,94 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉writing-macros.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix
+clj꞉writing-macros.core꞉> 
+; Syntax error compiling at (src/writing_macros/core.clj:9:1).
+; Can't take value of a macro: #'writing-macros.core/infix
+clj꞉writing-macros.core꞉> 
+7
+clj꞉writing-macros.core꞉> 
+(+ 1 1)
+clj꞉writing-macros.core꞉> 
+(if (>= 5 2) (do (do (println "Hello world five is greater than 2"))))
+clj꞉writing-macros.core꞉> 
+true
+clj꞉writing-macros.core꞉> 
+(if (>= 5 2) (do (do (println "Hello world five is greater than 2"))))
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix2
+clj꞉writing-macros.core꞉> 
+; Execution error (ClassCastException) at writing-macros.core/eval7848 (form-init6351301373466730860.clj:17).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix2
+clj꞉writing-macros.core꞉> 
+; Execution error (ClassCastException) at writing-macros.core/eval7859 (form-init6351301373466730860.clj:17).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/infix2
+clj꞉writing-macros.core꞉> 
+4
+clj꞉writing-macros.core꞉> 
+; Syntax error compiling at (src/writing_macros/core.clj:21:3).
+; Can't take value of a macro: #'clojure.core/let
+clj꞉writing-macros.core꞉> 
+#'writing-macros.core/my-print-whoopsie
+clj꞉writing-macros.core꞉> 
+[2 4 6 8 10]
+[2 4 6 8 10]
+clj꞉writing-macros.core꞉> 
+#function[clojure.core/+]
+clj꞉writing-macros.core꞉> 
++
+clj꞉writing-macros.core꞉> 
++
+clj꞉writing-macros.core꞉> 
+; Syntax error compiling at (src/writing_macros/core.clj:1:7946).
+; Unable to resolve symbol: sweating-to-the-oldies in this context
+clj꞉writing-macros.core꞉> 
+sweating-to-the-oldies
+clj꞉writing-macros.core꞉> 
+(+ 1 2)
+clj꞉writing-macros.core꞉> 
++
+clj꞉writing-macros.core꞉> 
++
+clj꞉writing-macros.core꞉> 
+clojure.core/+
+clj꞉writing-macros.core꞉> 
+clojure.core/+
+clj꞉writing-macros.core꞉> 
+(clojure.core/+ 2 9)
+clj꞉writing-macros.core꞉> 
+(+ 2 9)
+clj꞉writing-macros.core꞉> 
+(clojure.core/+ 2 9)
+clj꞉writing-macros.core꞉> 
+(clojure.core/+ 1 2)
+clj꞉writing-macros.core꞉> 
+(+ 1 ~(inc 1))
+clj꞉writing-macros.core꞉> 
+(clojure.core/+ 1 2)
+clj꞉writing-macros.core꞉> 

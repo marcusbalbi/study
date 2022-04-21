@@ -41,7 +41,15 @@ sweating-to-the-oldies
 `(+ 1 ~(inc 1))
 
 
+(defmacro code-critic 
+  "Phrases are courtesy Hermes Conrad from Futurama"
+  [bad good]
+  `(do (println "Great squid of Madrid, this is bad code:"
+                (quote ~bad))
+       (println "Sweet gorilla of Manila, this is good code:"
+                (quote ~good))))
 
+(code-critic (1 + 1) (+ 1 1))
 
 
 

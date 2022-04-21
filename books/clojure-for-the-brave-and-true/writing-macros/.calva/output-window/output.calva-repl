@@ -92,3 +92,13 @@ clj꞉writing-macros.core꞉> 
 clj꞉writing-macros.core꞉> 
 (clojure.core/+ 1 2)
 clj꞉writing-macros.core꞉> 
+#'writing-macros.core/code-critic
+clj꞉writing-macros.core꞉> 
+Great squid of Madrid, this is bad code: (1 + 1)
+Sweet gorilla of Manila, this is good code: (+ 1 1)
+nil
+clj꞉writing-macros.core꞉> 
+Great squid of Madrid, this is bad code: (1 + 1)
+Sweet gorilla of Manila, this is good code: (+ 1 1)
+nil
+clj꞉writing-macros.core꞉> 

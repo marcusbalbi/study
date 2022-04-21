@@ -1,0 +1,175 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉testing-clojure.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉testing-clojure.core꞉> 
+Hello World
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+; Execution error (ClassCastException) at testing-clojure.core/eval7837$fn (form-init13283968053027863113.clj:9).
+; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+; Execution error (ClassCastException) at testing-clojure.core/eval7847$fn (form-init13283968053027863113.clj:10).
+; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+; Execution error (ClassCastException) at testing-clojure.core/eval7857$fn (form-init13283968053027863113.clj:10).
+; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉testing-clojure.core꞉> 
+[2 4 6 5]
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+; Execution error (ClassCastException) at testing-clojure.core/eval7869$fn (form-init13283968053027863113.clj:10).
+; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+; Syntax error compiling if at (src/testing_clojure/core.clj:9:28).
+; Too many arguments to if
+clj꞉testing-clojure.core꞉> 
+Hello World
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+Hello World
+[2 4 6 8 10 12 1]
+nil
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10 12 1]
+; Execution error (NullPointerException) at testing-clojure.core/eval7945 (form-init13283968053027863113.clj:5).
+; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10 12 1]
+; Execution error (NullPointerException) at testing-clojure.core/eval7949 (form-init13283968053027863113.clj:5).
+; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.IFn.invoke(Object)" is null
+clj꞉testing-clojure.core꞉> 
+; Execution error (ArityException) at testing-clojure.core/eval7955 (form-init13283968053027863113.clj:15).
+; Wrong number of args (2) passed to: testing-clojure.core/eval7955/fn--7956
+clj꞉testing-clojure.core꞉> 
+; Execution error (ArityException) at testing-clojure.core/eval7969 (form-init13283968053027863113.clj:15).
+; Wrong number of args (2) passed to: testing-clojure.core/eval7969/fn--7970
+clj꞉testing-clojure.core꞉> 
+30
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+2 b ->  4
+6 b ->  6
+12 b ->  8
+20 b ->  10
+30
+clj꞉testing-clojure.core꞉> 
+a -> 2 b ->  4
+a -> 6 b ->  6
+a -> 12 b ->  8
+a -> 20 b ->  10
+30
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+a -> 2 b ->  4
+; Execution error (ClassCastException) at testing-clojure.core/eval8025$fn (form-init13283968053027863113.clj:15).
+; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉testing-clojure.core꞉> 
+[2 4 6 8 10]
+clj꞉testing-clojure.core꞉> 
+Hello World
+(2 3 4 5 6)
+30
+nil
+clj꞉testing-clojure.core꞉> 
+[2 4 6 5]
+clj꞉testing-clojure.core꞉> 
+(2 4)
+clj꞉testing-clojure.core꞉> 
+(6 8 10)
+clj꞉testing-clojure.core꞉> 

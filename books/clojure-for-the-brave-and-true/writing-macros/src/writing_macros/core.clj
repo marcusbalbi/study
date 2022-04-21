@@ -31,7 +31,7 @@
 sweating-to-the-oldies
 (quote sweating-to-the-oldies)
 
-'(+ 1 2 )
+'(+ 1 2)
 '+
 'clojure.core/+
 `+
@@ -41,7 +41,7 @@ sweating-to-the-oldies
 `(+ 1 ~(inc 1))
 
 
-(defmacro code-critic 
+(defmacro code-critic
   "Phrases are courtesy Hermes Conrad from Futurama"
   [bad good]
   `(do (println "Great squid of Madrid, this is bad code:"
@@ -50,6 +50,30 @@ sweating-to-the-oldies
                 (quote ~good))))
 
 (code-critic (1 + 1) (+ 1 1))
+
+
+(defn criticize-code [criticism code]
+  `(println ~criticism (quote ~code)))
+
+
+(criticize-code "Hello there!" '(1 + 1))
+
+(defmacro code-critic
+  [bad good]
+  `(do ~(criticize-code "Cursed Bacteria of Liberia, this is bad code:" bad)
+       ~(criticize-code "Sweet sacred boa of western and Eastern Samoa, this is a good code" good)))
+
+(code-critic (1 + 1) (+ 1 1))
+
+`(+ ~(list 1 2 3))
+`(+ ~@(list 1 2 3))
+
+(gensym)
+(gensym 'message)
+
+`(bitbot# blarg#)
+
+`(let [name# "Larray Potter"] name#)
 
 
 

@@ -18,87 +18,32 @@
 clj꞉writing-macros.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix
+G__5855
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix
+G__5858
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix
+G__5861
 clj꞉writing-macros.core꞉> 
-; Syntax error compiling at (src/writing_macros/core.clj:9:1).
-; Can't take value of a macro: #'writing-macros.core/infix
+G__5864
 clj꞉writing-macros.core꞉> 
-7
+G__5867
 clj꞉writing-macros.core꞉> 
-(+ 1 1)
+G__5870
 clj꞉writing-macros.core꞉> 
-(if (>= 5 2) (do (do (println "Hello world five is greater than 2"))))
+message7620
 clj꞉writing-macros.core꞉> 
-true
+(blarg__7867__auto__)
 clj꞉writing-macros.core꞉> 
-(if (>= 5 2) (do (do (println "Hello world five is greater than 2"))))
+; Syntax error compiling at (src/writing_macros/core.clj:1:7947).
+; Unable to resolve symbol: bitbot# in this context
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix2
+(bitbot__7871__auto__)
 clj꞉writing-macros.core꞉> 
-; Execution error (ClassCastException) at writing-macros.core/eval7848 (form-init6351301373466730860.clj:17).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+(bitbot__7875__auto__)
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix2
+(bitbot__7879__auto__ bitbot__7879__auto__)
 clj꞉writing-macros.core꞉> 
-; Execution error (ClassCastException) at writing-macros.core/eval7859 (form-init6351301373466730860.clj:17).
-; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+(bitbot__7884__auto__ blarg__7885__auto__)
 clj꞉writing-macros.core꞉> 
-#'writing-macros.core/infix2
-clj꞉writing-macros.core꞉> 
-4
-clj꞉writing-macros.core꞉> 
-; Syntax error compiling at (src/writing_macros/core.clj:21:3).
-; Can't take value of a macro: #'clojure.core/let
-clj꞉writing-macros.core꞉> 
-#'writing-macros.core/my-print-whoopsie
-clj꞉writing-macros.core꞉> 
-[2 4 6 8 10]
-[2 4 6 8 10]
-clj꞉writing-macros.core꞉> 
-#function[clojure.core/+]
-clj꞉writing-macros.core꞉> 
-+
-clj꞉writing-macros.core꞉> 
-+
-clj꞉writing-macros.core꞉> 
-; Syntax error compiling at (src/writing_macros/core.clj:1:7946).
-; Unable to resolve symbol: sweating-to-the-oldies in this context
-clj꞉writing-macros.core꞉> 
-sweating-to-the-oldies
-clj꞉writing-macros.core꞉> 
-(+ 1 2)
-clj꞉writing-macros.core꞉> 
-+
-clj꞉writing-macros.core꞉> 
-+
-clj꞉writing-macros.core꞉> 
-clojure.core/+
-clj꞉writing-macros.core꞉> 
-clojure.core/+
-clj꞉writing-macros.core꞉> 
-(clojure.core/+ 2 9)
-clj꞉writing-macros.core꞉> 
-(+ 2 9)
-clj꞉writing-macros.core꞉> 
-(clojure.core/+ 2 9)
-clj꞉writing-macros.core꞉> 
-(clojure.core/+ 1 2)
-clj꞉writing-macros.core꞉> 
-(+ 1 ~(inc 1))
-clj꞉writing-macros.core꞉> 
-(clojure.core/+ 1 2)
-clj꞉writing-macros.core꞉> 
-#'writing-macros.core/code-critic
-clj꞉writing-macros.core꞉> 
-Great squid of Madrid, this is bad code: (1 + 1)
-Sweet gorilla of Manila, this is good code: (+ 1 1)
-nil
-clj꞉writing-macros.core꞉> 
-Great squid of Madrid, this is bad code: (1 + 1)
-Sweet gorilla of Manila, this is good code: (+ 1 1)
-nil
+(clojure.core/let [name__7889__auto__ "Larray Potter"] name__7889__auto__)
 clj꞉writing-macros.core꞉> 

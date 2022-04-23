@@ -18,32 +18,30 @@
 clj꞉writing-macros.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉writing-macros.core꞉> 
-G__5855
+#'writing-macros.core/error-messages-for
 clj꞉writing-macros.core꞉> 
-G__5858
+("Please enter a name")
 clj꞉writing-macros.core꞉> 
-G__5861
+; Syntax error compiling at (src/writing_macros/core.clj:116:1).
+; Unable to resolve symbol: validate in this context
 clj꞉writing-macros.core꞉> 
-G__5864
+#'writing-macros.core/order-details
 clj꞉writing-macros.core꞉> 
-G__5867
+#'writing-macros.core/order-details-validations
 clj꞉writing-macros.core꞉> 
-G__5870
+; Syntax error compiling at (src/writing_macros/core.clj:116:1).
+; Unable to resolve symbol: validate in this context
 clj꞉writing-macros.core꞉> 
-message7620
+#'writing-macros.core/validate
 clj꞉writing-macros.core꞉> 
-(blarg__7867__auto__)
+{:email ("Your email address does not look like an email address")}
 clj꞉writing-macros.core꞉> 
-; Syntax error compiling at (src/writing_macros/core.clj:1:7947).
-; Unable to resolve symbol: bitbot# in this context
+:failure {:email (Your email address does not look like an email address)}
+nil
 clj꞉writing-macros.core꞉> 
-(bitbot__7871__auto__)
+#'writing-macros.core/if-valid
 clj꞉writing-macros.core꞉> 
-(bitbot__7875__auto__)
-clj꞉writing-macros.core꞉> 
-(bitbot__7879__auto__ bitbot__7879__auto__)
-clj꞉writing-macros.core꞉> 
-(bitbot__7884__auto__ blarg__7885__auto__)
-clj꞉writing-macros.core꞉> 
-(clojure.core/let [name__7889__auto__ "Larray Potter"] name__7889__auto__)
+(let*
+ [my-error-name (writing-macros.core/validate order-details order-details-validations)]
+ (if (clojure.core/empty? my-error-name) (println :sucess) (println :failure my-error-name)))
 clj꞉writing-macros.core꞉> 

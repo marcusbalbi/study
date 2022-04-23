@@ -18,158 +18,106 @@
 clj꞉testing-clojure.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉testing-clojure.core꞉> 
-Hello World
+true
+clj꞉testing-clojure.core꞉> 
+false
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+; Syntax error compiling at (src/testing_clojure/core.clj:29:28).
+; No such namespace: string
+clj꞉testing-clojure.core꞉> 
+; Syntax error compiling at (src/testing_clojure/core.clj:29:28).
+; No such namespace: string
+clj꞉testing-clojure.core꞉> 
+; Syntax error compiling at (src/testing_clojure/core.clj:29:28).
+; No such namespace: string
+clj꞉testing-clojure.core꞉> 
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"}]
+clj꞉testing-clojure.core꞉> 
+[{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
+[{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
+This is my result ==> [{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
+This is my result ==> [{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-; Execution error (ClassCastException) at testing-clojure.core/eval7837$fn (form-init13283968053027863113.clj:9).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-; Execution error (ClassCastException) at testing-clojure.core/eval7847$fn (form-init13283968053027863113.clj:10).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-; Execution error (ClassCastException) at testing-clojure.core/eval7857$fn (form-init13283968053027863113.clj:10).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉testing-clojure.core꞉> 
-[2 4 6 5]
-clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-; Execution error (ClassCastException) at testing-clojure.core/eval7869$fn (form-init13283968053027863113.clj:10).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-[2 4 6 8 10 12 1]
+This is my result ==> [{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-[2 4 6 8 10 12 1]
+This is my result ==> [{:name Jhon} {:name Jane} {:name Balbi}]
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-; Syntax error compiling if at (src/testing_clojure/core.clj:9:28).
-; Too many arguments to if
-clj꞉testing-clojure.core꞉> 
-Hello World
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-Hello World
-[2 4 6 8 10 12 1]
+This is my result ==> []
 nil
 clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10 12 1]
-; Execution error (NullPointerException) at testing-clojure.core/eval7945 (form-init13283968053027863113.clj:5).
-; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10 12 1]
-; Execution error (NullPointerException) at testing-clojure.core/eval7949 (form-init13283968053027863113.clj:5).
-; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.IFn.invoke(Object)" is null
-clj꞉testing-clojure.core꞉> 
-; Execution error (ArityException) at testing-clojure.core/eval7955 (form-init13283968053027863113.clj:15).
-; Wrong number of args (2) passed to: testing-clojure.core/eval7955/fn--7956
-clj꞉testing-clojure.core꞉> 
-; Execution error (ArityException) at testing-clojure.core/eval7969 (form-init13283968053027863113.clj:15).
-; Wrong number of args (2) passed to: testing-clojure.core/eval7969/fn--7970
-clj꞉testing-clojure.core꞉> 
-30
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-2 b ->  4
-6 b ->  6
-12 b ->  8
-20 b ->  10
-30
-clj꞉testing-clojure.core꞉> 
-a -> 2 b ->  4
-a -> 6 b ->  6
-a -> 12 b ->  8
-a -> 20 b ->  10
-30
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-a -> 2 b ->  4
-; Execution error (ClassCastException) at testing-clojure.core/eval8025$fn (form-init13283968053027863113.clj:15).
-; class java.lang.Long cannot be cast to class clojure.lang.IPersistentCollection (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉testing-clojure.core꞉> 
-[2 4 6 8 10]
-clj꞉testing-clojure.core꞉> 
-Hello World
-(2 3 4 5 6)
-30
+This is my result ==> {:name Balbi}
 nil
 clj꞉testing-clojure.core꞉> 
-[2 4 6 5]
+This is my result ==> {:name Balbi}
+nil
 clj꞉testing-clojure.core꞉> 
-(2 4)
+[{:name "Jhon"} {:name "Jane"}]
 clj꞉testing-clojure.core꞉> 
-(6 8 10)
+[{:name "Jhon"} {:name "Jane"} {:name "Balbi"} {:name "Jhon"} {:name "Jane"}]
+clj꞉testing-clojure.core꞉> 
+[{:name "Jhon"} {:name "Jane"}]
 clj꞉testing-clojure.core꞉> 

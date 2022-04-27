@@ -18,22 +18,33 @@
 clj꞉factories.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉factories.core꞉> 
-#'factories.core/car-factory
+Ola Mundo
+nil
 clj꞉factories.core꞉> 
-#'factories.core/-main
+Ola Mundo
+nil
 clj꞉factories.core꞉> 
-{:model "", :color "", :velocity 0}
+20
 clj꞉factories.core꞉> 
-; Execution error (ArityException) at factories.core/eval7818 (form-init9529155772206481114.clj:11).
-; Wrong number of args (3) passed to: factories.core/car-factory
+2000
 clj꞉factories.core꞉> 
-#'factories.core/car-factory
+nil
 clj꞉factories.core꞉> 
-#'factories.core/car-factory
+#object[java.time.Instant 0x79e45584 "2022-04-26T21:32:23.496749003Z"]
 clj꞉factories.core꞉> 
-{:model "up!", :color "blue", :velocity 180}
+#'factories.core/greets
 clj꞉factories.core꞉> 
-{:model "up!", :color "blue", :velocity 180, :gas 100}
+#'factories.core/greets
 clj꞉factories.core꞉> 
-#'factories.core/-main
+Ola  Lucas
+nil
+clj꞉factories.core꞉> 
+Ola  Lucas
+nil
+clj꞉factories.core꞉> 
+Ola  Lucas
+nil
+clj꞉factories.core꞉> 
+Ola  Balbi
+nil
 clj꞉factories.core꞉> 

@@ -1,4 +1,5 @@
 (ns concurrency-parallelism.core
+  (:require [org.httpkit.client :as http])
   (:gen-class))
 
 (future
@@ -148,6 +149,22 @@
            (enqueue saying (wait 100 "Cheerio!") (println @saying))))
 
 
+
+(slurp "http://www.google.com.br")
+
+(defn search [query]
+  (http/get (str "https://www.google.com/search?q=" query)))
+
+(search "Balbi")
+(println @(search "Balbi"))
+
+(let [response (search "Juju")
+      {:keys [status error body headers opts]} @response]
+  (println (keys @response))
+  (println "status: " status)
+  (println "Date:" (:date headers))
+  (println "body size:" (count body))
+  (println "has error?:" (if error "SIM" "NÃO")))
 
 
 

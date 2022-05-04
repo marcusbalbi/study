@@ -50,6 +50,48 @@
 (reset! fred {:cuddle-hunger-level 0 :percent-deteriorated 0})
 
 
+(defn shuffle-speed
+  [zombie]
+  (* (:cuddle-hunger-level zombie)
+     (- 100 (:percent-deteriorated zombie))))
+
+(defn shuffle-alert
+ [key watched old-state new-state]
+ (let [sph (shuffle-speed new-state)]
+   (if (> sph 5000)
+     (do
+       (println "Run you Fool!")
+       (println "The zombies speed is now " sph)
+       (println "This message brought to your courtesy" key))
+     (do
+       (println "All well with " key)
+       (println "Cuddle Hunger:" (:cuddle-hunger-level new-state))
+       (println "Percent Deterioreted:" (:percent-deteriorated new-state))
+       (println "SPH" sph)))))
+
+(reset! fred {:cuddle-hunger-level 80
+              :percent-deteriorated 2})
+
+(add-watch fred :fred-shuffle-alert shuffle-alert)
+
+(swap! fred update-in [:percent-deteriorated] + 1)
+
+(swap! fred update-in [:percent-deteriorated] + 60)
+
+(defn percent-deteriorated-validator
+  [{:keys [percent-deteriorated]}]
+  (or (and (>= percent-deteriorated 0)
+           (<= percent-deteriorated 100))
+      (throw (IllegalStateException. "Thats not mathy!!"))))
+
+
+(def bobby 
+  (atom {:cuddle-hunger-level 0 :percent-deteriorated 0}
+        :validator percent-deteriorated-validator))
+
+(swap! bobby update-in [:percent-deteriorated] + 200)
+
+
 
 (defn -main
   "I don't do a whole lot ... yet."

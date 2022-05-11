@@ -131,13 +131,13 @@
 (missing-variety-socks dryer)
 
 (def counter (ref 0))
-  (future
-    (dosync
-     (alter counter inc)
-     (println @counter "First increment")
-     (Thread/sleep 500)
-     (alter counter inc)
-     (println @counter "Second Incremetn, Finish Transaction")))
+(future
+  (dosync
+   (alter counter inc)
+   (println @counter "First increment")
+   (Thread/sleep 500)
+   (alter counter inc)
+   (println @counter "Second Incremetn, Finish Transaction")))
 (Thread/sleep 250)
 (println @counter, "This still have the 0 value read outside the transaction")
 (Thread/sleep 500)
@@ -188,7 +188,7 @@
 
 (def ^:dynamic *troll-thought* nil)
 
-(defn troll-riddle 
+(defn troll-riddle
   [your-answer]
   (let [number "man meat"]
     (when (thread-bound? #'*troll-thought*)
@@ -208,6 +208,61 @@
 (alter-var-root #'power-source (fn [_] "7-eleven park lot"))
 
 power-source
+
+
+(defn always-1
+  []
+  1)
+
+(take 5 (repeatedly always-1))
+(take 5 (repeatedly (partial rand-int 10)))
+
+(def alphabet-length 26)
+
+(def letters
+  (mapv
+   (comp str char (partial + 65))
+   (range alphabet-length)))
+
+(defn random-string
+  [length]
+  (apply 
+   str (take length 
+             (repeatedly 
+              #(rand-nth letters)))))
+
+(defn random-string-list
+  [list-length string-length]
+  (doall (take list-length (repeatedly (partial random-string string-length)))))
+
+(def orc-names (random-string-list 3000 7000))
+
+(time (dorun (map clojure.string/lower-case orc-names)))
+(time (dorun (pmap clojure.string/lower-case orc-names)))
+
+(def numbers [1 2 3 4 5 6 7 8 9 10])
+
+(partition-all 3 numbers)
+
+(pmap inc numbers)
+
+(pmap (fn [number-group] (doall (map inc number-group)))
+      (partition-all 3 numbers))
+
+(apply concat (pmap (fn [number-group] (doall (map inc number-group)))
+                    (partition-all 3 numbers)))
+
+(def orc-names-abbrevs (random-string-list 20000 300))
+
+(time (dorun
+       (apply concat
+              (pmap (fn [name] (doall (map clojure.string/lower-case name)))
+                    (partition-all 1000 orc-names-abbrevs)))))
+
+
+
+
+
 
 
 

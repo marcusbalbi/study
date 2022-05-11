@@ -159,6 +159,58 @@
 
 
 
+(def ^:dynamic *notification-address* "dobby@elf.org")
+*notification-address*
+(binding [*notification-address* "test@elf.org"]
+  *notification-address*)
+
+
+(defn notify [message]
+  (str "TO: " *notification-address* "\n"
+       "MESSAGE:" message))
+(notify "I fell")
+
+(binding [*notification-address* "test@elf.org"]
+  (notify "Test"))
+
+
+(binding [*out* (clojure.java.io/writer "print-output")]
+  (println "A man who carries a cat by the tail learns something he can learn in no other way"))
+
+(slurp "print-output")
+
+
+(println ["print" "all" "the" "things"])
+
+(binding [*print-length* 1]
+  (println ["print" "Just one"]))
+
+
+(def ^:dynamic *troll-thought* nil)
+
+(defn troll-riddle 
+  [your-answer]
+  (let [number "man meat"]
+    (when (thread-bound? #'*troll-thought*)
+      (set! *troll-thought* number))
+    (if (= number your-answer)
+      "Troll: You can cross the bridge"
+      "Troll: Time to eat you")))
+
+(binding [*troll-thought* nil]
+  (println (troll-riddle 2))
+  (println "SUCCULENT HUMAN: oooooooh!" "The answer was" *troll-thought*))
+
+
+
+(def power-source "Hair")
+
+(alter-var-root #'power-source (fn [_] "7-eleven park lot"))
+
+power-source
+
+
+
 
 
 (defn -main

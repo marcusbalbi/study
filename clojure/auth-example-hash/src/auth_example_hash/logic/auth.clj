@@ -11,6 +11,7 @@
 (defn create-user
   "Creates a new User with encrypted password"
   [email password]
+  ;; need email and password validation yet
   (let [
         low-case-email (string/lower-case email)
         hashed (encrypt low-case-email password)]

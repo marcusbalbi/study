@@ -16,4 +16,13 @@
         hashed (encrypt low-case-email password)]
     {:email low-case-email :password hashed}))
 
-;;(defn compare-password)
+(defn equals?
+  "compare if two users are the same"
+  [user1 user2]
+  (let [same-email (= (:email user1) (:email user2))
+        same-password (= (:password user1) (:password user2))]
+    (and same-email same-password)))
+
+;; (let [user1 (create-user "balbimarcus@gmail.com" "abc123")
+;;       user2 (create-user "balbimarcus@gmail.com" "abc123")]
+;;   (equals? user1 user2))

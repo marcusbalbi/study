@@ -6,7 +6,7 @@
   [filename]
   (json/read-str (slurp filename) :key-fn keyword))
 
-(fetch-data "db.json")
+(comment (fetch-data "db.json"))
 
 (defn- persist
   "save file"
@@ -17,9 +17,15 @@
 
 (defn save
   "Saves an User into database"
-  [filename user])
+  [filename user]
+  (let [data (fetch-data filename)
+        new-data (conj data user)]
+    (persist filename new-data)))
 
-(defn findByEmail
+(comment (save "db2.json"
+               {:email "jonas.doug@example.com" :password "blabla"}))
+
+(defn find-by-email
   "Find an User by its email"
   [filename email])
 

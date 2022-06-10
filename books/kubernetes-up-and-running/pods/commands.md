@@ -6,3 +6,14 @@
 * kubectl apply -f kuard-pod.yaml
 * kubectl describe pods kuard
 * kubectl delete -f kuard-pod.yaml
+
+## port forward
+
+* kubectl port-forward kuard 8080:8080
+* kubectl logs kuard
+* kubectl logs kuard -f
+* kubectl exec kuard -- date
+* kubectl exec -it kuard -- ash
+* kubectl cp kuard:etc/hosts ./hosts
+* kubectl cp ./hosts kuard:etc/hosts
+

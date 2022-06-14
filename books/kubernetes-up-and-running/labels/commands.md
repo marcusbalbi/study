@@ -21,3 +21,5 @@
 * kubectl get pods --selector="ver=2,app=bandicoot" -L app
 * kubectl get pods --selector="app in (alpaca, bandicoot)"
 * kubectl get pods --selector="app!=bandicoot"
+* kubectl delete pods --selector="canary=true"
+

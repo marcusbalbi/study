@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod
+  labels:
+    name: client-pod
+    component: web
+spec:
+  containers:
+  - name: client
+    image: marcusbalbi/udemy-docker-ci-example-complex-client:latest@sha256:68b34abc8f4b18170f1bcee56606aa08138cc7cf443aeedb46ba4bae9d9783e8
+    #image: stephengrider/multi-client
+    imagePullPolicy: Always
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 3000

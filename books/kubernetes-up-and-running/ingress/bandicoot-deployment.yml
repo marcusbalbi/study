@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bandicot-prod
+spec:
+  selector:
+    matchLabels:
+      app: bandicot
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bandicot
+    spec:
+      containers:
+      - name: bandicot-prod
+        image: gcr.io/kuar-demo/kuard-amd64:green
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          periodSeconds: 2
+          initialDelaySeconds: 0
+          failureThreshold: 3
+          successThreshold: 1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

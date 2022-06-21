@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: client-deployment
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       component: web
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: stephengrider/multi-client
+        image: stephengrider/multi-worker
         resources:
           limits:
             memory: "128Mi"

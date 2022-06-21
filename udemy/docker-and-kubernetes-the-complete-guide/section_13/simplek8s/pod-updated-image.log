@@ -1,0 +1,58 @@
+Name:         client-deployment-765c68994b-kt9k7
+Namespace:    default
+Priority:     0
+Node:         k3d-k3s-default-server-0/172.18.0.2
+Start Time:   Tue, 21 Jun 2022 20:26:49 -0300
+Labels:       component=web
+              pod-template-hash=765c68994b
+Annotations:  <none>
+Status:       Running
+IP:           10.42.0.96
+IPs:
+  IP:           10.42.0.96
+Controlled By:  ReplicaSet/client-deployment-765c68994b
+Containers:
+  client:
+    Container ID:   containerd://0fe9dbd92251de4ef38d54d85f84759cdc8ff21a11e97a2d464a50974bfd84a0
+    Image:          marcusbalbi/udemy-docker-ci-example-complex-client:v5
+    Image ID:       docker.io/marcusbalbi/udemy-docker-ci-example-complex-client@sha256:a042fb74bf187b8f800208119932d9f344495bbed459cbb63bcd28ff01861d7e
+    Port:           3000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 21 Jun 2022 20:26:53 -0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9xdzs (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-9xdzs:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m31s  default-scheduler  Successfully assigned default/client-deployment-765c68994b-kt9k7 to k3d-k3s-default-server-0
+  Normal  Pulling    3m30s  kubelet            Pulling image "marcusbalbi/udemy-docker-ci-example-complex-client:v5"
+  Normal  Pulled     3m27s  kubelet            Successfully pulled image "marcusbalbi/udemy-docker-ci-example-complex-client:v5" in 3.690241328s
+  Normal  Created    3m27s  kubelet            Created container client
+  Normal  Started    3m27s  kubelet            Started container client

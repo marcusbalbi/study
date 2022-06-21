@@ -1,0 +1,35 @@
+Name:                   kuard
+Namespace:              default
+CreationTimestamp:      Mon, 20 Jun 2022 21:37:54 -0300
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               run=kuard
+Replicas:               2 desired | 2 updated | 2 total | 2 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  run=kuard
+  Containers:
+   kuard:
+    Image:      gcr.io/kuar-demo/kuard-amd64:blue
+    Port:       8080/TCP
+    Host Port:  0/TCP
+    Limits:
+      cpu:        500m
+      memory:     128Mi
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Progressing    True    NewReplicaSetAvailable
+  Available      True    MinimumReplicasAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   kuard-76ccd465b (2/2 replicas created)
+Events:
+  Type    Reason             Age                  From                   Message
+  ----    ------             ----                 ----                   -------
+  Normal  ScalingReplicaSet  16m                  deployment-controller  Scaled up replica set kuard-76ccd465b to 1
+  Normal  ScalingReplicaSet  8m33s (x3 over 11m)  deployment-controller  Scaled up replica set kuard-76ccd465b to 2

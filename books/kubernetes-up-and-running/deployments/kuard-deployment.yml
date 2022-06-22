@@ -3,18 +3,25 @@ kind: Deployment
 metadata:
   name: kuard
 spec:
+  # essa propriedade vai limitar o historico de rollouts
+  revisionHistoryLimit: 14
+  minReadySeconds: 60
+  progressDeadlineSeconds: 600
   selector:
     matchLabels:
       run: kuard
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
         run: kuard
+      annotations:
+        kubernetes.io/change-cause: "Update to blue kuard"
     spec:
       containers:
       - name: kuard
         image: gcr.io/kuar-demo/kuard-amd64:blue
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"

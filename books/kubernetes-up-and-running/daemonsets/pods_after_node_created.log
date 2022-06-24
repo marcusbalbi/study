@@ -1,0 +1,4 @@
+NAME                                 READY   STATUS    RESTARTS   AGE     IP            NODE                             NOMINATED NODE   READINESS GATES
+fluentd-elasticsearch-rhhlb          1/1     Running   0          4m24s   10.42.0.167   k3d-k3s-default-server-0         <none>           <none>
+fluentd-elasticsearch-wpc5b          1/1     Running   0          4m24s   10.42.1.5     k3d-k3d-k3s-default-server-1-0   <none>           <none>
+fluentd-elasticsearch-g7flf          1/1     Running   0          29s     10.42.2.2     k3d-k3d-k3s-default-server-2-0   <none>           <none>

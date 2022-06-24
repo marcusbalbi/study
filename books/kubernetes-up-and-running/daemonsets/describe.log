@@ -1,0 +1,41 @@
+Name:           fluentd-elasticsearch
+Selector:       name=fluentd-elasticsearch
+Node-Selector:  <none>
+Labels:         k8s-app=fluentd-logging
+Annotations:    deprecated.daemonset.template.generation: 1
+Desired Number of Nodes Scheduled: 2
+Current Number of Nodes Scheduled: 2
+Number of Nodes Scheduled with Up-to-date Pods: 2
+Number of Nodes Scheduled with Available Pods: 2
+Number of Nodes Misscheduled: 0
+Pods Status:  2 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  name=fluentd-elasticsearch
+  Containers:
+   fluentd-elasticsearch:
+    Image:      quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+    Port:       <none>
+    Host Port:  <none>
+    Limits:
+      memory:  200Mi
+    Requests:
+      cpu:        100m
+      memory:     200Mi
+    Environment:  <none>
+    Mounts:
+      /var/lib/docker/containers from varlibdockercontainers (ro)
+      /var/log from varlog (rw)
+  Volumes:
+   varlog:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:  
+   varlibdockercontainers:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/docker/containers
+    HostPathType:  
+Events:
+  Type    Reason            Age   From                  Message
+  ----    ------            ----  ----                  -------
+  Normal  SuccessfulCreate  17s   daemonset-controller  Created pod: fluentd-elasticsearch-rhhlb
+  Normal  SuccessfulCreate  17s   daemonset-controller  Created pod: fluentd-elasticsearch-wpc5b

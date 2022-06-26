@@ -1,0 +1,4 @@
+# simple config file
+
+param1=true
+param2=test

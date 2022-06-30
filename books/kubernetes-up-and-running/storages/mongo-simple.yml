@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongo
+spec:
+  selector:
+    matchLabels:
+      app: mongo
+  serviceName: mongo
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:4.2.21
+        command: ["/bin/sh"]
+        args: ["-c", "mongod --replSet=rs0 --bind_ip_all"]
+        ports:
+        - containerPort: 27017
+          name: peer

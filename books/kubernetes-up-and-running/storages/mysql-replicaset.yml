@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mysql
+  # rotulo para vincular o service
+  labels:
+    app: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: database
+          image: mysql
+          # resources:
+          #   limits:
+          #     memory: "1Gi"
+          #     cpu: "500m"
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: secret
+          livenessProbe:
+            tcpSocket:
+              port: 3306
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+          - mountPath: "/var/lib/mysql"
+            name: database
+      volumes:
+        - name: database
+          persistentVolumeClaim:
+            claimName: database

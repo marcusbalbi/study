@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongo
+spec:
+  selector:
+    matchLabels:
+      app: mongo
+  serviceName: mongo
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mongo
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:4.2.21
+        command: ["/bin/sh"]
+        args: ["-c", "mongod --replSet=rs0 --bind_ip_all"]
+        ports:
+        - containerPort: 27017
+          name: web
+        volumeMounts:
+          - name: database
+            mountPath: /data/db
+        livenessProbe:
+          exec:
+            command:
+              - "/usr/bin/mongo "
+              - "--eval "
+              - "db.serverStatus()"
+          initialDelaySeconds: 10
+          timeoutSeconds: 10
+      # container para inicializar o servidor mongod e, em seguida dorme
+      - name: init-mongo
+        image: mongo:4.2.21-bionic
+        command: 
+          - bash
+          - /config/init.sh
+        volumeMounts:
+          - name: config
+            mountPath: /config
+      volumes:
+        - name: config
+          configMap:
+            name: "mongo-init"
+  volumeClaimTemplates:
+    - metadata:
+        name: database
+        annotations:
+          volume.alpha.kubernetes.io/storage-class: anything
+      spec:
+        accessModes:
+          - "ReadWriteOnce"
+        resources:
+          requests:
+            storage: 500Mi
+
+        

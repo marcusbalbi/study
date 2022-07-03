@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parse-server
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: parse-server
+  template:
+    metadata:
+      labels:
+        app: parse-server
+    spec:
+      containers:
+      - name: parse-server
+        image: marcusbalbi/parse-server
+        env:
+          - name: PARSE_SERVER_DATABASE_URI
+            value: "mongodb://mongo-0.mongo:27017,mongo-1.mongo:27017,mongo-2.mongo:27017/dev?replicaSet=rs0"
+          - name: PARSE_SERVER_APP_ID
+            value: my-app-id
+          - name: PARSE_SERVER_MASTER_KEY
+            value: my-master-key
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 1337

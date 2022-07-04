@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost
+  labels:
+    run: ghost
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: ghost
+  template:
+    metadata:
+      labels:
+        run: ghost
+    spec:
+      containers:
+      - name: ghost
+        image: ghost:alpine
+        # command: [ "sh", "-c", "cp /ghost-config/ghost-config.json /var/lib/ghost/config.json && node current/index.js" ]
+        # command: [ "sh", "-c", "cp /ghost-config/ghost-config.js /var/lib/ghost/config.js && /usr/local/bin/docker-entry-point.sh node current/index.js" ]
+        # command: [ "sh", "touch content/data/ghost.db && node current/index.js" ]
+        # command: ['sh', '-c', 'mkdir -p /var/lib/ghost/content/data/ && touch  /var/lib/ghost/content/data/ghost.db && node current/index.js']
+        # command: ['sh', '-c', 'mkdir -p /var/lib/ghost/content/data/ && touch  /var/lib/ghost/content/data/ghost.db && /usr/local/bin/docker-entrypoint.sh && node current/index.js']
+        env:
+          - name: NODE_ENV
+            value: development
+        volumeMounts:
+          - mountPath: /ghost-config
+            name: config
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+      volumes:
+        - name: config
+          configMap:
+            defaultMode: 420
+            name: ghost-config

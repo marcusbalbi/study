@@ -29,7 +29,7 @@
     "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
     "moment-timezone": "^0.5.34",
-    "mongoose": "^6.0.12",
+    "mongoose": "^6.4.6",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",

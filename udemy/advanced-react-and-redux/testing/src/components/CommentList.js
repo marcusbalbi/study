@@ -1,7 +1,5 @@
 import React from 'react';
 
 export const CommentList = () => {
-  return (
-    <div>CommentList</div>
-  )
+  return <div data-testid="CommentList">CommentList</div>;
 }

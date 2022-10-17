@@ -4,11 +4,11 @@ import { CommentList } from './CommentList';
 
 const App = () => {
   return (
-    <div>
+    <div data-testid="app">
       <CommentBox />
       <CommentList />
     </div>
-  )
+  );
 }
 
 export default App;

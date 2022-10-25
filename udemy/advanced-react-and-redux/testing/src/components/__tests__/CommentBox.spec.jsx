@@ -1,12 +1,9 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { CommentBox } from "components/CommentBox";
-import { AppReduxProvider } from "../../redux";
-import configureStore from "redux-mock-store"; //ES6 modules
+import { AppReduxProvider, createStore } from "../../redux";
 
 describe("CommentBox tests", () => {
-  const middlewares = [];
-  const mockStoreConfigure = configureStore(middlewares);
-  const store = mockStoreConfigure({ comments: [] });
+  const store = createStore();
   test("should render a textarea and a button", () => {
     const { unmount } = render(
       <AppReduxProvider store={store}>

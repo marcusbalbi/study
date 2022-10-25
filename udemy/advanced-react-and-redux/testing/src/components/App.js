@@ -1,13 +1,16 @@
 import React from 'react'
+import { AppReduxProvider } from '../redux';
 import { CommentBox } from './CommentBox';
 import { CommentList } from './CommentList';
 
 const App = () => {
   return (
-    <div data-testid="app">
-      <CommentBox />
-      <CommentList />
-    </div>
+    <AppReduxProvider>
+      <div data-testid="app">
+        <CommentBox />
+        <CommentList />
+      </div>
+    </AppReduxProvider>
   );
 }
 

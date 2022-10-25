@@ -1,5 +1,11 @@
 import React from 'react';
+import { useSelector } from '../redux';
 
 export const CommentList = () => {
-  return <div data-testid="CommentList">CommentList</div>;
+  const { comments } = useSelector((state) => {
+    return {
+      comments: state.comments
+    }
+  })
+  return <div data-testid="CommentList">{JSON.stringify(comments)}</div>;
 }

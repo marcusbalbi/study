@@ -15,7 +15,7 @@ export const CommentList = () => {
   }
 
   return <div data-testid="CommentList">
-    <ul>
+    <ul data-testid="CommentList-ul">
       {renderComments()}
     </ul>
   </div>;

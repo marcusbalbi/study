@@ -16,17 +16,18 @@ export const useDispatch = createDispatchHook(AppContext);
 export const useSelector = createSelectorHook(AppContext);
 
 
-export const createStore = () => {
+export const createStore = (preloadedState) => {
   return configureStore({
-    reducer: {
-      comments: commentsReducer,
-    },
-  });
-}
+  reducer: { comments: commentsReducer },
+  devTools: process.env.NODE_ENV !== 'production',
+  preloadedState,
+})
+};
 
-export function AppReduxProvider({ children }) {
+export function AppReduxProvider({ children, store }) {
+  const myStore = store || createStore();
   return (
-    <Provider context={AppContext} store={createStore()}>
+    <Provider context={AppContext} store={myStore}>
       {children}
     </Provider>
   );

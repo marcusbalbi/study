@@ -6,6 +6,17 @@ export const CommentList = () => {
     return {
       comments: state.comments
     }
-  })
-  return <div data-testid="CommentList">{JSON.stringify(comments)}</div>;
+  });
+
+  const renderComments = () => {
+    return comments.map((c, idx) => {
+      return <li key={idx}>{c.comment}</li>;
+    });
+  }
+
+  return <div data-testid="CommentList">
+    <ul>
+      {renderComments()}
+    </ul>
+  </div>;
 }

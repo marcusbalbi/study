@@ -4,6 +4,7 @@ import { CommentBox } from './CommentBox';
 import { CommentList } from './CommentList';
 
 const App = () => {
+
   return (
     <AppReduxProvider>
       <div data-testid="app">

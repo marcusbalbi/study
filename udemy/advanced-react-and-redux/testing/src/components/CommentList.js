@@ -4,19 +4,19 @@ import { useSelector } from '../redux';
 export const CommentList = () => {
   const { comments } = useSelector((state) => {
     return {
-      comments: state.comments
-    }
+      comments: state.comments,
+    };
   });
 
   const renderComments = () => {
     return comments.map((c, idx) => {
       return <li key={idx}>{c.comment}</li>;
     });
-  }
+  };
 
-  return <div data-testid="CommentList">
-    <ul data-testid="CommentList-ul">
-      {renderComments()}
-    </ul>
-  </div>;
+  return (
+    <div data-testid="CommentList">
+      <ul data-testid="CommentList-ul">{renderComments()}</ul>
+    </div>
+  );
 }

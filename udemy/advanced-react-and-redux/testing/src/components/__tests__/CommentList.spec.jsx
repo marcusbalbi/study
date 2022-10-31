@@ -25,4 +25,16 @@ describe("CommentList tests", () => {
     expect(list.innerHTML).toEqual("<li>Hi there</li>");
     unmount();
   });
+  test("should render a commentList with 2 or more comments", async () => {
+    const store = createStore({ comments: [{ comment: 'Hi there' }, { comment: 'Hello there!' }] });
+    const { unmount } = render(
+      <AppReduxProvider store={store}>
+        <CommentList/>
+      </AppReduxProvider>
+    );
+    const list = screen.queryByTestId("CommentList-ul");
+    expect(list.innerHTML).toEqual("<li>Hi there</li><li>Hello there!</li>");
+    expect(list.childElementCount).toBe(2)
+    unmount();
+  });
 });

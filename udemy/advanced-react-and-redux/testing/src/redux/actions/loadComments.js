@@ -7,7 +7,7 @@ export const loadComments = createAsyncThunk('comments/loadComments', async () =
   return data.data.map((comment) =>  {
     return {
       ...comment,
-      comment: [...comment.body, ],
+      comment: [...comment.name ],
     };
   })
 })

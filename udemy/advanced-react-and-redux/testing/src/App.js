@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { PostPage } from "./pages/PostPage";
 import { Header } from "./components/Header";
+import { RequiredRoute } from "./components/RequiredRoute";
 
 
 const App = () => {
@@ -13,7 +14,14 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/post" element={<PostPage />} />
+          <Route
+            path="/post"
+            element={
+              <RequiredRoute>
+                <PostPage />
+              </RequiredRoute>
+            }
+          />
         </Routes>
       </Router>
     </AppReduxProvider>

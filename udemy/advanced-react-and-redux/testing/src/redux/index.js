@@ -7,6 +7,7 @@ import {
   createSelectorHook,
 } from "react-redux";
 import commentsReducer from "./reducers/comments";
+import auth from "./reducers/auth";
 
 const AppContext = React.createContext(null);
 
@@ -18,7 +19,7 @@ export const useSelector = createSelectorHook(AppContext);
 
 export const createStore = (preloadedState) => {
   return configureStore({
-  reducer: { comments: commentsReducer },
+  reducer: { comments: commentsReducer, auth: auth },
   devTools: process.env.NODE_ENV !== 'production',
   preloadedState,
 })

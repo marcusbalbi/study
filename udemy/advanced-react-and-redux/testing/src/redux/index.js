@@ -16,13 +16,21 @@ export const useStore = createStoreHook(AppContext);
 export const useDispatch = createDispatchHook(AppContext);
 export const useSelector = createSelectorHook(AppContext);
 
+const logger = (store) => (next) => (action) => {
+  console.log("store", store);
+  console.log("dispatching", action);
+  let result = next(action);
+  console.log("next state", store.getState());
+  return result;
+};
 
 export const createStore = (preloadedState) => {
   return configureStore({
-  reducer: { comments: commentsReducer, auth: auth },
-  devTools: process.env.NODE_ENV !== 'production',
-  preloadedState,
-})
+    reducer: { comments: commentsReducer, auth: auth },
+    devTools: process.env.NODE_ENV !== "production",
+    preloadedState,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  });
 };
 
 export function AppReduxProvider({ children, store }) {

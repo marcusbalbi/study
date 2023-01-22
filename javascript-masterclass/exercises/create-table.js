@@ -18,7 +18,7 @@ const _extractColums = (sql) => {
     const regexCreate = /\(([\w]* [\w]*,?)+\)/;
     const result = regexCreate.exec(sql);
     if  (!result) return null;
-    return result[0].replace(/(\(|\))/g, '').split(',')
+    return result[0].replace(/(\(|\))/g, '').split(',').map(c => c.trim())
 }
 
 

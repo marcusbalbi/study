@@ -6,7 +6,7 @@ const insertCommand = require("./commands/insert");
 
 const createDatabase = () => {
   return {
-    tables: [],
+    tables: {},
     execute: function (sql) {
       if (!sql) return;
       if (sql.startsWith('create table')) {
@@ -18,9 +18,6 @@ const createDatabase = () => {
     insert: function (sql) {
       const { tableName, data } = insertCommand(sql);
 
-      if (!this.tables[tableName].data) {
-        this.tables[tableName].data = [];
-      }
       this.tables[tableName].data.push(data);
       return data.length;
     },
@@ -28,6 +25,7 @@ const createDatabase = () => {
       const { tableName, columns } = createCommand(sql);
       this.tables[tableName] = {
         columns,
+        data: [],
       };
     },
   };

@@ -2,9 +2,7 @@ const command = (sql) => {
   if (!sql || typeof sql !== "string") buildResult(null, []);
   if (!sql.startsWith("insert into")) buildResult(null, []);
 
-  const tableName = _extractTableName(sql);
-  const columns = _extractColums(sql);
-  const values = _extractValues(sql);
+  const [tableName, columns, values] = _extract(sql);
   const data = {};
   for (let i = 0; i < columns.length; i++) {
     data[columns[i]] = values[i];
@@ -12,25 +10,16 @@ const command = (sql) => {
   return { tableName, data, columns, values };
 };
 
-const _extractTableName = (sql) => {
-  const regexCreate = /^insert into ([\w]+).*$/;
-  const result = regexCreate.exec(sql);
-  return result && result.length > 0 && result[1];
-};
+const _extract = (sql) => {
+  const regexp = /insert into ([a-z]+) \((.+)\) values \((.+)\)/;
+  const parsedStatement = sql.match(regexp);
+  let [, tableName, columns, values] = parsedStatement;
 
-const _extractColums = (sql) => {
-  const regexColumns = /\((.*?)\)/;
-  const result = sql.match(regexColumns)
-  if (!result) return null;
-  return result[1].split(",").map((c) => c.trim());
-};
+  columns = columns.split(',').map(c => c.trim())
+  values = values.split(",").map((v) => v.trim());
 
-const _extractValues = (sql) => {
-  const regexColumns = /values \((.*?)\)/;
-  const result = sql.match(regexColumns)
-  if (!result) return null;
-  return result[1].split(",").map((v) => v.trim());
-};
+  return [tableName, columns, values];
+}
 
 const buildResult = (table, data) => {
   return {

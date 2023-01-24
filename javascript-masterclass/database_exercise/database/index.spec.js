@@ -36,4 +36,17 @@ describe('database', () => {
     result = database.execute("select name, age from author where id = 1");
     expect(result.length).toBe(1);
   })
+  test('delete', () => {
+    const database = createDatabase();
+    database.execute("create table author (id number, name string, age number, city string, state string, country string)");
+    database.execute("insert into author (id, name, age) values (1, Douglas Crockford, 62)");
+    database.execute("insert into author (id, name, age) values (2, Linus Torvalds, 47)");
+    database.execute("insert into author (id, name, age) values (3, Martin Fowler, 54)");
+    database.execute("delete from author where id = 2");
+    const result = database.execute("select name, age from author");
+    expect(result).toStrictEqual([
+      { name: "Douglas Crockford", age: "62" },
+      { name: "Martin Fowler", age: "54" },
+    ]);
+  })
 })

@@ -2,6 +2,7 @@
 const createCommand = require('./commands/create');
 const insertCommand = require("./commands/insert");
 const selectCommand = require("./commands/select");
+const deleteCommand = require("./commands/delete");
 
 
 
@@ -16,6 +17,8 @@ const createDatabase = () => {
         return this.insert(sql);
       } else if (sql.startsWith('select')) {
         return this.select(sql);
+      } else if (sql.startsWith('delete from')) {
+        return this.delete(sql);
       }
     },
     insert: function (sql) {
@@ -46,6 +49,13 @@ const createDatabase = () => {
           }
           return data;
         });
+    },
+    delete: function (sql) {
+      const { tableName, conditions } = deleteCommand(sql);
+      this.tables[tableName].data = this.tables[tableName].data.filter((row) => {
+        const [key, value] = conditions;
+        return row[key] !== value;
+      })
     }
   };
 }

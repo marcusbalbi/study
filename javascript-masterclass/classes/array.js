@@ -153,10 +153,22 @@ console.log(frameworks.reduce((total, f) => {
 // array accessors api
 
 
+console.log(frameworks.concat('Vue').lastIndexOf('Vue'))
+console.log(frameworks.lastIndexOf('Vue'))
+console.log(frameworks.lastIndexOf('aaa'))
+
+console.log(frameworks.indexOf('Angular'))
+console.log(frameworks.indexOf('aaa'))
+
+console.log(frameworks.includes('React'))
+console.log(frameworks.includes('Ember'))
+
+console.log(frameworks.concat('Ember'));
+console.log(frameworks);
 
 
-
-
-
+console.log(frameworks.slice(1));
+console.log(frameworks.slice(0, 2));
+console.log(frameworks.join(';'));
 
 

@@ -1,6 +1,7 @@
 
 const createCommand = require('./commands/create');
 const insertCommand = require("./commands/insert");
+const selectCommand = require("./commands/select");
 
 
 
@@ -13,6 +14,8 @@ const createDatabase = () => {
         return this.createTable(sql);
       } else if (sql.startsWith('insert into')) {
         return this.insert(sql);
+      } else if (sql.startsWith('select')) {
+        return this.select(sql);
       }
     },
     insert: function (sql) {
@@ -28,6 +31,22 @@ const createDatabase = () => {
         data: [],
       };
     },
+    select: function (sql) {
+      const { tableName, columns, conditions } = selectCommand(sql);
+      return this.tables[tableName].data
+        .filter((row) => {
+          if (!conditions) return true;
+          const [key, value] = conditions;
+          return row[key] === value
+        })
+        .map(row => {
+          const data = {};
+          for(const c of columns) {
+            data[c] = row[c]
+          }
+          return data;
+        });
+    }
   };
 }
 

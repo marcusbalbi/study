@@ -1,6 +1,6 @@
 const command = (sql) => {
-  if (!sql || typeof sql !== "string") buildResult(null, []);
-  if (!sql.startsWith("insert into")) buildResult(null, []);
+  if (!sql || typeof sql !== "string") return buildResult(null, {});
+  if (!sql.startsWith("insert into")) buildResult(null, {});
 
   const [tableName, columns, values] = _extract(sql);
   const data = {};

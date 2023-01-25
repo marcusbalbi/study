@@ -52,10 +52,14 @@ const createDatabase = () => {
     },
     delete: function (sql) {
       const { tableName, conditions } = deleteCommand(sql);
-      this.tables[tableName].data = this.tables[tableName].data.filter((row) => {
-        const [key, value] = conditions;
-        return row[key] !== value;
-      })
+      if (!conditions) {
+        this.tables[tableName].data = [];
+      } else {
+        this.tables[tableName].data = this.tables[tableName].data.filter((row) => {
+          const [key, value] = conditions;
+          return row[key] !== value;
+        });
+      }
     }
   };
 }

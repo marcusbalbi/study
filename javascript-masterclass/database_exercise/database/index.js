@@ -11,13 +11,13 @@ const createDatabase = () => {
     tables: {},
     execute: function (sql) {
       if (!sql) return;
-      if (sql.startsWith('create table')) {
+      if (sql.startsWith("create table")) {
         return this.createTable(sql);
-      } else if (sql.startsWith('insert into')) {
+      } else if (sql.startsWith("insert into")) {
         return this.insert(sql);
-      } else if (sql.startsWith('select')) {
+      } else if (sql.startsWith("select")) {
         return this.select(sql);
-      } else if (sql.startsWith('delete from')) {
+      } else if (sql.startsWith("delete from")) {
         return this.delete(sql);
       }
     },
@@ -40,12 +40,12 @@ const createDatabase = () => {
         .filter((row) => {
           if (!conditions) return true;
           const [key, value] = conditions;
-          return row[key] === value
+          return row[key] === value;
         })
-        .map(row => {
+        .map((row) => {
           const data = {};
-          for(const c of columns) {
-            data[c] = row[c]
+          for (const c of columns) {
+            data[c] = row[c];
           }
           return data;
         });
@@ -55,12 +55,14 @@ const createDatabase = () => {
       if (!conditions) {
         this.tables[tableName].data = [];
       } else {
-        this.tables[tableName].data = this.tables[tableName].data.filter((row) => {
-          const [key, value] = conditions;
-          return row[key] !== value;
-        });
+        this.tables[tableName].data = this.tables[tableName].data.filter(
+          (row) => {
+            const [key, value] = conditions;
+            return row[key] !== value;
+          }
+        );
       }
-    }
+    },
   };
 }
 

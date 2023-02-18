@@ -1,0 +1,128 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉chapter1.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉chapter1.core꞉> 
+#'chapter1.core/foo
+clj꞉chapter1.core꞉> 
+t Hello, World!
+nil
+clj꞉chapter1.core꞉> 
+; Syntax error compiling at (src/chapter1/core.clj:1:7980).
+; Unable to resolve symbol: Balbi in this context
+clj꞉chapter1.core꞉> 
+Balbi Hello, World!
+nil
+clj꞉chapter1.core꞉> 
+#'chapter1.core/blank?
+clj꞉chapter1.core꞉> 
+true
+clj꞉chapter1.core꞉> 
+true
+clj꞉chapter1.core꞉> 
+false
+clj꞉chapter1.core꞉> 
+true
+clj꞉chapter1.core꞉> 
+true
+clj꞉chapter1.core꞉> 
+0
+clj꞉chapter1.core꞉> 
+; Execution error (IllegalArgumentException) at chapter1.core/blank? (form-init5305401432344622824.clj:11).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉chapter1.core꞉> 
+; Execution error (IllegalArgumentException) at chapter1.core/blank? (form-init5305401432344622824.clj:11).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉chapter1.core꞉> 
+false
+clj꞉chapter1.core꞉> 
+""
+clj꞉chapter1.core꞉> 
+true
+clj꞉chapter1.core꞉> 
+chapter1.core.Person
+clj꞉chapter1.core꞉> 
+{:first-name "Marcus", :last-name "Balbi"}
+clj꞉chapter1.core꞉> 
+#'chapter1.core/balbi
+clj꞉chapter1.core꞉> 
+"Balbi"
+clj꞉chapter1.core꞉> 
+"Marcus"
+clj꞉chapter1.core꞉> 
+"Marcus"
+clj꞉chapter1.core꞉> 
+#'chapter1.core/hello-world
+clj꞉chapter1.core꞉> 
+hello world, Balbi
+nil
+clj꞉chapter1.core꞉> 
+#'chapter1.core/vector
+; WARNING: vector already refers to: #'clojure.core/vector in namespace: chapter1.core, being replaced by: #'chapter1.core/vector
+clj꞉chapter1.core꞉> 
+#'chapter1.core/my-vector
+clj꞉chapter1.core꞉> 
+#'chapter1.core/my-vector2
+clj꞉chapter1.core꞉> 
+; Syntax error compiling at (src/chapter1/core.clj:35:7).
+; Unable to resolve symbol: x in this context
+clj꞉chapter1.core꞉> 
+#'chapter1.core/x
+clj꞉chapter1.core꞉> 
+"more"
+clj꞉chapter1.core꞉> 
+"more"
+clj꞉chapter1.core꞉> 
+"more"
+clj꞉chapter1.core꞉> 
+#'chapter1.core/x
+clj꞉chapter1.core꞉> 
+nil
+clj꞉chapter1.core꞉> 
+nil
+clj꞉chapter1.core꞉> 
+"less"
+clj꞉chapter1.core꞉> 
+#'chapter1.core/compositions
+clj꞉chapter1.core꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (4) passed to: clojure.core/for
+clj꞉chapter1.core꞉> 
+("Deep purple")
+clj꞉chapter1.core꞉> 
+{"java.specification.version" "17", "sun.jnu.encoding" "UTF-8", "clojure.debug" "false", "java.class.path" "/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/test:/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/src:/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/dev-resources:/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/resources:/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/target/classes:/Users/marcus.balbi/.m2/repository/cider/cider-nrepl/0.28.5/cider-nrepl-0.28.5.jar:/Users/marcus.balbi/.m2/repository/nrepl/nrepl/1.0.0/nrepl-1.0.0.jar:/Users/marcus.balbi/.m2/repository/org/clojure/clojure/1.10.3/clojure-1.10.3.jar:/Users/marcus.balbi/.m2/repository/org/clojure/spec.alpha/0.2.194/spec.alpha-0.2.194.jar:/Users/marcus.balbi/.m2/repository/org/clojure/core.specs.alpha/0.2.56/core.specs.alpha-0.2.56.jar:/Users/marcus.balbi/.m2/repository/org/nrepl/incomplete/0.1.0/incomplete-0.1.0.jar", "java.vm.vendor" "Homebrew", "sun.arch.data.model" "64", "java.vendor.url" "https://github.com/Homebrew/homebrew-core/issues", "user.timezone" "America/Sao_Paulo", "java.vm.specification.version" "17", "os.name" "Mac OS X", "sun.java.launcher" "SUN_STANDARD", "user.country" "BR", "sun.boot.library.path" "/usr/local/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home/lib", "sun.java.command" "clojure.main -i /private/var/folders/04/jyy37jtx1_9fv0nzl4jthlgh0000gn/T/form-init5305401432344622824.clj", "http.nonProxyHosts" "local|*.local|169.254/16|*.169.254/16", "jdk.debug" "release", "sun.cpu.endian" "little", "user.home" "/Users/marcus.balbi", "user.language" "en", "java.specification.vendor" "Oracle Corporation", "java.version.date" "2022-01-18", "java.home" "/usr/local/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home", "file.separator" "/", "java.vm.compressedOopsMode" "Zero based", "line.separator" "\n", "java.vm.specification.vendor" "Oracle Corporation", "chapter1.version" "0.1.0-SNAPSHOT", "java.specification.name" "Java Platform API Specification", "sun.management.compiler" "HotSpot 64-Bit Tiered Compilers", "ftp.nonProxyHosts" "local|*.local|169.254/16|*.169.254/16", "java.runtime.version" "17.0.2+0", "user.name" "marcus.balbi", "path.separator" ":", "os.version" "13.0.1", "java.runtime.name" "OpenJDK Runtime Environment", "file.encoding" "UTF-8", "clojure.compile.path" "/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1/target/classes", "java.vm.name" "OpenJDK 64-Bit Server VM", "java.vendor.version" "Homebrew", "java.vendor.url.bug" "https://github.com/Homebrew/homebrew-core/issues", "java.io.tmpdir" "/var/folders/04/jyy37jtx1_9fv0nzl4jthlgh0000gn/T/", "java.version" "17.0.2", "user.dir" "/Users/marcus.balbi/dev/study/books/programming-clojure/chapter1", "os.arch" "x86_64", "java.vm.specification.name" "Java Virtual Machine Specification", "native.encoding" "UTF-8", "java.library.path" "/Users/marcus.balbi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.", "java.vm.info" "mixed mode, emulated-client, sharing", "java.vendor" "Homebrew", "java.vm.version" "17.0.2+0", ...}
+clj꞉chapter1.core꞉> 
+#'chapter1.core/accounts
+clj꞉chapter1.core꞉> 
+chapter1.core.Account
+clj꞉chapter1.core꞉> 
+#{{:id "CLJ", :balance 1000}}
+clj꞉chapter1.core꞉> 
+{:first-name "Marcus", :last-name "Balbi", :name "Vinicius"}
+clj꞉chapter1.core꞉> 
+{:first-name "Vinicius", :last-name "Balbi"}
+clj꞉chapter1.core꞉> 
+"Marcus"
+clj꞉chapter1.core꞉> 
+#object[java.security.ProtectionDomain 0x24c04bf0 "ProtectionDomain  null\n null\n <no principals>\n java.security.Permissions@4ed5a772 (\n (\"java.security.AllPermission\" \"<all permissions>\" \"<all actions>\")\n)\n\n"]
+clj꞉chapter1.core꞉> 

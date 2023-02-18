@@ -1,7 +1,5 @@
 (ns examples.core
-  (:gen-class))
+  (:gen-class) 
+  (:require [clojure.string :as str]
+            [clojure.string :as s]))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))

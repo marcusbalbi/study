@@ -44,12 +44,11 @@
 ;; if (x < 10) return "less"
 
 
-(def compositions [
-                   {:name "Black Sabbath" :composer "Ozzy Osbourne"}
+(def compositions [{:name "Black Sabbath" :composer "Ozzy Osbourne"}
                    {:name "Rock n Roll" :composer "Led Zeppelin"}
                    {:name "Black Night" :composer "Deep purple"}])
 (for [c compositions :when (= (:name c) "Black Night")]
-(:composer c))
+  (:composer c))
 
 (System/getProperties)
 
@@ -57,7 +56,43 @@
 (defrecord Account [id balance])
 
 (dosync
-(alter accounts conj (->Account "CLJ" 1000)))
+ (alter accounts conj (->Account "CLJ" 1000)))
 
 (.. "hello" getClass getProtectionDomain)
+
+
+(defn hello [name]
+  (println (str "Hello, " name)))
+
+(hello "Julia")
+
+(str *1)
+
+(/ 1 0)
+(str *e)
+
+(conj #{} "Balbi")
+
+(def visitors (atom #{}))
+
+(swap! visitors conj "balbi")
+(swap! visitors conj "Julia")
+(print visitors)
+@visitors
+
+(defn historical-hello
+  "Prints Hello and save the name"
+  [name]
+  (swap! visitors conj name)
+  (println (str "Hello, " name)))
+
+(historical-hello "Joana")
+@visitors
+
+(require 'clojure.java.io)
+
+(instance? java.util.Collection [1 2 3])
+
+
+
 

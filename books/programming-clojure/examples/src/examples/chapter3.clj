@@ -295,8 +295,23 @@ x
 (clojure.set/select #(str/starts-with? % "Java") languages)
 
 
-(def songs (ref []))
+(def songs (ref #{}))
+
+(cons {:title "extra"} #{{:title "AAA"}})
+(conj #{{:title "AAA"}} {:title "extra"})
+(seq #{{:title "Behind the wall of sleep"}})
 
 (dosync 
-(alter songs conj {:title "Black Sabbath"}))
+(alter songs conj {:title "Black Sabbath" :year 1970}))
 @songs
+(seq @songs)
+
+(cons 4 [1 2 3])
+(cons 4 #{1 2 3})
+(cons {:a 1} [{:a 2}])
+(cons {:a 1} #{{:a 2}})
+
+(conj '( {:name 'a}) {:b 2})
+(conj #{{:name 'a}} {:b 2})
+(conj {:name 'a} {:b 2})
+(into {:name 'a} {:b 2})

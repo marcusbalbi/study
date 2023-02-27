@@ -5,6 +5,13 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
+; Connecting using "undefined" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "undefined"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Aborting jack-in. No project type selected.
+; Jacking in...
 ; Connecting using "Leiningen" project type.
 ; You can make Calva auto-select this:
 ; "calva.autoSelectReplConnectProjectType": "Leiningen"
@@ -24,1228 +31,349 @@ clj꞉examples.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉examples.core꞉> 
 nil
-clj꞉examples.chapter3꞉> 
-2
-clj꞉examples.chapter3꞉> 
-(2 3 4 5 6 7 8 9)
-clj꞉examples.chapter3꞉> 
-(0 1 2 3 4 5 6 7 8 9)
-clj꞉examples.chapter3꞉> 
-(10 11 12 13 14 15 16 17 18 19)
-clj꞉examples.chapter3꞉> 
-(1 3 5 7 9 11 13 15 17 19 21)
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-(0 -1 -2 -3 -4 -5 -6 -7 -8 -9)
-clj꞉examples.chapter3꞉> 
-(0 -1 -2 -3 -4 -5 -6 -7 -8 -9)
-clj꞉examples.chapter3꞉> 
-(1/2 3/2 5/2 7/2)
-clj꞉examples.chapter3꞉> 
-; Execution error (ClassCastException) at examples.chapter3/eval7647 (form-init2194794571626775935.clj:69).
-; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
-clj꞉examples.chapter3꞉> 
-("M" "M" "M" "M" "M" "M" "M" "M" "M" "M" "M" "M")
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:71:1).
-; No such namespace: str
-clj꞉examples.chapter3꞉> 
-"AAAA"
-clj꞉examples.chapter3꞉> 
-"A|A|A|A"
-clj꞉examples.chapter3꞉> 
-#function[clojure.core/take/fn--5923]
-clj꞉examples.chapter3꞉> 
-(1 2 3 4 5 6 7 8 9 10)
-clj꞉examples.chapter3꞉> 
-(2 3 4 5 6 7 8 9 10 11)
-clj꞉examples.chapter3꞉> 
-(1 2 3 4 5 6 7 8 9 10)
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-([:name "Josep"] [:age 23])
-clj꞉examples.chapter3꞉> 
-([:name "Josep"] [:age 23])
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/whole-numbers
-clj꞉examples.chapter3꞉> 
-(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
-clj꞉examples.chapter3꞉> 
-({} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {})
-clj꞉examples.chapter3꞉> 
-({:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"}
- {:name "josep"})
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:79:37).
-; Unable to resolve symbol: random-uuid in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:79:37).
-; Unable to resolve symbol: random-uuid in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:79:37).
-; Unable to resolve symbol: random-uuid in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:79:1).
-; Unable to resolve symbol: random-uuid in this context
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval7925 (form-init2194794571626775935.clj:79).
-; Wrong number of args (0) passed to: clojure.core/random-sample
-clj꞉examples.chapter3꞉> 
-#function[clojure.core/filter/fn--5907]
-clj꞉examples.chapter3꞉> 
-; Execution error (ClassCastException) at examples.chapter3/eval7929 (form-init2194794571626775935.clj:79).
-; class java.lang.Class cannot be cast to class clojure.lang.IFn (java.lang.Class is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉examples.chapter3꞉> 
-; Syntax error (NoSuchFieldException) compiling . at (src/examples/chapter3.clj:79:1).
-; nextInt
-clj꞉examples.chapter3꞉> 
-0.5791021490248442
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval7934 (form-init2194794571626775935.clj:79).
-; Wrong number of args (0) passed to: clojure.core/rand-int
-clj꞉examples.chapter3꞉> 
-99
-clj꞉examples.chapter3꞉> 
-40
-clj꞉examples.chapter3꞉> 
-39
-clj꞉examples.chapter3꞉> 
-72
-clj꞉examples.chapter3꞉> 
-5
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-55
-clj꞉examples.chapter3꞉> 
-99
-clj꞉examples.chapter3꞉> 
-63
-clj꞉examples.chapter3꞉> 
-71
-clj꞉examples.chapter3꞉> 
-44
-clj꞉examples.chapter3꞉> 
-95
-clj꞉examples.chapter3꞉> 
-65
-clj꞉examples.chapter3꞉> 
-87
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-; Execution error (UnsupportedOperationException) at examples.chapter3/eval7966 (form-init2194794571626775935.clj:79).
-; count not supported on this type: Long
-clj꞉examples.chapter3꞉> 
-0
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-0
-clj꞉examples.chapter3꞉> 
-1
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-0
-clj꞉examples.chapter3꞉> 
-1
-clj꞉examples.chapter3꞉> 
-(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
-clj꞉examples.chapter3꞉> 
-(0 1 2 0 1 2 0 1 2 0)
-clj꞉examples.chapter3꞉> 
-([:name "Maria"]
- [:age 2]
- [:name "Maria"]
- [:age 2]
- [:name "Maria"]
- [:age 2]
- [:name "Maria"]
- [:age 2]
- [:name "Maria"]
- [:age 2])
-clj꞉examples.chapter3꞉> 
-(0 1 2 0 1 2 0 1 2 0)
-clj꞉examples.chapter3꞉> 
-(1 "A" 2 "B" 3 "C")
-clj꞉examples.chapter3꞉> 
-("Banana" "|" "Apple")
-clj꞉examples.chapter3꞉> 
-"Banana|Apple"
-clj꞉examples.chapter3꞉> 
-"Banana | Apple"
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:89:1).
-; Unable to resolve symbol: join in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:91:1).
-; No such namespace: str
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-"Banana | Apple"
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:91:1).
-; Unable to resolve symbol: join in this context
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-"Banana | Apple"
-clj꞉examples.chapter3꞉> 
-("a" "b" "c")
-clj꞉examples.chapter3꞉> 
-["a" "b" "c"]
-clj꞉examples.chapter3꞉> 
-[(1 2 3 4 5 6 7 8 9)]
-clj꞉examples.chapter3꞉> 
-#{1 4 3 2 5}
-clj꞉examples.chapter3꞉> 
-#{1 3 2}
-clj꞉examples.chapter3꞉> 
-{:age 34, :name "Jhon", :job "Freelancer"}
-clj꞉examples.chapter3꞉> 
-#{1 4 3 2 5}
-clj꞉examples.chapter3꞉> 
-[0 1 2 3 4 5 6 7 8 9]
-clj꞉examples.chapter3꞉> 
-(2 4 6 8 10 12 14 16 18 20)
-clj꞉examples.chapter3꞉> 
-(1 3 5 7 9 11 13 15 17 19)
-clj꞉examples.chapter3꞉> 
-; Syntax error reading source at (REPL:106:26).
-; Invalid unicode character: \u'
-clj꞉examples.chapter3꞉> 
-; Syntax error reading source at (REPL:106:26).
-; Illegal/unsupported escape sequence near index 5
-; \A\e\i\o\u
-;      ^
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/vowel?
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/consonant?
-clj꞉examples.chapter3꞉> 
-(\T \h)
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-(\T \h)
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/vowel?
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-(\T \h)
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-\a
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/vowel?
-clj꞉examples.chapter3꞉> 
-\a
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-\a
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-\o
-clj꞉examples.chapter3꞉> 
-(\e \space \q \u \i \c \k \space \f \o \x \space \i \s \space \b \r \o \w \n)
-clj꞉examples.chapter3꞉> 
-(\e \- \q \u \i \c \k \- \f \o \x \- \i \s \- \b \r \o \w \n)
-clj꞉examples.chapter3꞉> 
-(\T \h)
-clj꞉examples.chapter3꞉> 
-(\T \h \b)
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:1:7928).
-; Unable to resolve symbol: The-quick-fox-is-brown in this context
-clj꞉examples.chapter3꞉> 
-(\T \h)
-clj꞉examples.chapter3꞉> 
-(\e \- \q \u \i \c \k \- \f \o \x \- \i \s \- \b \r \o \w \n)
-clj꞉examples.chapter3꞉> 
-[(0 1 2 3 4) (5 6 7 8 9)]
-clj꞉examples.chapter3꞉> 
-[({} {} {}) ({} {})]
-clj꞉examples.chapter3꞉> 
-[({:a 1} {:b 2} {:c 3}) ({:d 4} {:e 5})]
-clj꞉examples.chapter3꞉> 
-[(0 1 2 3 4 5 6 7 8 9 10) (11 12 13 14 15 16 17 18 19)]
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-1
-clj꞉examples.chapter3꞉> 
-[true false 1]
-clj꞉examples.chapter3꞉> 
-[true false 1 nil]
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-("<p>the</p>" "<p>quick</p>" "<p>brow</p>" "<p>fox</p>")
-clj꞉examples.chapter3꞉> 
-("<the>h1</the>" "<quick>h2</quick>" "<brow>h3</brow>")
-clj꞉examples.chapter3꞉> 
-("<h1>the</h1>" "<h2>quick</h2>" "<h3>brow</h3>")
-clj꞉examples.chapter3꞉> 
-("<h1>the</h1>" "<h2>quick</h2>" "<h3>brow</h3>" "<h4>fox</h4>")
-clj꞉examples.chapter3꞉> 
-55
-clj꞉examples.chapter3꞉> 
-55
-clj꞉examples.chapter3꞉> 
-55
-clj꞉examples.chapter3꞉> 
-3628800
-clj꞉examples.chapter3꞉> 
-(1 7 11 42)
-clj꞉examples.chapter3꞉> 
-(1 11 42 7)
-clj꞉examples.chapter3꞉> 
-({:grade 1} {:grade 10} {:grade 80})
-clj꞉examples.chapter3꞉> 
-({:grade 80} {:grade 10} {:grade 1})
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/x
-clj꞉examples.chapter3꞉> 
-1
-2
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-(1 2)
-clj꞉examples.chapter3꞉> 
-[72, 101, 108, 108, 111]
-clj꞉examples.chapter3꞉> 
-72
-clj꞉examples.chapter3꞉> 
-(101 108 108 111)
-clj꞉examples.chapter3꞉> 
-(\h 101 108 108 111)
-clj꞉examples.chapter3꞉> 
-(104 101 108 108 111)
-clj꞉examples.chapter3꞉> 
-#object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x607d17f5 "java.specification.version=17"]
-clj꞉examples.chapter3꞉> 
-(#object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x3f155d34 "sun.jnu.encoding=UTF-8"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x332fc24c "clojure.debug=false"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x4988881c "java.class.path=/home/balbi/estudos/study/books/programming-clojure/examples/test:/home/balbi/estudos/study/books/programming-clojure/examples/src:/home/balbi/estudos/study/books/programming-clojure/examples/dev-resources:/home/balbi/estudos/study/books/programming-clojure/examples/resources:/home/balbi/estudos/study/books/programming-clojure/examples/target/default/classes:/home/balbi/.m2/repository/cider/cider-nrepl/0.28.5/cider-nrepl-0.28.5.jar:/home/balbi/.m2/repository/nrepl/nrepl/1.0.0/nrepl-1.0.0.jar:/home/balbi/.m2/repository/org/clojure/clojure/1.10.3/clojure-1.10.3.jar:/home/balbi/.m2/repository/org/clojure/spec.alpha/0.2.194/spec.alpha-0.2.194.jar:/home/balbi/.m2/repository/org/clojure/core.specs.alpha/0.2.56/core.specs.alpha-0.2.56.jar:/home/balbi/.m2/repository/org/nrepl/incomplete/0.1.0/incomplete-0.1.0.jar"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x31770c48 "java.vm.vendor=Private Build"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x14e979ea "sun.arch.data.model=64"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x5919f499 "sun.font.fontmanager=sun.awt.X11FontManager"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x54dc5fce "java.vendor.url=Unknown"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x5d400c51 "user.timezone=America/Sao_Paulo"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x2b9183a "user.country.format=BR"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x149299c8 "java.vm.specification.version=17"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x220686bb "os.name=Linux"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7ff9242e "sun.java.launcher=SUN_STANDARD"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x354b8b23 "user.country=US"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x3517089b "sun.boot.library.path=/usr/lib/jvm/java-17-openjdk-amd64/lib"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x233263dc "sun.java.command=clojure.main -i /tmp/form-init2194794571626775935.clj"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x15dcebc0 "jdk.debug=release"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7ca768cb "sun.cpu.endian=little"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7179e414 "user.home=/home/balbi"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x41e55564 "user.language=en"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x33953473 "java.specification.vendor=Oracle Corporation"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7433f3fa "java.version.date=2022-10-18"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x4a54f02c "java.home=/usr/lib/jvm/java-17-openjdk-amd64"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x2171d277 "file.separator=/"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x3b5d5c86 "java.vm.compressedOopsMode=Zero based"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x509ac434 "line.separator=\n"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x3d229b9b "java.vm.specification.vendor=Oracle Corporation"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x12ef0422 "java.specification.name=Java Platform API Specification"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x4307c395 "examples.version=0.1.0-SNAPSHOT"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x45ba04a5 "sun.management.compiler=HotSpot 64-Bit Tiered Compilers"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x6ceda1ca "java.runtime.version=17.0.5+8-Ubuntu-2ubuntu122.04"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x6c97661 "user.name=balbi"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7b2f1646 "path.separator=:"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x6ea5aaaa "os.version=5.19.0-32-generic"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x6f47b545 "java.runtime.name=OpenJDK Runtime Environment"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x22f0bcb2 "file.encoding=UTF-8"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x216e138c "clojure.compile.path=/home/balbi/estudos/study/books/programming-clojure/examples/target/default/classes"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x62dd0df1 "java.vm.name=OpenJDK 64-Bit Server VM"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x30626172 "java.vendor.url.bug=Unknown"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x17504ee0 "java.io.tmpdir=/tmp"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x4673ddf5 "java.version=17.0.5"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x4ccbe24f "user.dir=/home/balbi/estudos/study/books/programming-clojure/examples"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x6f017355 "os.arch=amd64"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x7a33071b "java.vm.specification.name=Java Virtual Machine Specification"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x2277f1dd "user.language.format=pt"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x31bdb646 "native.encoding=UTF-8"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x55c2f0ff "java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x37ab3e83 "java.vm.info=mixed mode, emulated-client, sharing"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x2acfc8b2 "java.vendor=Private Build"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x761c442b "java.vm.version=17.0.5+8-Ubuntu-2ubuntu122.04"]
- #object[java.util.concurrent.ConcurrentHashMap$MapEntry 0x349b171f "sun.io.unicode.encoding=UnicodeLittle"]
- ...)
-clj꞉examples.chapter3꞉> 
-\M
-clj꞉examples.chapter3꞉> 
-(\a \l \b \i)
-clj꞉examples.chapter3꞉> 
-(\B \A \l \b \i)
-clj꞉examples.chapter3꞉> 
-(\o \l \l \e \H)
-clj꞉examples.chapter3꞉> 
-"olleH"
-clj꞉examples.chapter3꞉> 
-"olleH"
-clj꞉examples.chapter3꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: clojure.core$str
-clj꞉examples.chapter3꞉> 
-("o" "l" "l" "e" "H")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox" "s")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox" "s")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox")
-clj꞉examples.chapter3꞉> 
-("The" "quick" "brown" "fox" "b")
-clj꞉examples.chapter3꞉> 
-(" " " " " ")
-clj꞉examples.chapter3꞉> 
-("The" "brown" "fox" "quick")
-clj꞉examples.chapter3꞉> 
-("brown" "fox" "quick" "the")
-clj꞉examples.chapter3꞉> 
-("brown" "fox")
-clj꞉examples.chapter3꞉> 
-"(\"THE\" \"QUICK\" \"BROWN\" \"FOX\")"
-clj꞉examples.chapter3꞉> 
-"(\"THE\" \"QUICK\" \"BROWN\" \"FOX\")"
-clj꞉examples.chapter3꞉> 
-("THE" "QUICK" "BROWN" "FOX")
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter3/eval8276 (form-init2194794571626775935.clj:188).
-; No matching field found: File for class java.lang.String
-clj꞉examples.chapter3꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (src/examples/chapter3.clj:188:13).
-; No matching ctor found for class java.io.File
-clj꞉examples.chapter3꞉> 
-; Syntax error (IllegalArgumentException) compiling new at (src/examples/chapter3.clj:188:13).
-; No matching ctor found for class java.io.File
-clj꞉examples.chapter3꞉> 
-[#object[java.io.File 0x80d3122 "./resources"], #object[java.io.File 0x3073db44 "./README.md"],
- #object[java.io.File 0x342ae142 "./.nrepl-port"], #object[java.io.File 0x740a7666 "./.hgignore"],
- #object[java.io.File 0x7823468a "./src"], #object[java.io.File 0x60f551be "./.gitignore"],
- #object[java.io.File 0x5477777 "./target"], #object[java.io.File 0x22d998ff "./CHANGELOG.md"],
- #object[java.io.File 0x40ac8d38 "./.calva"], #object[java.io.File 0xa1e4c32 "./.clj-kondo"],
- #object[java.io.File 0x345c7ec9 "./.lsp"], #object[java.io.File 0x5a2c16dd "./doc"],
- #object[java.io.File 0x7e4d85ed "./project.clj"], #object[java.io.File 0x6ca29ca "./test"],
- #object[java.io.File 0x5137a5ec "./LICENSE"]]
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x50d21b5e "./resources"]
- #object[java.io.File 0x2e34db0d "./README.md"]
- #object[java.io.File 0x7a3c28a "./.nrepl-port"]
- #object[java.io.File 0x646c0876 "./.hgignore"]
- #object[java.io.File 0x41619c04 "./src"]
- #object[java.io.File 0x4e888fc9 "./.gitignore"]
- #object[java.io.File 0x2950a2f6 "./target"]
- #object[java.io.File 0x2d7b3012 "./CHANGELOG.md"]
- #object[java.io.File 0x60370805 "./.calva"]
- #object[java.io.File 0x6acb250d "./.clj-kondo"]
- #object[java.io.File 0x46206db0 "./.lsp"]
- #object[java.io.File 0x322f3ec6 "./doc"]
- #object[java.io.File 0x6a007fa6 "./project.clj"]
- #object[java.io.File 0x5950cca6 "./test"]
- #object[java.io.File 0x1c5867d1 "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.Reflector/getInstanceField (Reflector.java:397).
-; No matching field found: getname for class java.io.File
-clj꞉examples.chapter3꞉> 
-("resources"
- "README.md"
- ".nrepl-port"
- ".hgignore"
- "src"
- ".gitignore"
- "target"
- "CHANGELOG.md"
- ".calva"
- ".clj-kondo"
- ".lsp"
- "doc"
- "project.clj"
- "test"
- "LICENSE")
-clj꞉examples.chapter3꞉> 
-("resources"
- "README.md"
- ".nrepl-port"
- ".hgignore"
- "src"
- ".gitignore"
- "target"
- "CHANGELOG.md"
- ".calva"
- ".clj-kondo"
- ".lsp"
- "doc"
- "project.clj"
- "test"
- "LICENSE")
-clj꞉examples.chapter3꞉> 
-("resources"
- "README.md"
- ".nrepl-port"
- ".hgignore"
- "src"
- ".gitignore"
- "target"
- "CHANGELOG.md"
- ".calva"
- ".clj-kondo"
- ".lsp"
- "doc"
- "project.clj"
- "test"
- "LICENSE")
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:195:11).
-; Expecting var, but File is mapped to class java.io.File
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:195:18).
-; Expecting var, but File is mapped to class java.io.File
-clj꞉examples.chapter3꞉> 
-108
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x6b361ec7 "."]
- #object[java.io.File 0x17833067 "./resources"]
- #object[java.io.File 0x504c0786 "./README.md"]
- #object[java.io.File 0x2dc5b799 "./.nrepl-port"]
- #object[java.io.File 0x5366e250 "./.hgignore"]
- #object[java.io.File 0x531f4159 "./src"]
- #object[java.io.File 0x61ce13e2 "./src/examples"]
- #object[java.io.File 0x6137193d "./src/examples/core.clj"]
- #object[java.io.File 0x5a71329 "./src/examples/chapter2.clj"]
- #object[java.io.File 0x2c9b8f4d "./src/examples/chapter3.clj"]
- #object[java.io.File 0x3ddbd83f "./src/examples/chapter1.clj"]
- #object[java.io.File 0x647cd048 "./.gitignore"]
- #object[java.io.File 0x597fb9b5 "./target"]
- #object[java.io.File 0x296eb430 "./target/default+test"]
- #object[java.io.File 0x4a979b02 "./target/default+test/stale"]
- #object[java.io.File 0x48ebfc88 "./target/default+test/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x6cfd4631 "./target/default"]
- #object[java.io.File 0x30eeb0aa "./target/default/classes"]
- #object[java.io.File 0x4657623e "./target/default/classes/META-INF"]
- #object[java.io.File 0x51cfd9c0 "./target/default/classes/META-INF/maven"]
- #object[java.io.File 0x5785c106 "./target/default/classes/META-INF/maven/examples"]
- #object[java.io.File 0x122b40bc "./target/default/classes/META-INF/maven/examples/examples"]
- #object[java.io.File 0x6f908655 "./target/default/classes/META-INF/maven/examples/examples/pom.properties"]
- #object[java.io.File 0x403e53be "./target/default/repl-port"]
- #object[java.io.File 0x39ca374e "./target/default/stale"]
- #object[java.io.File 0x712cae6b "./target/default/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x1a652c35 "./CHANGELOG.md"]
- #object[java.io.File 0x28f43f64 "./.calva"]
- #object[java.io.File 0x406c1d73 "./.calva/output-window"]
- #object[java.io.File 0x5427bce3 "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0x679036d6 "./.clj-kondo"]
- #object[java.io.File 0x6e963a5f "./.clj-kondo/.cache"]
- #object[java.io.File 0x4e31257b "./.clj-kondo/.cache/v1"]
- #object[java.io.File 0x279858fa "./.clj-kondo/.cache/v1/lock"]
- #object[java.io.File 0x41d8ec59 "./.clj-kondo/.cache/v1/clj"]
- #object[java.io.File 0x1ec372ff "./.clj-kondo/.cache/v1/clj/nrepl.util.lookup.transit.json"]
- #object[java.io.File 0x599e86a1 "./.clj-kondo/.cache/v1/clj/clojure.walk.transit.json"]
- #object[java.io.File 0x3ca44ae0 "./.clj-kondo/.cache/v1/clj/clojure.pprint.transit.json"]
- #object[java.io.File 0x3a18c309 "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x3fc90a3f "./.clj-kondo/.cache/v1/clj/nrepl.middleware.transit.json"]
- #object[java.io.File 0x124f28e9 "./.clj-kondo/.cache/v1/clj/examples.chapter1.transit.json"]
- #object[java.io.File 0xc22930a "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x705e090c "./.clj-kondo/.cache/v1/clj/clojure.set.transit.json"]
- #object[java.io.File 0x7b17dca "./.clj-kondo/.cache/v1/clj/nrepl.cmdline.transit.json"]
- #object[java.io.File 0x6cd205b5 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.completion.transit.json"]
- #object[java.io.File 0x74f061e6 "./.clj-kondo/.cache/v1/clj/clojure.core.transit.json"]
- #object[java.io.File 0x74e6101d "./.clj-kondo/.cache/v1/clj/nrepl.config.transit.json"]
- #object[java.io.File 0x78b56c66 "./.clj-kondo/.cache/v1/clj/clojure.reflect.transit.json"]
- #object[java.io.File 0x4363168 "./.clj-kondo/.cache/v1/clj/nrepl.bencode.transit.json"]
- #object[java.io.File 0x733e9f59 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.dynamic-loader.transit.json"]
- ...)
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x63cd2fc0 "."]
- #object[java.io.File 0x29a398c6 "./resources"]
- #object[java.io.File 0x48ee719e "./README.md"]
- #object[java.io.File 0x10d3f158 "./.nrepl-port"]
- #object[java.io.File 0x62fad2a5 "./.hgignore"]
- #object[java.io.File 0x23f11eda "./src"]
- #object[java.io.File 0x165014e8 "./src/examples"]
- #object[java.io.File 0x19867e4b "./src/examples/core.clj"]
- #object[java.io.File 0x2dddf824 "./src/examples/chapter2.clj"]
- #object[java.io.File 0x671248b "./src/examples/chapter3.clj"]
- #object[java.io.File 0x101087f9 "./src/examples/chapter1.clj"]
- #object[java.io.File 0x3acec796 "./.gitignore"]
- #object[java.io.File 0x78900433 "./target"]
- #object[java.io.File 0x774a22d6 "./target/default+test"]
- #object[java.io.File 0x63715c89 "./target/default+test/stale"]
- #object[java.io.File 0x2fcfc506 "./target/default+test/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x5786fd50 "./target/default"]
- #object[java.io.File 0x717c39e4 "./target/default/classes"]
- #object[java.io.File 0x1880a656 "./target/default/classes/META-INF"]
- #object[java.io.File 0x49b6a7b5 "./target/default/classes/META-INF/maven"]
- #object[java.io.File 0x29babfae "./target/default/classes/META-INF/maven/examples"]
- #object[java.io.File 0x39191064 "./target/default/classes/META-INF/maven/examples/examples"]
- #object[java.io.File 0x2436b307 "./target/default/classes/META-INF/maven/examples/examples/pom.properties"]
- #object[java.io.File 0x5841233b "./target/default/repl-port"]
- #object[java.io.File 0x24faa052 "./target/default/stale"]
- #object[java.io.File 0x55911e99 "./target/default/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x442e31a7 "./CHANGELOG.md"]
- #object[java.io.File 0x15279ae2 "./.calva"]
- #object[java.io.File 0x64ae5024 "./.calva/output-window"]
- #object[java.io.File 0x3916effe "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0xc805272 "./.clj-kondo"]
- #object[java.io.File 0x2559398a "./.clj-kondo/.cache"]
- #object[java.io.File 0x33607275 "./.clj-kondo/.cache/v1"]
- #object[java.io.File 0x3d0712f8 "./.clj-kondo/.cache/v1/lock"]
- #object[java.io.File 0x339ad4e8 "./.clj-kondo/.cache/v1/clj"]
- #object[java.io.File 0x5f632e78 "./.clj-kondo/.cache/v1/clj/nrepl.util.lookup.transit.json"]
- #object[java.io.File 0x6f200c3b "./.clj-kondo/.cache/v1/clj/clojure.walk.transit.json"]
- #object[java.io.File 0x6a3553f5 "./.clj-kondo/.cache/v1/clj/clojure.pprint.transit.json"]
- #object[java.io.File 0xfedf7cf "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x49bb18a4 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.transit.json"]
- #object[java.io.File 0x2615947c "./.clj-kondo/.cache/v1/clj/examples.chapter1.transit.json"]
- #object[java.io.File 0x667fc1b0 "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x6cc013f "./.clj-kondo/.cache/v1/clj/clojure.set.transit.json"]
- #object[java.io.File 0x17a3477a "./.clj-kondo/.cache/v1/clj/nrepl.cmdline.transit.json"]
- #object[java.io.File 0x1d9f8786 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.completion.transit.json"]
- #object[java.io.File 0x5f5a7c4 "./.clj-kondo/.cache/v1/clj/clojure.core.transit.json"]
- #object[java.io.File 0x63568bbc "./.clj-kondo/.cache/v1/clj/nrepl.config.transit.json"]
- #object[java.io.File 0x6ec3983b "./.clj-kondo/.cache/v1/clj/clojure.reflect.transit.json"]
- #object[java.io.File 0xf0191d2 "./.clj-kondo/.cache/v1/clj/nrepl.bencode.transit.json"]
- #object[java.io.File 0x27e2cc71 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.dynamic-loader.transit.json"]
- ...)
-clj꞉examples.chapter3꞉> 
-108
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/minutes-to-millis
-clj꞉examples.chapter3꞉> 
-300000
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/recently-modified?
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/recently-modified?
-clj꞉examples.chapter3꞉> 
-"."
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter3/eval8323 (form-init2194794571626775935.clj:209).
-; No matching field found: getFiles for class java.io.File
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:209:1).
-; Unable to resolve symbol: recently-modified? in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:209:1).
-; Unable to resolve symbol: recently-modified? in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:209:1).
-; Unable to resolve symbol: recently-modified? in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:207:36).
-; Unable to resolve symbol: minutes-to-millis in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:202:1).
-; Unable to resolve symbol: minutes-to-millis in this context
-clj꞉examples.chapter3꞉> 
-#'examples.chapter2/minutes-to-millis
-clj꞉examples.chapter2꞉> 
-300000
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/recently-modified?
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-[#object[java.io.File 0x9bcd10b "./resources"], #object[java.io.File 0x35f9b8cb "./README.md"],
- #object[java.io.File 0x488f004f "./.nrepl-port"], #object[java.io.File 0x209cfa45 "./.hgignore"],
- #object[java.io.File 0x5120f147 "./src"], #object[java.io.File 0x66cfebb0 "./.gitignore"],
- #object[java.io.File 0xeb8bf69 "./target"], #object[java.io.File 0x49312229 "./CHANGELOG.md"],
- #object[java.io.File 0x1fcd5881 "./.calva"], #object[java.io.File 0x6c6b2a3 "./.clj-kondo"],
- #object[java.io.File 0x4d4e06e5 "./.lsp"], #object[java.io.File 0xd2e550f "./doc"],
- #object[java.io.File 0x78d21d7b "./project.clj"], #object[java.io.File 0x4bb2eb68 "./test"],
- #object[java.io.File 0x7676b5d5 "./LICENSE"]]
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x1b779eba "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x5fad7868 "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x4a8cf86 "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x6654611b "./src/examples/chapter2.clj"]
- #object[java.io.File 0x3879f730 "./src/examples/chapter3.clj"]
- #object[java.io.File 0x2cb8e66c "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0x4fcc5e19 "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x264a2e94 "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x5029193 "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/make-last-modified
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/make-last-modified
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/make-last-modified
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0xf1dbf41 "./src/examples/chapter2.clj"]
- #object[java.io.File 0x7aaa8dac "./src/examples/chapter3.clj"]
- #object[java.io.File 0x4d84d43a "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0x50709b45 "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x5423811 "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x37c2eb5f "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x184b1437 "."]
- #object[java.io.File 0xa66ffe1 "./.nrepl-port"]
- #object[java.io.File 0x485df100 "./src/examples"]
- #object[java.io.File 0x452e19ab "./src/examples/chapter2.clj"]
- #object[java.io.File 0x27eceefd "./src/examples/chapter3.clj"]
- #object[java.io.File 0x5bcb7d1d "./target/default"]
- #object[java.io.File 0x111de091 "./target/default/classes/META-INF/maven/examples/examples/pom.properties"]
- #object[java.io.File 0x24cb4058 "./target/default/repl-port"]
- #object[java.io.File 0x6490d93a "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0x64337320 "./.clj-kondo/.cache/v1/clj"]
- #object[java.io.File 0x1ad40e5f "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x646354dd "./.clj-kondo/.cache/v1/clj/examples.chapter1.transit.json"]
- #object[java.io.File 0x6581862 "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x790dd1fa "./.clj-kondo/.cache/v1/clj/examples.core-test.transit.json"]
- #object[java.io.File 0x43918e72 "./LICENSE"])
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:224:19).
-; Unable to resolve symbol: reader in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:223:1).
-; Unable to resolve symbol: reader in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:223:1).
-; Unable to resolve symbol: reader in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:223:1).
-; Unable to resolve symbol: reader in this context
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-#object[java.io.BufferedReader 0x1b31b44a "java.io.BufferedReader@1b31b44a"]
-clj꞉examples.chapter3꞉> 
-#object[java.io.BufferedReader 0x898177c "java.io.BufferedReader@898177c"]
-clj꞉examples.chapter3꞉> 
-("# examples" "")
-clj꞉examples.chapter3꞉> 
-("Eclipse Public License - v 2.0" "")
-clj꞉examples.chapter3꞉> 
-("Eclipse Public License - v 2.0"
- ""
- "    THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE"
- "    PUBLIC LICENSE (\"AGREEMENT\"). ANY USE, REPRODUCTION OR DISTRIBUTION"
- "    OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT."
- ""
- "1. DEFINITIONS"
- ""
- "\"Contribution\" means:"
- "")
-clj꞉examples.chapter3꞉> 
-280
-clj꞉examples.chapter3꞉> 
-49
-clj꞉examples.chapter3꞉> 
-49
-clj꞉examples.chapter3꞉> 
-49
-clj꞉examples.chapter3꞉> 
-48
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:227:19).
-; No such var: str/non-blank
-clj꞉examples.chapter3꞉> 
-232
-clj꞉examples.chapter3꞉> 
-231
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x41aee235 "."]
- #object[java.io.File 0x7fd99aa2 "./resources"]
- #object[java.io.File 0x2677ef09 "./README.md"]
- #object[java.io.File 0x56c4bbbb "./.nrepl-port"]
- #object[java.io.File 0x47c004f1 "./.hgignore"]
- #object[java.io.File 0x1911e7e5 "./src"]
- #object[java.io.File 0x6b988f14 "./src/examples"]
- #object[java.io.File 0x18f2f8bf "./src/examples/core.clj"]
- #object[java.io.File 0x5fd290dc "./src/examples/chapter2.clj"]
- #object[java.io.File 0x496a6a0c "./src/examples/chapter3.clj"]
- #object[java.io.File 0x6625ac1a "./src/examples/chapter1.clj"]
- #object[java.io.File 0x699d8761 "./.gitignore"]
- #object[java.io.File 0x2282aefe "./target"]
- #object[java.io.File 0x38a29aa8 "./target/default+test"]
- #object[java.io.File 0x732ca4da "./target/default+test/stale"]
- #object[java.io.File 0x6d96937b "./target/default+test/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x7b0ae067 "./target/default"]
- #object[java.io.File 0x7195714c "./target/default/classes"]
- #object[java.io.File 0x59c1a5f8 "./target/default/classes/META-INF"]
- #object[java.io.File 0x15f8f0 "./target/default/classes/META-INF/maven"]
- #object[java.io.File 0x2cb0294d "./target/default/classes/META-INF/maven/examples"]
- #object[java.io.File 0x76f53286 "./target/default/classes/META-INF/maven/examples/examples"]
- #object[java.io.File 0x22cfa7c5 "./target/default/classes/META-INF/maven/examples/examples/pom.properties"]
- #object[java.io.File 0xdb20914 "./target/default/repl-port"]
- #object[java.io.File 0x2065a3ae "./target/default/stale"]
- #object[java.io.File 0x7f5bd426 "./target/default/stale/leiningen.core.classpath.extract-native-dependencies"]
- #object[java.io.File 0x20f5b587 "./CHANGELOG.md"]
- #object[java.io.File 0x3d12f224 "./.calva"]
- #object[java.io.File 0x30e74efb "./.calva/output-window"]
- #object[java.io.File 0x113c5625 "./.calva/output-window/output.calva-repl"]
- #object[java.io.File 0x1c688008 "./.clj-kondo"]
- #object[java.io.File 0x36c1d273 "./.clj-kondo/.cache"]
- #object[java.io.File 0x3c5bd2c6 "./.clj-kondo/.cache/v1"]
- #object[java.io.File 0x4f252616 "./.clj-kondo/.cache/v1/lock"]
- #object[java.io.File 0x1715973a "./.clj-kondo/.cache/v1/clj"]
- #object[java.io.File 0x2f7f9de1 "./.clj-kondo/.cache/v1/clj/nrepl.util.lookup.transit.json"]
- #object[java.io.File 0x4d50a72a "./.clj-kondo/.cache/v1/clj/clojure.walk.transit.json"]
- #object[java.io.File 0x2ba32d00 "./.clj-kondo/.cache/v1/clj/clojure.pprint.transit.json"]
- #object[java.io.File 0x1034d309 "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x43f7c47b "./.clj-kondo/.cache/v1/clj/nrepl.middleware.transit.json"]
- #object[java.io.File 0xb5642d8 "./.clj-kondo/.cache/v1/clj/examples.chapter1.transit.json"]
- #object[java.io.File 0x392fa59f "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0xfb58528 "./.clj-kondo/.cache/v1/clj/clojure.set.transit.json"]
- #object[java.io.File 0x721c5cb9 "./.clj-kondo/.cache/v1/clj/nrepl.cmdline.transit.json"]
- #object[java.io.File 0x4be580a0 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.completion.transit.json"]
- #object[java.io.File 0xf22d71e "./.clj-kondo/.cache/v1/clj/clojure.core.transit.json"]
- #object[java.io.File 0x2c9d9f17 "./.clj-kondo/.cache/v1/clj/nrepl.config.transit.json"]
- #object[java.io.File 0x3c74e7a9 "./.clj-kondo/.cache/v1/clj/clojure.reflect.transit.json"]
- #object[java.io.File 0x5bf39007 "./.clj-kondo/.cache/v1/clj/nrepl.bencode.transit.json"]
- #object[java.io.File 0x42f03640 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.dynamic-loader.transit.json"]
- ...)
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x39c4652 "."])
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x3c69b77b "./src/examples/core.clj"]
- #object[java.io.File 0x7a694500 "./src/examples/chapter2.clj"]
- #object[java.io.File 0x12d4068b "./src/examples/chapter3.clj"]
- #object[java.io.File 0x23d2f516 "./src/examples/chapter1.clj"]
- #object[java.io.File 0x29351940 "./.clj-kondo"]
- #object[java.io.File 0x1dfb3335 "./.clj-kondo/.cache"]
- #object[java.io.File 0x65cc8d1 "./.clj-kondo/.cache/v1"]
- #object[java.io.File 0x20ba740f "./.clj-kondo/.cache/v1/lock"]
- #object[java.io.File 0x21448641 "./.clj-kondo/.cache/v1/clj"]
- #object[java.io.File 0x65e26bc7 "./.clj-kondo/.cache/v1/clj/nrepl.util.lookup.transit.json"]
- #object[java.io.File 0x5183dea "./.clj-kondo/.cache/v1/clj/clojure.walk.transit.json"]
- #object[java.io.File 0x76713b4a "./.clj-kondo/.cache/v1/clj/clojure.pprint.transit.json"]
- #object[java.io.File 0x7382dd4b "./.clj-kondo/.cache/v1/clj/examples.chapter2.transit.json"]
- #object[java.io.File 0x5483caf "./.clj-kondo/.cache/v1/clj/nrepl.middleware.transit.json"]
- #object[java.io.File 0x41fba681 "./.clj-kondo/.cache/v1/clj/examples.chapter1.transit.json"]
- #object[java.io.File 0x3e2f6e9f "./.clj-kondo/.cache/v1/clj/examples.chapter3.transit.json"]
- #object[java.io.File 0x5b228494 "./.clj-kondo/.cache/v1/clj/clojure.set.transit.json"]
- #object[java.io.File 0x1fcb661b "./.clj-kondo/.cache/v1/clj/nrepl.cmdline.transit.json"]
- #object[java.io.File 0x39804cd "./.clj-kondo/.cache/v1/clj/nrepl.middleware.completion.transit.json"]
- #object[java.io.File 0x4686d9b7 "./.clj-kondo/.cache/v1/clj/clojure.core.transit.json"]
- #object[java.io.File 0x9cfe3d7 "./.clj-kondo/.cache/v1/clj/nrepl.config.transit.json"]
- #object[java.io.File 0x4d70b74b "./.clj-kondo/.cache/v1/clj/clojure.reflect.transit.json"]
- #object[java.io.File 0xe8d7c44 "./.clj-kondo/.cache/v1/clj/nrepl.bencode.transit.json"]
- #object[java.io.File 0x7e364743 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.dynamic-loader.transit.json"]
- #object[java.io.File 0x811c209 "./.clj-kondo/.cache/v1/clj/nrepl.middleware.load-file.transit.json"]
- #object[java.io.File 0x4093f6af "./.clj-kondo/.cache/v1/clj/clojure.repl.transit.json"]
- #object[java.io.File 0x2519dda5 "./.clj-kondo/.cache/v1/clj/clojure.uuid.transit.json"]
- #object[java.io.File 0x69d98a1a "./.clj-kondo/.cache/v1/clj/nrepl.core.transit.json"]
- #object[java.io.File 0x6fde1ca2 "./.clj-kondo/.cache/v1/clj/clojure.spec.test.alpha.transit.json"]
- #object[java.io.File 0x30a7a978 "./.clj-kondo/.cache/v1/clj/clojure.parallel.transit.json"]
- #object[java.io.File 0x5bb8be3c "./.clj-kondo/.cache/v1/clj/clojure.datafy.transit.json"]
- #object[java.io.File 0x7e14660b "./.clj-kondo/.cache/v1/clj/nrepl.middleware.sideloader.transit.json"]
- #object[java.io.File 0x61305e67 "./.clj-kondo/.cache/v1/clj/nrepl.helpers.transit.json"]
- #object[java.io.File 0x6c51d750 "./.clj-kondo/.cache/v1/clj/clojure.spec.gen.alpha.transit.json"]
- #object[java.io.File 0x7286ddb8 "./.clj-kondo/.cache/v1/clj/nrepl.util.completion.transit.json"]
- #object[java.io.File 0x2f7fc9dd "./.clj-kondo/.cache/v1/clj/clojure.core.protocols.transit.json"]
- #object[java.io.File 0x4c5f7933 "./.clj-kondo/.cache/v1/clj/incomplete.core.transit.json"]
- #object[java.io.File 0x2ed6ccbf "./.clj-kondo/.cache/v1/clj/nrepl.middleware.session.transit.json"]
- #object[java.io.File 0x6af9bfc0 "./.clj-kondo/.cache/v1/clj/clojure.java.io.transit.json"]
- #object[java.io.File 0x3b99a263 "./.clj-kondo/.cache/v1/clj/clojure.java.browse.transit.json"]
- #object[java.io.File 0xcb8d2c2 "./.clj-kondo/.cache/v1/clj/clojure.test.junit.transit.json"]
- #object[java.io.File 0x149344de "./.clj-kondo/.cache/v1/clj/clojure.xml.transit.json"]
- #object[java.io.File 0x3333fe33 "./.clj-kondo/.cache/v1/clj/clojure.zip.transit.json"]
- #object[java.io.File 0x454fd88c "./.clj-kondo/.cache/v1/clj/nrepl.version.transit.json"]
- #object[java.io.File 0xf2b3c25 "./.clj-kondo/.cache/v1/clj/clojure.spec.alpha.transit.json"]
- #object[java.io.File 0x1103caa "./.clj-kondo/.cache/v1/clj/clojure.template.transit.json"]
- #object[java.io.File 0x2dfe88dd "./.clj-kondo/.cache/v1/clj/nrepl.server.transit.json"]
- #object[java.io.File 0x164eae56 "./.clj-kondo/.cache/v1/clj/clojure.core.reducers.transit.json"]
- #object[java.io.File 0x40d262ae "./.clj-kondo/.cache/v1/clj/clojure.stacktrace.transit.json"]
- #object[java.io.File 0x4027e372 "./.clj-kondo/.cache/v1/clj/clojure.string.transit.json"]
- ...)
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x4664af98 "."])
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x6e31d530 "."])
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.Reflector/getInstanceField (Reflector.java:397).
-; No matching field found: endsWith for class java.lang.String
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/clojure-source?
-clj꞉examples.chapter3꞉> 
-(#object[java.io.File 0x408eb727 "./src/examples/core.clj"]
- #object[java.io.File 0x261cc90f "./src/examples/chapter2.clj"]
- #object[java.io.File 0x1c90919b "./src/examples/chapter3.clj"]
- #object[java.io.File 0x582d7930 "./src/examples/chapter1.clj"]
- #object[java.io.File 0x2764b2f5 "./project.clj"]
- #object[java.io.File 0x14b3abd0 "./test/examples/core_test.clj"])
-clj꞉examples.chapter3꞉> 
-1
-clj꞉examples.chapter3꞉> 
-(2 3)
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalStateException) at examples.chapter3/eval8474 (form-init2194794571626775935.clj:241).
-; Can't pop empty list
-clj꞉examples.chapter3꞉> 
-3
-clj꞉examples.chapter3꞉> 
-[1 2]
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-:b
-clj꞉examples.chapter3꞉> 
-:b
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-:not-found
-clj꞉examples.chapter3꞉> 
-2
-clj꞉examples.chapter3꞉> 
-; Execution error (IndexOutOfBoundsException) at examples.chapter3/eval8492 (form-init2194794571626775935.clj:250).
-; null
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8494 (form-init2194794571626775935.clj:250).
-; Wrong number of args (2) passed to: clojure.lang.PersistentVector
-clj꞉examples.chapter3꞉> 
-; Execution error (IndexOutOfBoundsException) at examples.chapter3/eval8496 (form-init2194794571626775935.clj:250).
-; null
-clj꞉examples.chapter3꞉> 
-[0 1 :two 3 4]
-clj꞉examples.chapter3꞉> 
-{:name "Jonas"}
-clj꞉examples.chapter3꞉> 
-[4 5]
-clj꞉examples.chapter3꞉> 
-[2 3]
-clj꞉examples.chapter3꞉> 
-; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
-; Don't know how to create ISeq from: clojure.core$drop$fn__5939
-clj꞉examples.chapter3꞉> 
-(2 3)
-clj꞉examples.chapter3꞉> 
-(5)
-clj꞉examples.chapter3꞉> 
-(4 5)
-clj꞉examples.chapter3꞉> 
-(:name :age :job)
-clj꞉examples.chapter3꞉> 
-("Jhon" 12 "student")
-clj꞉examples.chapter3꞉> 
-"Jhon12student"
-clj꞉examples.chapter3꞉> 
-"Jhon - 12 - student"
-clj꞉examples.chapter3꞉> 
-"student"
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-"not informed"
-clj꞉examples.chapter3꞉> 
-"student"
-clj꞉examples.chapter3꞉> 
-"Jhon"
-clj꞉examples.chapter3꞉> 
-"Jhon"
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8538 (form-init2194794571626775935.clj:271).
-; Wrong number of args (1) passed to: clojure.core/contains?
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-{:name "Jhon"}
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/song
-clj꞉examples.chapter3꞉> 
-{:name "Black night", :composer "Deep purple", :length 3.23, :year 1970}
-clj꞉examples.chapter3꞉> 
-{:name "Black night", :composer "Deep purple"}
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8550 (form-init2194794571626775935.clj:278).
-; Wrong number of args (3) passed to: clojure.core/select-keys
-clj꞉examples.chapter3꞉> 
-{:name "Black night", :length 3.23}
-clj꞉examples.chapter3꞉> 
-{:name "BLACK NIGHT", :composer "Deep purple", :length 3.23}
-clj꞉examples.chapter3꞉> 
-{:name "BLACK NIGHT", :composer "Deep purple", :length 3.23, :year 1970}
-clj꞉examples.chapter3꞉> 
-{:name "Black night", :composer "Deep purple", :length 3.23, :year 1970}
-clj꞉examples.chapter3꞉> 
-{:name "BLACK NIGHT", :composer "Deep purple", :length 3.23, :year 1970}
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8564 (form-init2194794571626775935.clj:285).
-; Wrong number of args (2) passed to: examples.chapter3/eval8564/fn--8565
-clj꞉examples.chapter3꞉> 
-{:name "Burn", :composer "Deep purple", :length 3.23}
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8572 (form-init2194794571626775935.clj:285).
-; Wrong number of args (2) passed to: examples.chapter3/eval8572/fn--8573
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:1:7928).
-; Unable to resolve symbol: b in this context
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8582 (form-init2194794571626775935.clj:286).
-; Wrong number of args (2) passed to: examples.chapter3/eval8582/fn--8583
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-false
-clj꞉examples.chapter3꞉> 
-true
-clj꞉examples.chapter3꞉> 
-#function[examples.chapter3/eval8596/fn--8597]
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8602 (form-init2194794571626775935.clj:286).
-; Wrong number of args (2) passed to: examples.chapter3/eval8602/fn--8603
-clj꞉examples.chapter3꞉> 
-{:name "Burn", :composer "Deep purple", :length 3.23}
-clj꞉examples.chapter3꞉> 
-#function[examples.chapter3/eval8610/fn--8611]
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8616 (form-init2194794571626775935.clj:290).
-; Wrong number of args (2) passed to: examples.chapter3/eval8616/fn--8617
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8620 (form-init2194794571626775935.clj:290).
-; Wrong number of args (2) passed to: examples.chapter3/eval8620/fn--8621
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8626 (form-init2194794571626775935.clj:290).
-; Wrong number of args (2) passed to: examples.chapter3/eval8626/fn--8627
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8632 (form-init2194794571626775935.clj:290).
-; Wrong number of args (2) passed to: examples.chapter3/eval8632/fn--8633
-clj꞉examples.chapter3꞉> 
-{:name false, :composer false, :length false}
-clj꞉examples.chapter3꞉> 
-; Execution error (NullPointerException) at examples.chapter3/eval8654$fn (form-init2194794571626775935.clj:288).
-; Cannot invoke "clojure.lang.IFn.invoke()"
-clj꞉examples.chapter3꞉> 
-#function[examples.chapter3/eval8664/fn--8665]
-clj꞉examples.chapter3꞉> 
-; Execution error (ClassCastException) at examples.chapter3/eval8672$fn (form-init2194794571626775935.clj:288).
-; class java.lang.String cannot be cast to class clojure.lang.IFn (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
-clj꞉examples.chapter3꞉> 
-{:name false, :composer false, :length false}
-clj꞉examples.chapter3꞉> 
-; Execution error (NullPointerException) at examples.chapter3/eval8696$fn (form-init2194794571626775935.clj:288).
-; Cannot invoke "clojure.lang.IFn.invoke()"
-clj꞉examples.chapter3꞉> 
-{:name false, :composer false, :length false}
-clj꞉examples.chapter3꞉> 
-{:name false, :composer false, :length false}
-clj꞉examples.chapter3꞉> 
-{:name false, :composer false, :length false}
-clj꞉examples.chapter3꞉> 
-nil
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:291:1).
-; Unable to resolve symbol: languages in this context
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/languages
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/func-languages
-clj꞉examples.chapter3꞉> 
-#{"Javascript" "PHP" "Lisp" "F#" "Clojure" "Java"}
-clj꞉examples.chapter3꞉> 
-#{"Javascript" "PHP" "Java"}
-clj꞉examples.chapter3꞉> 
-#{"Lisp" "F#" "Clojure"}
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8747 (form-init2194794571626775935.clj:295).
-; Wrong number of args (1) passed to: examples.chapter3/eval8747/fn--8748
-clj꞉examples.chapter3꞉> 
-#{"Javascript" "Java"}
-clj꞉examples.chapter3꞉> 
-#{"Javascript" "Java"}
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:300:1).
-; Unable to resolve symbol: songs in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:300:1).
-; Unable to resolve symbol: songs in this context
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:300:1).
-; Unable to resolve symbol: songs in this context
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/songs
-clj꞉examples.chapter3꞉> 
-({:name "Jghon"})
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter3/eval8768 (form-init2194794571626775935.clj:300).
-; Don't know how to create ISeq from: clojure.lang.Ref
-clj꞉examples.chapter3꞉> 
-({:name "Jghon"})
-clj꞉examples.chapter3꞉> 
-; Execution error (ClassCastException) at examples.chapter3/eval8772 (form-init2194794571626775935.clj:301).
-; class clojure.lang.PersistentList$EmptyList cannot be cast to class clojure.lang.IFn (clojure.lang.PersistentList$EmptyList and clojure.lang.IFn are in unnamed module of loader 'app')
-clj꞉examples.chapter3꞉> 
-#<Ref@7d94546f: ()>
-clj꞉examples.chapter3꞉> 
-()
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter3/eval8776$fn (form-init2194794571626775935.clj:300).
-; Don't know how to create ISeq from: clojure.lang.Ref
-clj꞉examples.chapter3꞉> 
-; Syntax error compiling at (src/examples/chapter3.clj:300:1).
-; Unable to resolve symbol: songs in this context
-clj꞉examples.chapter3꞉> 
-#'examples.chapter1/songs
-clj꞉examples.chapter1꞉> 
-#'examples.chapter3/songs
-clj꞉examples.chapter3꞉> 
-; Execution error (IllegalStateException) at examples.chapter3/eval8793 (form-init2194794571626775935.clj:300).
+clj꞉examples.chapter6꞉> 
+; Syntax error compiling def at (src/examples/chapter6.clj:4:1).
+; First argument to def must be a Symbol
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/current-track
+clj꞉examples.chapter6꞉> 
+#<Ref@35663471: "The wizard">
+clj꞉examples.chapter6꞉> 
+"The wizard"
+clj꞉examples.chapter6꞉> 
+"The wizard"
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at examples.chapter6/eval7878 (form-init17603664381955001498.clj:12).
 ; No transaction running
-clj꞉examples.chapter3꞉> 
-[]
-clj꞉examples.chapter3꞉> 
-([] [:title "Black Sabbath"])
-clj꞉examples.chapter3꞉> 
-([] [:title "Black Sabbath"])
-clj꞉examples.chapter3꞉> 
-(([] [:title "Black Sabbath"]) [:title "Black Sabbaths"])
-clj꞉examples.chapter3꞉> 
-(([] [:title "Black Sabbath"]) [:title "Black Sabbaths"])
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/songs
-clj꞉examples.chapter3꞉> 
-(#{} [:title "Black Sabbaths"])
-clj꞉examples.chapter3꞉> 
-; Execution error (ArityException) at examples.chapter3/eval8813$fn (form-init2194794571626775935.clj:301).
+clj꞉examples.chapter6꞉> 
+"N.I.B"
+clj꞉examples.chapter6꞉> 
+"N.I.B"
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/current-composer
+clj꞉examples.chapter6꞉> 
+"Deep Purple"
+clj꞉examples.chapter6꞉> 
+Burn Deep Purple
+nil
+clj꞉examples.chapter6꞉> 
+Burn ,  Deep Purple
+nil
+clj꞉examples.chapter6꞉> 
+Burn , Deep Purple
+nil
+clj꞉examples.chapter6꞉> 
+examples.chapter6.Message
+clj꞉examples.chapter6꞉> 
+{:sender "Aaron", :text "Hello there!"}
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/messages
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/native-add-msg
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+; Syntax error compiling at (src/examples/chapter6.clj:41:1).
+; Unable to resolve symbol: naive-add-msg in this context
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/naive-add-msg
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/add-message
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "Hi there!"} {:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "Hi there!"} {:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/add-message-commute
+clj꞉examples.chapter6꞉> 
+({:sender "User2", :text "Hello!"}
+ {:sender "Balbi", :text "Hi there!"}
+ {:sender "Balbi", :text "bad idea"}
+ {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+({:sender "User2", :text "Hello!"}
+ {:sender "User2", :text "Hello!"}
+ {:sender "Balbi", :text "Hi there!"}
+ {:sender "Balbi", :text "bad idea"}
+ {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+({:sender "User2", :text "Hello!"}
+ {:sender "User2", :text "Hello!"}
+ {:sender "User2", :text "Hello!"}
+ {:sender "Balbi", :text "Hi there!"}
+ {:sender "Balbi", :text "bad idea"}
+ {:sender "Balbi", :text "bad idea"})
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/valid-message?
+clj꞉examples.chapter6꞉> 
+; Syntax error compiling def at (src/examples/chapter6.clj:62:1).
+; Too many arguments to def
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/validate-message-list
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/messages
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at examples.chapter6/add-message (form-init17603664381955001498.clj:46).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at examples.chapter6/add-message (form-init17603664381955001498.clj:46).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+({:sender "UserA", :text "Hi from map"})
+clj꞉examples.chapter6꞉> 
+({:sender "Balbi", :text "Hi there!"} {:sender "UserA", :text "Hi from map"})
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/person-name
+clj꞉examples.chapter6꞉> 
+"Joe"
+clj꞉examples.chapter6꞉> 
+"Joe"
+clj꞉examples.chapter6꞉> 
+"Jane"
+clj꞉examples.chapter6꞉> 
+"Jane"
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/person
+clj꞉examples.chapter6꞉> 
+{:name "Jane", :age 16}
+clj꞉examples.chapter6꞉> 
+{:name "Jane", :age 16, #function[clojure.core/assoc--5433] 12}
+clj꞉examples.chapter6꞉> 
+; Execution error (ArityException) at examples.chapter6/eval7976 (form-init17603664381955001498.clj:84).
 ; Wrong number of args (2) passed to: clojure.core/assoc--5433
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/songs
-clj꞉examples.chapter3꞉> 
-#{}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#<Ref@4a3fa7f8: #{{:title "Black Sabbath"} {:title "Black Sabbaths"}}>
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#{{:title "Black Sabbath"} {:title "Black Sabbaths"}}
-clj꞉examples.chapter3꞉> 
-#'examples.chapter3/songs
-clj꞉examples.chapter3꞉> 
-[{:title "Black Sabbath"}]
-clj꞉examples.chapter3꞉> 
+clj꞉examples.chapter6꞉> 
+{:name "Jane", :age 12, #function[clojure.core/assoc--5433] 12}
+clj꞉examples.chapter6꞉> 
+{:name "Jane", :age 12, #function[clojure.core/assoc--5433] 12}
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/person
+clj꞉examples.chapter6꞉> 
+{:name "Joe", :age 12}
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/counter
+clj꞉examples.chapter6꞉> 
+#<Agent@2489fd3f: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@2489fd3f: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@2489fd3f: 3>
+clj꞉examples.chapter6꞉> 
+3
+clj꞉examples.chapter6꞉> 
+; Execution error (ClassCastException) at examples.chapter6/eval7992 (form-init17603664381955001498.clj:94).
+; class clojure.lang.Agent cannot be cast to class java.lang.Number (clojure.lang.Agent is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+6
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+true
+clj꞉examples.chapter6꞉> 
+13
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439: 4>
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439: 6>
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439: 8>
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439 FAILED: 8>
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+8
+clj꞉examples.chapter6꞉> 
+#error {
+ :cause "Invalid reference state"
+ :via
+ [{:type java.lang.IllegalStateException
+   :message "Invalid reference state"
+   :at [clojure.lang.ARef validate "ARef.java" 33]}]
+ :trace
+ [[clojure.lang.ARef validate "ARef.java" 33]
+  [clojure.lang.ARef validate "ARef.java" 46]
+  [clojure.lang.Agent setState "Agent.java" 177]
+  [clojure.lang.Agent$Action doRun "Agent.java" 115]
+  [clojure.lang.Agent$Action run "Agent.java" 163]
+  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1136]
+  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 635]
+  [java.lang.Thread run "Thread.java" 833]]}
+clj꞉examples.chapter6꞉> 
+; Execution error (ArityException) at examples.chapter6/eval8084 (form-init17603664381955001498.clj:113).
+; Wrong number of args (1) passed to: clojure.core/restart-agent
+clj꞉examples.chapter6꞉> 
+0
+clj꞉examples.chapter6꞉> 
+#<Agent@35379439: 1>
+clj꞉examples.chapter6꞉> 
+; Syntax error compiling at (src/examples/chapter6.clj:122:1).
+; Unable to resolve symbol: bcounter2 in this context
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 3>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 4>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 5>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c: 6>
+clj꞉examples.chapter6꞉> 
+#<Agent@43d1874c FAILED: 6>
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#<Agent@31955dc: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@31955dc FAILED: 1>
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1: 3>
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1: 4>
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1: 5>
+clj꞉examples.chapter6꞉> 
+#<Agent@63293bd1 FAILED: 5>
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#<Agent@7c161bd9: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@7c161bd9: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@7c161bd9: 3>
+clj꞉examples.chapter6꞉> 
+#<Agent@7c161bd9 FAILED: 3>
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
+; Invalid reference state
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#'examples.chapter6/bcounter2
+clj꞉examples.chapter6꞉> 
+#<Agent@7f18dae4: 1>
+clj꞉examples.chapter6꞉> 
+#<Agent@7f18dae4: 2>
+clj꞉examples.chapter6꞉> 
+#<Agent@7f18dae4: 3>
+clj꞉examples.chapter6꞉> 
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+Invalid reference state
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+Invalid reference state
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+Invalid reference state
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+Invalid reference state
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+Invalid reference state
+#<Agent@7f18dae4: 4>
+clj꞉examples.chapter6꞉> 
+#<Agent@7f18dae4: 5>
+clj꞉examples.chapter6꞉> 

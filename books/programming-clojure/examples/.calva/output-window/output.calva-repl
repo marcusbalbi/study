@@ -5,13 +5,6 @@
 ; Happy coding! ♥️
 
 ; Jacking in...
-; Connecting using "undefined" project type.
-; You can make Calva auto-select this:
-; "calva.autoSelectReplConnectProjectType": "undefined"
-;   - See https://calva.io/connect/#auto-select-project-type
-; 
-; Aborting jack-in. No project type selected.
-; Jacking in...
 ; Connecting using "Leiningen" project type.
 ; You can make Calva auto-select this:
 ; "calva.autoSelectReplConnectProjectType": "Leiningen"
@@ -30,350 +23,47 @@
 clj꞉examples.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉examples.core꞉> 
+; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:445).
+; java.io
+clj꞉examples.chapter7.gulp꞉> 
 nil
-clj꞉examples.chapter6꞉> 
-; Syntax error compiling def at (src/examples/chapter6.clj:4:1).
-; First argument to def must be a Symbol
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/current-track
-clj꞉examples.chapter6꞉> 
-#<Ref@35663471: "The wizard">
-clj꞉examples.chapter6꞉> 
-"The wizard"
-clj꞉examples.chapter6꞉> 
-"The wizard"
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at examples.chapter6/eval7878 (form-init17603664381955001498.clj:12).
-; No transaction running
-clj꞉examples.chapter6꞉> 
-"N.I.B"
-clj꞉examples.chapter6꞉> 
-"N.I.B"
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/current-composer
-clj꞉examples.chapter6꞉> 
-"Deep Purple"
-clj꞉examples.chapter6꞉> 
-Burn Deep Purple
+clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.gulp/gulp
+clj꞉examples.chapter7.gulp꞉> 
 nil
-clj꞉examples.chapter6꞉> 
-Burn ,  Deep Purple
+clj꞉examples.chapter7.expectore꞉> 
+#'examples.chapter7.expectore/expectore
+clj꞉examples.chapter7.expectore꞉> 
+#'examples.chapter7.gulp/make-reader
+clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.gulp/make-reader
+clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.gulp/make-reader-condp
+clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.gulp/make-reader-condp
+clj꞉examples.chapter7.gulp꞉> 
+; Syntax error compiling at (src/examples/chapter7/expectore.clj:15:31).
+; Expecting var, but OutputStreamWriter is mapped to class java.io.OutputStreamWriter
+clj꞉examples.chapter7.expectore꞉> 
+#'examples.chapter7.gulp/make-reader-condp
+clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.gulp/make-reader-condp
+clj꞉examples.chapter7.gulp꞉> 
+; Syntax error compiling at (src/examples/chapter7/expectore.clj:15:31).
+; Expecting var, but OutputStreamWriter is mapped to class java.io.OutputStreamWriter
+clj꞉examples.chapter7.expectore꞉> 
+#'examples.chapter7.expectore/make-writer-condp
+clj꞉examples.chapter7.expectore꞉> 
+#'examples.chapter7.expectore/make-writer-condp
+clj꞉examples.chapter7.expectore꞉> 
 nil
-clj꞉examples.chapter6꞉> 
-Burn , Deep Purple
-nil
-clj꞉examples.chapter6꞉> 
-examples.chapter6.Message
-clj꞉examples.chapter6꞉> 
-{:sender "Aaron", :text "Hello there!"}
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/messages
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/native-add-msg
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-; Syntax error compiling at (src/examples/chapter6.clj:41:1).
-; Unable to resolve symbol: naive-add-msg in this context
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/naive-add-msg
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/add-message
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "Hi there!"} {:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "Hi there!"} {:sender "Balbi", :text "bad idea"} {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/add-message-commute
-clj꞉examples.chapter6꞉> 
-({:sender "User2", :text "Hello!"}
- {:sender "Balbi", :text "Hi there!"}
- {:sender "Balbi", :text "bad idea"}
- {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-({:sender "User2", :text "Hello!"}
- {:sender "User2", :text "Hello!"}
- {:sender "Balbi", :text "Hi there!"}
- {:sender "Balbi", :text "bad idea"}
- {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-({:sender "User2", :text "Hello!"}
- {:sender "User2", :text "Hello!"}
- {:sender "User2", :text "Hello!"}
- {:sender "Balbi", :text "Hi there!"}
- {:sender "Balbi", :text "bad idea"}
- {:sender "Balbi", :text "bad idea"})
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/valid-message?
-clj꞉examples.chapter6꞉> 
-; Syntax error compiling def at (src/examples/chapter6.clj:62:1).
-; Too many arguments to def
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/validate-message-list
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/messages
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at examples.chapter6/add-message (form-init17603664381955001498.clj:46).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at examples.chapter6/add-message (form-init17603664381955001498.clj:46).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-({:sender "UserA", :text "Hi from map"})
-clj꞉examples.chapter6꞉> 
-({:sender "Balbi", :text "Hi there!"} {:sender "UserA", :text "Hi from map"})
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/person-name
-clj꞉examples.chapter6꞉> 
-"Joe"
-clj꞉examples.chapter6꞉> 
-"Joe"
-clj꞉examples.chapter6꞉> 
-"Jane"
-clj꞉examples.chapter6꞉> 
-"Jane"
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/person
-clj꞉examples.chapter6꞉> 
-{:name "Jane", :age 16}
-clj꞉examples.chapter6꞉> 
-{:name "Jane", :age 16, #function[clojure.core/assoc--5433] 12}
-clj꞉examples.chapter6꞉> 
-; Execution error (ArityException) at examples.chapter6/eval7976 (form-init17603664381955001498.clj:84).
-; Wrong number of args (2) passed to: clojure.core/assoc--5433
-clj꞉examples.chapter6꞉> 
-{:name "Jane", :age 12, #function[clojure.core/assoc--5433] 12}
-clj꞉examples.chapter6꞉> 
-{:name "Jane", :age 12, #function[clojure.core/assoc--5433] 12}
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/person
-clj꞉examples.chapter6꞉> 
-{:name "Joe", :age 12}
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/counter
-clj꞉examples.chapter6꞉> 
-#<Agent@2489fd3f: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@2489fd3f: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@2489fd3f: 3>
-clj꞉examples.chapter6꞉> 
-3
-clj꞉examples.chapter6꞉> 
-; Execution error (ClassCastException) at examples.chapter6/eval7992 (form-init17603664381955001498.clj:94).
-; class clojure.lang.Agent cannot be cast to class java.lang.Number (clojure.lang.Agent is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-6
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-true
-clj꞉examples.chapter6꞉> 
-13
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439: 4>
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439: 6>
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439: 8>
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439 FAILED: 8>
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-8
-clj꞉examples.chapter6꞉> 
-#error {
- :cause "Invalid reference state"
- :via
- [{:type java.lang.IllegalStateException
-   :message "Invalid reference state"
-   :at [clojure.lang.ARef validate "ARef.java" 33]}]
- :trace
- [[clojure.lang.ARef validate "ARef.java" 33]
-  [clojure.lang.ARef validate "ARef.java" 46]
-  [clojure.lang.Agent setState "Agent.java" 177]
-  [clojure.lang.Agent$Action doRun "Agent.java" 115]
-  [clojure.lang.Agent$Action run "Agent.java" 163]
-  [java.util.concurrent.ThreadPoolExecutor runWorker "ThreadPoolExecutor.java" 1136]
-  [java.util.concurrent.ThreadPoolExecutor$Worker run "ThreadPoolExecutor.java" 635]
-  [java.lang.Thread run "Thread.java" 833]]}
-clj꞉examples.chapter6꞉> 
-; Execution error (ArityException) at examples.chapter6/eval8084 (form-init17603664381955001498.clj:113).
-; Wrong number of args (1) passed to: clojure.core/restart-agent
-clj꞉examples.chapter6꞉> 
-0
-clj꞉examples.chapter6꞉> 
-#<Agent@35379439: 1>
-clj꞉examples.chapter6꞉> 
-; Syntax error compiling at (src/examples/chapter6.clj:122:1).
-; Unable to resolve symbol: bcounter2 in this context
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 3>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 4>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 5>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c: 6>
-clj꞉examples.chapter6꞉> 
-#<Agent@43d1874c FAILED: 6>
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#<Agent@31955dc: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@31955dc FAILED: 1>
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1: 3>
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1: 4>
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1: 5>
-clj꞉examples.chapter6꞉> 
-#<Agent@63293bd1 FAILED: 5>
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#<Agent@7c161bd9: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@7c161bd9: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@7c161bd9: 3>
-clj꞉examples.chapter6꞉> 
-#<Agent@7c161bd9 FAILED: 3>
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-; Execution error (IllegalStateException) at java.util.concurrent.ThreadPoolExecutor/runWorker (ThreadPoolExecutor.java:1136).
-; Invalid reference state
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#'examples.chapter6/bcounter2
-clj꞉examples.chapter6꞉> 
-#<Agent@7f18dae4: 1>
-clj꞉examples.chapter6꞉> 
-#<Agent@7f18dae4: 2>
-clj꞉examples.chapter6꞉> 
-#<Agent@7f18dae4: 3>
-clj꞉examples.chapter6꞉> 
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-Invalid reference state
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-Invalid reference state
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-Invalid reference state
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-Invalid reference state
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-Invalid reference state
-#<Agent@7f18dae4: 4>
-clj꞉examples.chapter6꞉> 
-#<Agent@7f18dae4: 5>
-clj꞉examples.chapter6꞉> 
+clj꞉examples.chapter7.main꞉> 
+; Syntax error macroexpanding clojure.core/gen-interface at (src/examples/chapter7/main.clj:4:1).
+; Interface methods must not contain '-'
+clj꞉examples.chapter7.main꞉> 
+examples.chapter7.main.IOFactory
+clj꞉examples.chapter7.main꞉> 
+; Syntax error compiling def at (src/examples/chapter7/main.clj:9:1).
+; Expecting var, but IOFactory is mapped to interface examples.chapter7.main.IOFactory
+clj꞉examples.chapter7.main꞉> 
+; nREPL Connection was closed

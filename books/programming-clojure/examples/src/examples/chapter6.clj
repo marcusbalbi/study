@@ -1,4 +1,7 @@
-(ns examples.chapter6)
+(ns examples.chapter6
+  (:require [clojure.core])
+  (:use clojure.pprint)
+  (:import javax.swing.JOptionPane))
 
 
 (def current-track (ref "The wizard"))
@@ -126,6 +129,65 @@ current-track
 ;; still works cause error-handler supplied
 (send bcounter2 inc)
 
+(def testmap {:customer/id 123})
+
+(:customer/id testmap)
+
+(def ^:dynamic foo 10)
+
+foo
+
+(def bar (fn [] (println "aa")))
+(.start (Thread. (fn [] (println foo))))
+
+
+(binding [foo 23]
+  (println foo))
+
+(defn print-foo [] (println foo))
+
+(print-foo)
+
+(let [foo "leet foo"]
+  (print-foo))
+
+
+(binding [foo "bind foo"]
+  (print-foo))
+
+
+(defn ^:dynamic slow-double [n]
+  (Thread/sleep 100)
+  (* n 2))
+
+(pprint (meta #'slow-double))
+
+(defn ^:this-is-a-tag slow-double2 [n]
+  (Thread/sleep 100)
+  (* n 2))
+
+
+(pprint (meta #'slow-double2))
+
+(slow-double 10)
+
+(defn calls-slow-double []
+  (map slow-double [1 2 1 2 1 2]))
+
+(calls-slow-double)
+
+(time (calls-slow-double))
+
+(time (dorun (calls-slow-double)))
+
+(defn demo-memorize []
+  (time (dorun (binding [slow-double (memoize slow-double)]
+                 (calls-slow-double)))))
+
+(demo-memorize)
+
+
+;; (JOptionPane/showMessageDialog nil "Teste")
 
 
 

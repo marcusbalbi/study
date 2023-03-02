@@ -11,3 +11,4 @@
   (make-reader [this] "Creates a BuferedReader")
   (make-writer [this] "Creates a BufferedWriter")
  )
+

@@ -23,47 +23,117 @@
 clj꞉examples.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉examples.core꞉> 
-; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:445).
-; java.io
-clj꞉examples.chapter7.gulp꞉> 
+#'examples.chapter7.protocols/vw-up
+clj꞉examples.chapter7.protocols꞉> 
+; Syntax error compiling at (src/examples/chapter7/protocols.clj:7:1).
+; Unable to resolve symbol: defrecord in this context
+clj꞉examples.chapter7.protocols꞉> 
 nil
-clj꞉examples.chapter7.gulp꞉> 
-#'examples.chapter7.gulp/gulp
-clj꞉examples.chapter7.gulp꞉> 
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+{:make "Toyota", :model "Corolla"}
+clj꞉examples.chapter7.protocols꞉> 
+{:make "Honda", :model "Civic"}
+clj꞉examples.chapter7.protocols꞉> 
+; Syntax error compiling def at (src/examples/chapter7/protocols.clj:11:1).
+; First argument to def must be a Symbol
+clj꞉examples.chapter7.protocols꞉> 
+#'examples.chapter7.protocols/honda-civic
+clj꞉examples.chapter7.protocols꞉> 
+#'examples.chapter7.protocols/toyota-corolla
+clj꞉examples.chapter7.protocols꞉> 
+clojure.lang.PersistentArrayMap
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+clojure.lang.PersistentArrayMap
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+Display
+clj꞉examples.chapter7.protocols꞉> 
+; Syntax error (IllegalArgumentException) compiling deftype* at (src/examples/chapter7/protocols.clj:12:1).
+; Must supply at least one argument for 'this' in: title
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+#'examples.chapter7.protocols/toyota-corolla
+clj꞉examples.chapter7.protocols꞉> 
+#'examples.chapter7.protocols/honda-civic
+clj꞉examples.chapter7.protocols꞉> 
+"Toyota - Corolla"
+clj꞉examples.chapter7.protocols꞉> 
+; Syntax error (IllegalArgumentException) compiling description at (src/examples/chapter7/protocols.clj:25:1).
+; No single method: description of interface: examples.chapter7.protocols.Display found for function: description of protocol: Display
+clj꞉examples.chapter7.protocols꞉> 
+; Execution error (AbstractMethodError) at examples.chapter7.protocols/eval8012 (form-init9228648601965814285.clj:25).
+; Receiver class examples.chapter7.protocols.CarModel does not define or inherit an implementation of the resolved method 'abstract java.lang.Object description(java.lang.Object)' of interface examples.chapter7.protocols.Display.
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.CarModel
+clj꞉examples.chapter7.protocols꞉> 
+; Execution error (AbstractMethodError) at examples.chapter7.protocols/eval8038 (form-init9228648601965814285.clj:26).
+; Receiver class examples.chapter7.protocols.CarModel does not define or inherit an implementation of the resolved method 'abstract java.lang.Object description(java.lang.Object)' of interface examples.chapter7.protocols.Display.
+clj꞉examples.chapter7.protocols꞉> 
+#'examples.chapter7.protocols/toyota-corolla
+clj꞉examples.chapter7.protocols꞉> 
+"Corolla is the best asdssa"
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.Product
+clj꞉examples.chapter7.protocols꞉> 
+{:name "TV Samsumg"}
+clj꞉examples.chapter7.protocols꞉> 
+; Syntax error (IllegalArgumentException) compiling description at (src/examples/chapter7/protocols.clj:36:25).
+; No single method: description of interface: examples.chapter7.protocols.Display found for function: description of protocol: Display
+clj꞉examples.chapter7.protocols꞉> 
+"This is the product TV Samsumgand The product TV Samsumgis the best big"
+clj꞉examples.chapter7.protocols꞉> 
+"This is the product TV Samsumg and The product TV Samsumgis the best big"
+clj꞉examples.chapter7.protocols꞉> 
+examples.chapter7.protocols.Product
+clj꞉examples.chapter7.protocols꞉> nil
+clj꞉examples.chapter7.protocols꞉> 
+"This is the product clojure.core$name@2a9d1b9e and The product clojure.core$name@2a9d1b9eis the best big"
+clj꞉examples.chapter7.protocols꞉> 
 nil
-clj꞉examples.chapter7.expectore꞉> 
-#'examples.chapter7.expectore/expectore
-clj꞉examples.chapter7.expectore꞉> 
-#'examples.chapter7.gulp/make-reader
-clj꞉examples.chapter7.gulp꞉> 
-#'examples.chapter7.gulp/make-reader
-clj꞉examples.chapter7.gulp꞉> 
-#'examples.chapter7.gulp/make-reader-condp
-clj꞉examples.chapter7.gulp꞉> 
-#'examples.chapter7.gulp/make-reader-condp
-clj꞉examples.chapter7.gulp꞉> 
-; Syntax error compiling at (src/examples/chapter7/expectore.clj:15:31).
-; Expecting var, but OutputStreamWriter is mapped to class java.io.OutputStreamWriter
-clj꞉examples.chapter7.expectore꞉> 
-#'examples.chapter7.gulp/make-reader-condp
-clj꞉examples.chapter7.gulp꞉> 
-#'examples.chapter7.gulp/make-reader-condp
-clj꞉examples.chapter7.gulp꞉> 
-; Syntax error compiling at (src/examples/chapter7/expectore.clj:15:31).
-; Expecting var, but OutputStreamWriter is mapped to class java.io.OutputStreamWriter
-clj꞉examples.chapter7.expectore꞉> 
-#'examples.chapter7.expectore/make-writer-condp
-clj꞉examples.chapter7.expectore꞉> 
-#'examples.chapter7.expectore/make-writer-condp
-clj꞉examples.chapter7.expectore꞉> 
-nil
-clj꞉examples.chapter7.main꞉> 
-; Syntax error macroexpanding clojure.core/gen-interface at (src/examples/chapter7/main.clj:4:1).
-; Interface methods must not contain '-'
-clj꞉examples.chapter7.main꞉> 
-examples.chapter7.main.IOFactory
-clj꞉examples.chapter7.main꞉> 
-; Syntax error compiling def at (src/examples/chapter7/main.clj:9:1).
-; Expecting var, but IOFactory is mapped to interface examples.chapter7.main.IOFactory
-clj꞉examples.chapter7.main꞉> 
-; nREPL Connection was closed
+clj꞉examples.chapter7.records꞉> 
+examples.chapter7.records.Note
+clj꞉examples.chapter7.records꞉> 
+{:pitch :D#, :octate 4, :duration 1/2}
+clj꞉examples.chapter7.records꞉> 
+:D#
+clj꞉examples.chapter7.records꞉> 
+:D#
+clj꞉examples.chapter7.records꞉> 
+true
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/d#
+clj꞉examples.chapter7.records꞉> 
+examples.chapter7.records.Note
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/d#
+clj꞉examples.chapter7.records꞉> 
+{:pitch :D4, :octave 4, :duration 1/2, :octava 8}
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/d#
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/d#
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/d#
+clj꞉examples.chapter7.records꞉> 
+{:pitch :D4, :octave 8, :duration 1/2}
+clj꞉examples.chapter7.records꞉> 
+{:pitch :D4, :octave 5, :duration 1/2}
+clj꞉examples.chapter7.records꞉> 
+{:pitch :D4, :octave 4, :duration 1/2, :velocity 100}
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/new-d#
+clj꞉examples.chapter7.records꞉> 
+examples.chapter7.records.Note
+clj꞉examples.chapter7.records꞉> 
+examples.chapter7.records.Note
+clj꞉examples.chapter7.records꞉> 
+clojure.lang.PersistentArrayMap
+clj꞉examples.chapter7.records꞉> 

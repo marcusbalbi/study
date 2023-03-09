@@ -137,3 +137,97 @@ examples.chapter7.records.Note
 clj꞉examples.chapter7.records꞉> 
 clojure.lang.PersistentArrayMap
 clj꞉examples.chapter7.records꞉> 
+MidiNite
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+MidiNote
+; Warning: protocol #'examples.chapter7.records/MidiNote is overwriting method to-mesc of protocol MidiNite
+; 
+; Warning: protocol #'examples.chapter7.records/MidiNote is overwriting method key-number of protocol MidiNite
+; 
+; Warning: protocol #'examples.chapter7.records/MidiNote is overwriting method play of protocol MidiNite
+clj꞉examples.chapter7.records꞉> 
+MidiNote
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/perform
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/perform
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/close-enconters
+clj꞉examples.chapter7.records꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉examples.core꞉> 
+; Jack-in done.
+clj꞉examples.core꞉> 
+; Syntax error compiling at (src/examples/chapter7/records.clj:33:1).
+; Unable to resolve symbol: Note in this context
+clj꞉examples.chapter7.records꞉> 
+; Syntax error compiling at (src/examples/chapter7/records.clj:33:1).
+; Unable to resolve symbol: Note in this context
+clj꞉examples.chapter7.records꞉> 
+; Syntax error compiling at (src/examples/chapter7/records.clj:61:1).
+; Unable to resolve symbol: perform in this context
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+examples.chapter7.records.Note
+clj꞉examples.chapter7.records꞉> 
+MidiNote
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/perform
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/close-enconters
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+nil
+clj꞉examples.chapter7.records꞉> 
+#'examples.chapter7.records/close-enconters
+clj꞉examples.chapter7.records꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; nREPL Connection was closed
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉examples.core꞉> 
+; Jack-in done.
+clj꞉examples.core꞉> 

@@ -25,15 +25,3 @@
   (let [command (get-command sql)]
     (println command)
     (command db sql)))
-
-(def database (create-db))
-
-(def database (execute database "create table author (id number, name string, age number, city string, state string, country string)"))
-(def database (execute database "create table songs (id number, name string, age number, city string, state string, country string)"))
-
-(->> database
-    :tables
-    :author
-    (map #(:name %) ,,,))
-
-(execute database "insert into author (id, name, age) values (1, Douglas Crockford, 62)")

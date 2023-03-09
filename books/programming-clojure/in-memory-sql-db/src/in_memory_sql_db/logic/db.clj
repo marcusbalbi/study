@@ -15,6 +15,9 @@
       (throw (ex-info "Invalid SQL!" {:sql sql}))
       (update-in db [:tables] #(conj % {(keyword (:table structure)) (:columns structure)})))))
 
+(defn insert [db sql]
+  (let []))
+
 (defn get-command [sql]
   (cond
    (str/starts-with? sql "create table") create-table
@@ -23,5 +26,4 @@
 
 (defn execute [db sql]
   (let [command (get-command sql)]
-    (println command)
     (command db sql)))

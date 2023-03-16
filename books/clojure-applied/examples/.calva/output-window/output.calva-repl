@@ -1,0 +1,157 @@
+; Evaluating file: money.clj
+; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
+; Expecting var, but Comparable is mapped to interface java.lang.Comparable
+; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉examples.chapter1.money꞉> 
+; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
+; Expecting var, but Comparable is mapped to interface java.lang.Comparable
+clj꞉examples.chapter1.money꞉> 
+Fruit
+clj꞉examples.chapter1.money꞉> 
+; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
+; Expecting var, but Comparable is mapped to interface java.lang.Comparable
+clj꞉examples.chapter1.money꞉> 
+; Evaluating file: money.clj
+; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:17:1).
+; interface java.lang.Comparable is not a protocol
+; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval8670 (form-init14958335748940258894.clj:17).
+; interface java.lang.Comparable is not a protocol
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+; Evaluating file: money.clj
+#'examples.chapter1.money/currencies
+clj꞉examples.chapter1.money꞉> 
+Fruit
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/=$
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/=$
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/=$
+clj꞉examples.chapter1.money꞉> 
+true
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/= (form-init14958335748940258894.clj:29).
+; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+; Evaluating file: money.clj
+; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:33:1).
+; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
+; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/= (money.clj:29).
+; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+; Evaluating file: money.clj
+; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:33:1).
+; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
+; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉examples.chapter1.money꞉> 
+{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9045 (form-init14958335748940258894.clj:35).
+; No matching field found: compareTo for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+Fruit
+clj꞉examples.chapter1.money꞉> 
+Fruit
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9119 (form-init14958335748940258894.clj:35).
+; No matching field found: compareTo for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9121 (form-init14958335748940258894.clj:35).
+; No matching field found: compare_to for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9123 (form-init14958335748940258894.clj:35).
+; No matching field found: compare_to for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/compare-moneys
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9126 (form-init14958335748940258894.clj:38).
+; No matching field found: compare_moneys for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/compare-money
+clj꞉examples.chapter1.money꞉> 
+0
+clj꞉examples.chapter1.money꞉> 
+1
+clj꞉examples.chapter1.money꞉> 
+-1
+clj꞉examples.chapter1.money꞉> 
+1
+clj꞉examples.chapter1.money꞉> 
+Fruit
+clj꞉examples.chapter1.money꞉> 
+CompareMoney
+; Warning: protocol #'examples.chapter1.money/CompareMoney is overwriting method compare-with of protocol Fruit
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+CompareMoney
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/compare-money
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/currencies
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/=$
+clj꞉examples.chapter1.money꞉> 
+1
+clj꞉examples.chapter1.money꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.money/= (form-init14958335748940258894.clj:32).
+; No matching method compare_to found taking 1 args for class examples.chapter1.money.Money
+clj꞉examples.chapter1.money꞉> 
+examples.chapter1.chapter1.Banana
+clj꞉examples.chapter1.chapter1꞉> 
+Fruit
+clj꞉examples.chapter1.chapter1꞉> 
+nil
+clj꞉examples.chapter1.chapter1꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9300 (form-init14958335748940258894.clj:46).
+; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
+clj꞉examples.chapter1.chapter1꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9302 (form-init14958335748940258894.clj:46).
+; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
+clj꞉examples.chapter1.chapter1꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9304 (form-init14958335748940258894.clj:46).
+; No matching method subtotal found taking 1 args for class examples.chapter1.chapter1.Banana
+clj꞉examples.chapter1.chapter1꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9306 (form-init14958335748940258894.clj:46).
+; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
+clj꞉examples.chapter1.chapter1꞉> 
+33812
+clj꞉examples.chapter1.chapter1꞉> 
+; Evaluating file: money.clj
+true
+clj꞉examples.chapter1.money꞉> 
+true
+clj꞉examples.chapter1.money꞉> 
+false
+clj꞉examples.chapter1.money꞉> 
+true
+clj꞉examples.chapter1.money꞉> 
+false
+clj꞉examples.chapter1.money꞉> 
+nil
+clj꞉examples.chapter1.money꞉> 
+; Evaluating file: money.clj
+false
+clj꞉examples.chapter1.money꞉> 

@@ -1,157 +1,232 @@
-; Evaluating file: money.clj
-; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
-; Expecting var, but Comparable is mapped to interface java.lang.Comparable
-; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉examples.chapter1.money꞉> 
-; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
-; Expecting var, but Comparable is mapped to interface java.lang.Comparable
-clj꞉examples.chapter1.money꞉> 
-Fruit
-clj꞉examples.chapter1.money꞉> 
-; Syntax error compiling def at (src/examples/chapter1/money.clj:11:1).
-; Expecting var, but Comparable is mapped to interface java.lang.Comparable
-clj꞉examples.chapter1.money꞉> 
-; Evaluating file: money.clj
-; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:17:1).
-; interface java.lang.Comparable is not a protocol
-; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval8670 (form-init14958335748940258894.clj:17).
-; interface java.lang.Comparable is not a protocol
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-; Evaluating file: money.clj
-#'examples.chapter1.money/currencies
-clj꞉examples.chapter1.money꞉> 
-Fruit
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/=$
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/=$
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/=$
-clj꞉examples.chapter1.money꞉> 
-true
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/= (form-init14958335748940258894.clj:29).
-; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-; Evaluating file: money.clj
-; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:33:1).
-; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
-; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/= (money.clj:29).
-; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-; Evaluating file: money.clj
-; Syntax error (IllegalArgumentException) compiling at (src/examples/chapter1/money.clj:33:1).
-; No matching method compareTo found taking 1 args for class examples.chapter1.money.Money
-; Evaluation of file money.clj failed: class clojure.lang.Compiler$CompilerException
-clj꞉examples.chapter1.money꞉> 
-{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9045 (form-init14958335748940258894.clj:35).
-; No matching field found: compareTo for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-Fruit
-clj꞉examples.chapter1.money꞉> 
-Fruit
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
-clj꞉examples.chapter1.money꞉> 
-{:amount 250, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9119 (form-init14958335748940258894.clj:35).
-; No matching field found: compareTo for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9121 (form-init14958335748940258894.clj:35).
-; No matching field found: compare_to for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9123 (form-init14958335748940258894.clj:35).
-; No matching field found: compare_to for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/compare-moneys
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/eval9126 (form-init14958335748940258894.clj:38).
-; No matching field found: compare_moneys for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/compare-money
-clj꞉examples.chapter1.money꞉> 
-0
-clj꞉examples.chapter1.money꞉> 
-1
-clj꞉examples.chapter1.money꞉> 
--1
-clj꞉examples.chapter1.money꞉> 
-1
-clj꞉examples.chapter1.money꞉> 
-Fruit
-clj꞉examples.chapter1.money꞉> 
-CompareMoney
-; Warning: protocol #'examples.chapter1.money/CompareMoney is overwriting method compare-with of protocol Fruit
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-CompareMoney
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/compare-money
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/currencies
-clj꞉examples.chapter1.money꞉> 
-#'examples.chapter1.money/=$
-clj꞉examples.chapter1.money꞉> 
-1
-clj꞉examples.chapter1.money꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.money/= (form-init14958335748940258894.clj:32).
-; No matching method compare_to found taking 1 args for class examples.chapter1.money.Money
-clj꞉examples.chapter1.money꞉> 
-examples.chapter1.chapter1.Banana
-clj꞉examples.chapter1.chapter1꞉> 
-Fruit
-clj꞉examples.chapter1.chapter1꞉> 
-nil
-clj꞉examples.chapter1.chapter1꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9300 (form-init14958335748940258894.clj:46).
-; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
-clj꞉examples.chapter1.chapter1꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9302 (form-init14958335748940258894.clj:46).
-; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
-clj꞉examples.chapter1.chapter1꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9304 (form-init14958335748940258894.clj:46).
-; No matching method subtotal found taking 1 args for class examples.chapter1.chapter1.Banana
-clj꞉examples.chapter1.chapter1꞉> 
-; Execution error (IllegalArgumentException) at examples.chapter1.chapter1/eval9306 (form-init14958335748940258894.clj:46).
-; No matching field found: subtotal for class examples.chapter1.chapter1.Banana
-clj꞉examples.chapter1.chapter1꞉> 
-33812
-clj꞉examples.chapter1.chapter1꞉> 
-; Evaluating file: money.clj
-true
-clj꞉examples.chapter1.money꞉> 
-true
-clj꞉examples.chapter1.money꞉> 
-false
-clj꞉examples.chapter1.money꞉> 
-true
-clj꞉examples.chapter1.money꞉> 
-false
-clj꞉examples.chapter1.money꞉> 
-nil
-clj꞉examples.chapter1.money꞉> 
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Using host:port 127.0.0.1:50791 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉examples.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉examples.core꞉> 
 ; Evaluating file: money.clj
 false
 clj꞉examples.chapter1.money꞉> 
+true
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/+$
+clj꞉examples.chapter1.money꞉> 
+{:amount 1, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+{:amount 67, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+; Execution error (ExceptionInfo) at examples.chapter1.money/validate-same-currency (money.clj:9).
+; Currencies do not match
+clj꞉examples.chapter1.money꞉> 
+{:amount 67, :currency {:divisor 100, :sym "USD", :desc "US Dollars"}}
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/*$
+clj꞉examples.chapter1.money꞉> 
+{:amount 20, :currency {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉examples.chapter1.money꞉> 
+{:amount 21.0, :currency {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉examples.chapter1.money꞉> 
+{:amount 21.0M, :currency {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉examples.chapter1.money꞉> 
+{:amount 21.0, :currency {:divisor 100, :sym "EUR", :desc "Euro"}}
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/make-money
+clj꞉examples.chapter1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+{:amount 21.0, :currency :eur}
+clj꞉examples.chapter1.money꞉> 
+{:amount 23, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+; Execution error (ExceptionInfo) at examples.chapter1.money/validate-same-currency (money.clj:9).
+; Currencies do not match
+clj꞉examples.chapter1.money꞉> 
+{:amount 67, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+{:amount 1250, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+{:amount 1250, :currency :eur}
+clj꞉examples.chapter1.money꞉> 
+{:amount 1250, :currency :eurs}
+clj꞉examples.chapter1.money꞉> 
+{:amount 1250, :currency :eur}
+clj꞉examples.chapter1.money꞉> 
+{:amount 1250, :currency :eur}
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.apollo/make-mission
+clj꞉examples.chapter1.apollo꞉> 
+; Syntax error compiling def at (src/examples/chapter1/apollo.clj:12:1).
+; Too many arguments to def
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/appolo-4
+clj꞉examples.chapter1.apollo꞉> 
+{:name "Apllo 4",
+ :system "Saturn IV",
+ :launched "1967-11-09",
+ :manned? false,
+ :cm-name nil,
+ :lm-name nil,
+ :orbits 3,
+ :evas nil}
+clj꞉examples.chapter1.apollo꞉> 
+; Syntax error compiling at (src/examples/chapter1/apollo.clj:16:1).
+; Unable to resolve symbol: orbits in this context
+clj꞉examples.chapter1.apollo꞉> 
+3
+clj꞉examples.chapter1.apollo꞉> 
+["Apllo 4" 3]
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/mission-default
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/make-mission
+clj꞉examples.chapter1.apollo꞉> 
+{:name "Apllo 4",
+ :system "Saturn IV",
+ :launched "1967-11-09",
+ :manned? false,
+ :cm-name nil,
+ :lm-name nil,
+ :orbits 3,
+ :evas nil}
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/appolo-4
+clj꞉examples.chapter1.apollo꞉> 
+{:name "Apllo 4",
+ :system "Saturn IV",
+ :launched "1967-11-09",
+ :manned? false,
+ :cm-name nil,
+ :lm-name nil,
+ :orbits 3,
+ :evas 0}
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/make-mission-2
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/appolo-3
+clj꞉examples.chapter1.apollo꞉> 
+{:name "Apllo 4",
+ :system "Saturn IV",
+ :launched "1967-11-09",
+ :manned? false,
+ :cm-name nil,
+ :lm-name nil,
+ :orbits 3,
+ :evas nil}
+clj꞉examples.chapter1.apollo꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.apollo/make-mission-2 (form-init15086734297432220581.clj:14).
+; No value supplied for key: :evas
+clj꞉examples.chapter1.apollo꞉> 
+; Execution error (IllegalArgumentException) at examples.chapter1.apollo/make-mission-2 (form-init15086734297432220581.clj:14).
+; No value supplied for key: evas
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/appolo-3
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/make-mission-2
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.apollo/appolo-3
+clj꞉examples.chapter1.apollo꞉> 
+{:name "Apllo 4",
+ :system "Saturn IV",
+ :launched "1967-11-09",
+ :manned? false,
+ :cm-name nil,
+ :lm-name nil,
+ :orbits 3,
+ :evas 0}
+clj꞉examples.chapter1.apollo꞉> 
+#'examples.chapter1.money/new-money
+clj꞉examples.chapter1.money꞉> 
+#function[examples.chapter1.money/new-money]
+clj꞉examples.chapter1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+#'examples.chapter1.money/zero-dollars
+clj꞉examples.chapter1.money꞉> 
+{:amount 0, :currency :usd}
+clj꞉examples.chapter1.money꞉> 
+examples.chapter1.recipe.Recipe
+clj꞉examples.chapter1.recipe꞉> 
+; Evaluating file: recipe.clj
+examples.chapter1.recipe.Recipe
+clj꞉examples.chapter1.recipe꞉> 
+examples.chapter1.recipe.Person
+clj꞉examples.chapter1.recipe꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (5) passed to: examples.chapter1.recipe/eval8109/->Recipe--8139
+clj꞉examples.chapter1.recipe꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (5) passed to: examples.chapter1.recipe/eval8109/->Recipe--8139
+clj꞉examples.chapter1.recipe꞉> 
+#'examples.chapter1.recipe/toast
+clj꞉examples.chapter1.recipe꞉> 
+{:name "Toast",
+ :author {:fname "Marcus", :lname "Balbi"},
+ :description "Crispy bread",
+ :ingredients ["Slice of Bread"],
+ :steps ["Toast Bread in toaster"],
+ :servings 1}
+clj꞉examples.chapter1.recipe꞉> 
+#'examples.chapter1.recipe/people
+clj꞉examples.chapter1.recipe꞉> 
+#'examples.chapter1.recipe/recipes
+clj꞉examples.chapter1.recipe꞉> 
+#'examples.chapter1.recipe/recipes
+clj꞉examples.chapter1.recipe꞉> 
+{:r1
+ {:name "Toast",
+  :author :p1,
+  :description "Crispy bread",
+  :ingredients ["Slice of Bread"],
+  :steps ["Toast Bread in toaster"],
+  :servings 1}}
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:1:7981).
+; Unable to resolve symbol: random-uuid in this context
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; Unable to resolve symbol: random-uuid in this context
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; Unable to resolve symbol: random-uuid in this context
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; Unable to resolve symbol: random-uuid in this context
+clj꞉examples.chapter1.recipe꞉> 
+; Evaluating file: recipe.clj
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; Unable to resolve symbol: random-uuid in this context
+; Evaluation of file recipe.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉examples.chapter1.recipe꞉> 
+; Execution error (ArityException) at examples.chapter1.recipe/eval8247 (form-init15086734297432220581.clj:31).
+; Wrong number of args (0) passed to: clojure.core/random-sample
+clj꞉examples.chapter1.recipe꞉> 
+; Execution error (ArityException) at examples.chapter1.recipe/eval8249 (form-init15086734297432220581.clj:31).
+; Wrong number of args (0) passed to: clojure.core/random-sample
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; Unable to resolve symbol: random-uuid in this context
+clj꞉examples.chapter1.recipe꞉> 
+; Syntax error compiling at (src/examples/chapter1/recipe.clj:31:1).
+; No such var: clojure.core/random-uuid
+clj꞉examples.chapter1.recipe꞉> 

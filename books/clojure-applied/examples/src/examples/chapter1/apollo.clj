@@ -26,4 +26,17 @@
 (let [{:keys [orbits name]} appolo-4]
   [name orbits])
 
-appolo-3
+
+(appolo-3 :orbits)
+(get appolo-3 :orbits)
+(:orbits appolo-3)
+
+(:not-exists appolo-3)
+(appolo-3 :not-exists)
+(get appolo-3 :not-exists)
+
+(get nil :orbits)
+(:not-exists nil)
+;; (nil :not-exists) error
+
+(select-keys appolo-3 [:name :orbits])

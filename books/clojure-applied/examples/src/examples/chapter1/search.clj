@@ -3,3 +3,5 @@
 (def units [:lb :oz :kg])
 
 (some #{:oz} units)
+
+(into {} {:a "b"})

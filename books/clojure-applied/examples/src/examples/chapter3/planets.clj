@@ -46,3 +46,5 @@
   (> 0 (:moons astro)))
 
 (group-by multi-moon (filter planet? astros))
+
+(flatten [1 [2 [3]]])

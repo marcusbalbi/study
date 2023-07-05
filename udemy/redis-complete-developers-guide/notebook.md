@@ -33,3 +33,24 @@ DECR count
 DECRBY count 5
 
 INCRBYFLOAT count2 12.2
+
+
+SADD colors red green blue
+SADD colors2 purple blue yellow
+SADD colors3 red yellow blue
+
+SUNION colors colors2 colors3
+SDIFF colors colors2 colors3
+SINTER colors colors2 colors3
+
+SINTERSTORE colors:result colors colors2 colors3
+SUNIONSTORE colors:result colors colors2 colors3
+SDIFFSTORE colors:result colors colors2 colors3
+
+SISMEMBER colors red
+
+SCARD colors
+
+SREM colors2 blue
+
+SSCAN colors 0 COUNT 2

@@ -1,0 +1,140 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/balbi/estudos/study/books/learnig-java-book/jar-test ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:45067 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉jar-test.core꞉>  ; Use `alt+enter` to evaluate
+clj꞉jar-test.core꞉> 
+; Jack-in done.
+clj꞉jar-test.core꞉> 
+; Evaluating file: core.clj
+#'jar-test.core/-main
+clj꞉jar-test.core꞉> 
+(import 'com.balbi.App)
+; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:445).
+; com.balbi.App
+clj꞉jar-test.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/balbi/estudos/study/books/learnig-java-book/jar-test ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:33563 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉jar-test.core꞉> 
+clj꞉jar-test.core꞉> 
+; Jack-in done.
+clj꞉jar-test.core꞉> 
+; Evaluating file: core.clj
+#'jar-test.core/-main
+clj꞉jar-test.core꞉> 
+(import 'com.balbi.App)
+com.balbi.App
+clj꞉jar-test.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ClassNotFoundException) compiling at (src/jar_test/core.clj:1:1).
+; com.balbi.App.App
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉jar-test.core꞉> 
+; Execution error (ClassNotFoundException) at java.net.URLClassLoader/findClass (URLClassLoader.java:445).
+; com.balbi.App.App
+clj꞉jar-test.core꞉> 
+nil
+clj꞉jar-test.core꞉> 
+#'jar-test.core/-main
+clj꞉jar-test.core꞉> 
+; Evaluating file: core.clj
+#'jar-test.core/-main
+clj꞉jar-test.core꞉> 
+; Evaluating file: core.clj
+#'jar-test.core/-main
+clj꞉jar-test.core꞉> 
+; Execution error (IllegalArgumentException) at jar-test.core/-main (core.clj:8).
+; No matching field found: main for class java.lang.Class
+clj꞉jar-test.core꞉> 
+; Execution error (IllegalArgumentException) at jar-test.core/eval8094 (form-init12142829245834185437.clj:12).
+; No matching field found: main for class java.lang.Class
+clj꞉jar-test.core꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (src/jar_test/core.clj:12:1).
+; No matching method main found taking 0 args for class com.balbi.App
+clj꞉jar-test.core꞉> 
+; Execution error (ClassCastException) at jar-test.core/eval8097 (form-init12142829245834185437.clj:12).
+; class clojure.lang.PersistentVector cannot be cast to class [Ljava.lang.String; (clojure.lang.PersistentVector is in unnamed module of loader 'app'; [Ljava.lang.String; is in module java.base of loader 'bootstrap')
+clj꞉jar-test.core꞉> 
+; Execution error (ClassCastException) at jar-test.core/eval8099 (form-init12142829245834185437.clj:12).
+; class clojure.lang.PersistentVector cannot be cast to class [Ljava.lang.String; (clojure.lang.PersistentVector is in unnamed module of loader 'app'; [Ljava.lang.String; is in module java.base of loader 'bootstrap')
+clj꞉jar-test.core꞉> 
+; Execution error (ClassCastException) at jar-test.core/eval8101 (form-init12142829245834185437.clj:12).
+; class java.lang.String cannot be cast to class [Ljava.lang.String; (java.lang.String and [Ljava.lang.String; are in module java.base of loader 'bootstrap')
+clj꞉jar-test.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd /home/balbi/estudos/study/books/learnig-java-book/jar-test ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:43567 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉jar-test.core꞉> 
+clj꞉jar-test.core꞉> 
+; Jack-in done.
+clj꞉jar-test.core꞉> 
+; Syntax error (IllegalArgumentException) compiling . at (src/jar_test/core.clj:5:7).
+; Malformed member expression, expecting (. target member ...)
+clj꞉jar-test.core꞉> 
+; Syntax error (IllegalArgumentException) compiling new at (src/jar_test/core.clj:5:8).
+; Unable to resolve classname: Sum
+clj꞉jar-test.core꞉> 
+nil
+clj꞉jar-test.core꞉> 
+#'jar-test.core/a
+clj꞉jar-test.core꞉> 
+; Execution error (IllegalArgumentException) at jar-test.core/eval8034 (form-init14138079885484525258.clj:7).
+; No matching field found: sum for class com.balbi.Sum
+clj꞉jar-test.core꞉> 
+4
+clj꞉jar-test.core꞉> 
+224
+clj꞉jar-test.core꞉> 

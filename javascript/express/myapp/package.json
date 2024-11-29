@@ -23,7 +23,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.0.2",
     "chai-http": "^3.0.0",
-    "codecov": "^2.2.0",
+    "codecov": "^3.7.1",
     "coveralls": "^2.13.1",
     "eslint": "^4.0.0",
     "eslint-config-standard": "^10.2.1",
